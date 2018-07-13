@@ -1,0 +1,18 @@
+.btn-confirm{
+  border: 1px solid #2b9bdb;
+  color: #2b9bdb;
+  background: #fff;
+  line-height: 2em;
+}
+
+.btn-unenable{
+  border: 1px solid #ccc;
+  color: #ccc;
+  background: #fff;
+  line-height: 2em;
+  
+}
+
+.weui-cell__bd .tag{
+  color: #888;
+}

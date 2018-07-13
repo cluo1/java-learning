@@ -1,0 +1,210 @@
+/*====================我的名片====================*/
+
+.mycard {
+  margin-bottom: 10px;
+}
+
+.mycard .basicmess {
+  padding: 15px 15px 0 15px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.mycard .basicmess1 {
+  padding: 0 15px;
+}
+
+.mycard .basicmesscon {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  min-width: 0;
+}
+
+.mycard .same {
+  margin-top: 5px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.mycard .sameimg image {
+  width: 22px;
+  height: 22px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.mycard .samecon {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.mycard .userphoto {
+  margin-left: 0.8em;
+  width: 60px;
+  height: 60px;
+  line-height: 50px;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+  overflow: hidden;
+  vertical-align: top;
+  border-radius: 5px;
+}
+
+.mycard .userphoto image {
+  width: 100%;
+  height: 100%;
+  vertical-align: top !;
+  position: relative;
+}
+
+.mycard .identity {
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  right: 4px;
+  bottom: -6px;
+}
+
+.mycard .identity image {
+  width: 60%;
+  height: 60%;
+}
+
+.mycard .name {
+  /*font-size:40rpx;*/
+  color: #373737;
+}
+
+.mycard .desc, .mycard .company, .mycard .address, .mycard .phone {
+  /*font-size: 30rpx;*/
+  color: #373737;
+}
+
+.mycard .phone {
+  color: #48a7dd;
+}
+
+.mycard .state {
+  /*font-size: 0.4em;*/
+  margin-left: 8px;
+  vertical-align: middle;
+  padding: 3px;
+  border-radius: 5px;
+  background: #ccc;
+  color: #fff;
+}
+
+.mycard  .verifyed {
+  /*border: 1px solid #ffc000;
+  color: #ff9c00;*/
+  background: #ffc000;
+  color: #fff;
+}
+
+.mycard .statehide {
+  display: none;
+}
+
+.mycard .introduction {
+  /*font-size: 29rpx;*/
+  color: #706f6f;
+  border-top: 1px dotted #e5e5e5;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+/*====================我的名片-END====================*/
+
+/*====================名片列表====================*/
+
+.cardlist {
+  margin-bottom: 10px;
+}
+
+.cardlist .cardlist_con {
+  border: 1px solid #e5e5e5;
+  background: #fff;
+}
+
+.cardlist .product {
+  padding: 15px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.cardlist .proimg {
+  margin-right: 0.8em;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+  overflow: hidden;
+}
+
+.cardlist .proimg image {
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+
+.cardlist .procon {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  min-width: 0;
+}
+
+.cardlist .name, .cardlist .trade, .cardlist .distance {
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.cardlist .name {
+  /*font-size: 32rpx;*/
+  color: #373737;
+}
+
+.cardlist .trade {
+  /*font-size: 26rpx;*/
+  color: #6e6c6c;
+  margin: 2px auto;
+}
+
+.cardlist .distance {
+  font-size: 26rpx;
+  color: #919191;
+}
+
+.cardlist .state {
+  position: relative;
+}
+
+.cardlist .state image {
+  position: absolute;
+  margin-top: -50px;
+  width: 90px;
+  height: 90px;
+  right: 10px;
+  bottom: 10px;
+}
+
+/*====================名片列表-END====================*/

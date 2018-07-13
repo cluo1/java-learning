@@ -1,0 +1,52 @@
+<view class="container">
+  <view class="weui-cells">
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">收货人</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" type="text" maxlength="12" placeholder-class='pholder' placeholder="请输入收货人" id="name" bindinput="inputChange" value="{{addressInfo.name}}" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input {{coupontypeIndex==0?'hide':''}}">
+      <view class="weui-cell__hd">
+        <view class="weui-label">手机号码</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" type="number" maxlength="11" placeholder-class='pholder' placeholder="请填写收货人手机号码" id="tel" bindinput="inputChange" value="{{addressInfo.tel}}" />
+      </view>
+    </view>
+    <view class="weui-cell" bindtap="openMap">
+      <view class="weui-cell__hd">
+        <view class="weui-label">收货地址</view>
+      </view>
+      <view class="weui-cell__bd">
+         
+      </view>
+      <view class="weui-cell__fd location">
+        <image src="/images/getlocation.png"></image>
+        <text class="fs-08">快速定位</text> 
+      </view>
+      <!--<view class="weui-cell__ft_in-access">
+      </view>-->
+    </view>
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <textarea class="weui-textarea" placeholder-class='pholder' placeholder="请填写收货人地址" value="{{addressInfo.address}}" style="height: 4em" id="address" bindinput="inputChange" value="{{addressInfo.address?addressInfo.address:''}}" focus="{{addressFocus}}" />
+      </view>
+    </view>
+  </view>
+  <view class="weui-cells {{address_id>0?'':'hide'}}" >
+
+    <view class="weui-cell" bindtap="delete">
+      <view class="weui-cell__hd">
+        <view class="weui-label" style="color:red">删除地址</view>
+      </view>
+    </view>
+
+  </view>
+  <view class="fix-bottom">
+    <view class="submit" bindtap="save">{{saveText}}</view>
+  </view>
+</view>

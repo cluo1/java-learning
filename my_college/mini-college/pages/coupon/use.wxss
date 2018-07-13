@@ -1,0 +1,104 @@
+page {
+  background: #48a7dd;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.shopcode {
+  background: #fff;
+  margin: 0 15px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.shopname, .shopexplain {
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.shopname {
+  /*font-size: 30rpx;*/
+  color: #777;
+  margin: 10px auto;
+}
+
+.shopexplain {
+  /*font-size: 60rpx;*/
+  color: #2b2b2b;
+  font-weight: bold;
+  margin: 0 auto 20px auto;
+}
+
+.square {
+  width: 100%;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.square view {
+  width: 20px;
+  height: 20px;
+  background: #48a7dd;
+  border-radius: 50%;
+}
+
+.square .lefticon {
+  float: left;
+  margin-left: -10px;
+}
+
+.square .righticon {
+  float: right;
+  margin-right: -10px;
+}
+
+.qrcode {
+  border-top: 1px dotted #e5e5e5;
+  margin: 30px 20px 0 20px;
+  padding: 30px 0 20px 0;
+}
+
+.qrcode image {
+  width: 180px;
+  height: 180px;
+  border: 1px solid #e5e5e5;
+  padding: 2px;
+}
+
+.remark {
+  color: #939393;
+  /*font-size: 28rpx;*/
+  padding-bottom: 20px;
+  /*padding-bottom: 2em;*/
+}
+
+.back {
+  padding: 1em;
+  /*width: 100%;*/
+  text-align: left !important;
+  color: #48a7dd;
+}
+
+.footer {
+  /*position: absolute;
+  bottom: 20px;*/
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  /*font-size: 0.7em;*/
+}
+
+.report {
+  /*position: absolute;
+  bottom: 50px;*/
+  text-align: center;
+  line-height: 30px;
+  color: #e5e5e5;
+  width: 100%;
+  text-decoration: underline;
+  /*font-size: 0.6em;*/
+}

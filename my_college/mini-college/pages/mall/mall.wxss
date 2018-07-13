@@ -1,0 +1,210 @@
+page {
+  background: #333;
+  color: #fff;
+}
+
+.container {
+  padding-bottom: 20px;
+}
+
+.brank {
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+}
+
+.product {
+  background: #fff;
+  color: #000;
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.product .item {
+  width: 90%;
+  margin: 0 auto;
+  padding: 50px 0 0 0;
+  /*position: relative;*/
+}
+
+.product .item .cover {
+  width: 30%;
+  display: inline-block;
+}
+
+.product .item .cover image {
+  width: 100%;
+}
+
+.product .item .info {
+  margin-left: 5%;
+  width: 60%;
+  display: inline-block;
+  text-align: left;
+  position: relative;
+  vertical-align: top;
+}
+
+.product .item  .info .price {
+  line-height: 2em;
+}
+
+.product .item .info .market_price {
+  line-height: 1em;
+  text-decoration: line-through;
+  color: #ccc;
+  margin-top: 10px;
+  font-size: 0.8em;
+}
+
+.product .item .info .btn-buy {
+  display: inline-block;
+  background: #e69a46;
+  border-radius: 2px;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 0 5px;
+}
+
+.border view {
+  display: inline-block;
+  width: 50%;
+}
+
+.border .left {
+  text-align: left;
+}
+
+.border .right {
+  text-align: right;
+}
+
+.container .title-img {
+  text-align: center;
+  /*margin: 1em 0;*/
+  padding: 3em 0 1em;
+  position: relative;
+}
+.title-bg{
+  position: absolute;
+  top:1.7em;
+  width:92%;
+  left:50%;
+transform:translateX(-50%);
+
+}
+.activity-tip{
+  width: 92%;
+  text-align: center;
+  margin:1em auto 0;
+  position: relative;
+}
+.activity-tip .content{
+  width: 90%;
+  margin: auto;
+  color: #e69a46;
+}
+.activity-tip .title-bg{
+  width: 100%;
+  bottom: 0;
+  top: auto;
+}
+.activity-tip .check-ranking{
+  margin:15px auto;
+  font-size: 1.2em;
+  border:1px solid #e69a46;
+  border-radius: 4px;
+  padding: 0 12px;
+  line-height: 2em;
+  color: #e69a46;
+  width: auto;
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+}
+.container .sjbk {
+  text-align: center;
+}
+
+.reward {
+  color: #e69a46;
+  width: 92%;
+  margin: 0 auto;
+}
+
+.reward .item {
+  display: inline-block;
+  width: 33.33%;
+  text-align: center;
+  vertical-align: top;
+}
+
+.reward .item .title {
+  font-weight: bold;
+}
+
+.rule {
+  color: #e69a46;
+  width: 92%;
+  margin: 0 auto;
+  margin-top: 1em;
+  padding-bottom: 20px;
+}
+
+.rule .title {
+  text-align: center;
+  margin-top: 1em;
+}
+.rule .rule-title{
+  width: 93%;
+  margin: auto;
+  text-align: center;
+}
+.rule .rule-title image{
+  width: 100%;
+}
+.rule .step{
+  padding: 10px 0;
+}
+
+.rule .step .col2 {
+  width: 50%;
+}
+
+.rule .step .col3 {
+  width: 33.333%;
+}
+
+.rule .step .item {
+  display: inline-block;
+  text-align: center;
+}
+.rule .step .item view{
+  line-height: 2em;
+}
+
+.rule .step .item image {
+  width: 40%;
+  vertical-align: middle;
+}
+
+.rule .time {
+  text-align: center;
+  margin: 1em 0;
+}
+
+.rule-title {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.rule-title image {
+  vertical-align: middle;
+}
+
+.rule .content {
+  width: 85%;
+  margin: 0 auto;
+}

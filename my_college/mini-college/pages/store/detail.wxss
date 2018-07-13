@@ -1,0 +1,112 @@
+
+.b10 {
+  margin-bottom: 10px;
+}
+
+.storemess {
+  background: #48a7dd;
+  color: #fff;
+  padding: 15px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.storemess .logo {
+  margin-right: 0.8em;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  background:#fff;
+  border-radius: 50%;
+}
+
+.storemess .logo image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.storemess .name {
+  /*font-size: 30rpx;*/
+  margin-bottom: 5px;
+}
+
+.storemess .address .mess{
+  /*font-size: 22rpx;*/
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.storemess .address image {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.storemess .address .weui-cell {
+  padding: 0;
+}
+
+.list {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 10px 15px;
+  background: #fff;
+}
+
+.list:first-child{
+  border-top: 1px solid #e5e5e5;
+}
+
+
+.list .title {
+  width: 80px;
+  height: auto;
+  margin-right: 0.8em;
+  vertical-align: top;
+}
+
+.list .title {
+  /*font-size: 26rpx;*/
+  color: #313030;
+}
+
+.list .desc {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  text-align: left;
+  /*font-size: 26rpx;*/
+  color: #949393;
+  line-height: 1.6;
+}
+
+.releasebtn {
+  background: #48a7dd !important;
+  margin-bottom: 1.17647059em;
+  border-radius: 0px;
+}
+
+.btn_delete {
+  background: #f6b632 !important;
+  margin-bottom: 1.17647059em;
+  border-radius: 0px;
+}
+
+button{
+  color: #fff !important;
+}

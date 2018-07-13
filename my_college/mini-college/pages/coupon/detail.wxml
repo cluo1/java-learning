@@ -1,0 +1,149 @@
+<view class="container">
+
+  <!--<view class="circle" style="left:{{style_left}}px;right:{{style_right}}px;width:{{style_width}}px;height:{{style_width}}px;top:{{style_top}}px;">
+  </view>-->
+  <view class="repacket">
+    <image src="/images/repacket.png"></image>
+    <view class="repacket_con">
+      <view class="usecoupon {{isShowPage?'':'hide'}}">
+        <view class="discount fs-30">
+
+          <!--<text>{{coupon.discount}}</text>-->
+          <text>{{coupon.discount}}</text>
+        </view>
+        <view class="shopimg" bindtap="redirectCardInfo">
+          <image src="{{coupon.logo}}"></image>
+        </view>
+
+        <view class="name">{{coupon.name}}</view>
+        <!-- <view class="explain fs-15">{{coupon.title}}</view>-->
+        <view class="{{(wid>0&&(coupon.status==1||cid>0))||wid==0?'':'hide'}}">
+          <!--<view class="useway {{wid>0?'':'hide'}}">请到店后使用</view>-->
+          <view class="{{wid>0?'':'hide'}}">
+            <button class="usebtn" bindtap="redirectUse">立即使用</button>
+          </view>
+          <view class="{{(userInfo.user_id==coupon.user_id||wid>0)?'hide':''}}">
+            <button class="usebtn {{coupon.receive==0?'gray':''}}" bindtap="receiveCoupon">立即领取</button>
+          </view>
+          <view class="{{userInfo.user_id==coupon.user_id?'':'hide'}}">
+            <button class="usebtn" bindtap="showsharestips" open-type="{{canIUseShare?'share':''}}">分享给朋友</button>
+          </view>
+        </view>
+        <view class="{{(wid>0&&coupon.status==2)?'':'hide'}}">
+          <button class="unusebtn">已使用</button>
+        </view>
+        <view class="{{(wid>0&&coupon.status==0)?'':'hide'}}">
+          <button class="unusebtn">已过期</button>
+        </view>
+
+        <!--<view class="date fs-08">使用期限:{{coupon.start_time}}-{{coupon.end_time}}</view>-->
+        <view class="explain fs-08">{{coupon.title}}</view>
+
+        <scroll-view scroll-x="true" style="width:90%;height:{{imgWidth}}px;white-space:nowrap;margin: 0 auto; margin-bottom:5px" class="images {{coupon.photo&&coupon.photo.length>0?'':'hide'}}">
+          <block wx:for="{{coupon.photo}}">
+            <image src="{{item}}" style="width:{{imgWidth}}px;height:{{imgWidth}}px;display:inline-block;;margin-left:5px" mode="aspectFill" bindtap="previewImage" data-src="{{item}}"></image>
+          </block>
+        </scroll-view>
+
+
+        <view class="list" bindtap="showBusinessInfo">
+          <view class="same">
+            <view class="title">
+              商家信息
+            </view>
+            <view class="desc">
+            </view>
+            <view class="weui-cell__ft {{isShowBusinessInfo?'weui-cell__ft_in-access_down':'weui-cell__ft_in-access'}}"></view>
+          </view>
+        </view>
+        <view class="businessInfo  {{isShowBusinessInfo?'':'hide'}}">
+          <view class="list">
+            <view class="same">
+              <view class="title">
+                使用期限：
+              </view>
+              <view class="desc">
+                {{coupon.start_time}}-{{coupon.end_time}}
+              </view>
+            </view>
+          </view>
+          <view class="list">
+            <view class="same">
+              <view class="title">
+                详细地址：
+              </view>
+              <view class="desc" bindtap="openMap">
+                {{coupon.address?coupon.address:'无'}}
+                <text>（</text>
+                <text style="text-decoration:underline">导航去</text>
+                <text>）</text>
+              </view>
+              <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </view>
+          </view>
+          <view class="list">
+            <view class="same">
+              <view class="title">
+                商家简介：
+              </view>
+              <view class="desc">
+                {{coupon.intro?coupon.intro:'商家未填写信息'}}
+              </view>
+            </view>
+          </view>
+          <view class="list">
+            <view class="same">
+              <view class="title">
+                使用条件：
+              </view>
+              <view class="desc">
+                {{coupon.remark?coupon.remark+';':''}}
+                <view>一张优惠券仅限于单笔订单消费抵用，不可拆分，过期即作废</view>
+              </view>
+            </view>
+          </view>
+
+
+          <view class="list">
+            <view class="same">
+              <view class="title">
+                联系电话：
+              </view>
+              <view class="desc" bindtap="callTel">
+                {{coupon.tel?coupon.tel:'无'}}
+              </view>
+              <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </view>
+          </view>
+        </view>
+        <view class="list {{share==1?'':'hide'}}" bindtap="redirectHome">
+          <view class="same">
+            <view class="title">
+              我要创建卡券
+            </view>
+            <view class="desc">
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+          </view>
+        </view>
+        <view class="list {{share==1?'':'hide'}}" bindtap="redirectCoupons">
+          <view class="same">
+            <view class="title">
+              更多优惠
+            </view>
+            <view class="desc">
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+          </view>
+        </view>
+      </view>
+      <view class="sharetips fs-11" hidden="{{!isShowTips}}">
+        <view class="tipsimg">
+          <image src="/images/shareicon.png"></image>
+        </view>
+        <view class="tipsmess">1.点击右上角选择"转发"！</view>
+        <view class="tipsknew" bindtap="showsharestips">我知道了</view>
+      </view>
+    </view>
+  </view>
+</view>

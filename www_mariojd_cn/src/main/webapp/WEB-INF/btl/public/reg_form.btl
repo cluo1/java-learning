@@ -1,0 +1,25 @@
+<form class="form-horizontal" id="regForm">
+    <div class="form-group lg-group">
+        <div class="col-sm-12">
+            <input type="email" class="form-control" id="regEmail" name="regEmail"
+                   placeholder="电子邮箱">
+        </div>
+    </div>
+    <div class="form-group lg-group">
+        <div class="col-sm-12">
+            <input type="password" class="form-control" id="regPsw" name="regPsw"
+                   placeholder="6-16位密码">
+        </div>
+    </div>
+    <h5 id="regTip"></h5>
+    <div class="form-group">
+        <div class="col-sm-12">
+            <button type="submit" class="btn btn-info btn-block lg-btn"
+                    id="regSubmit">立即注册
+            </button>
+        </div>
+    </div>
+</form>
+<h5 class="text-muted">
+    已有账号?<a href="#feature-tab" data-tab="tab-login">点击登录</a>
+</h5>

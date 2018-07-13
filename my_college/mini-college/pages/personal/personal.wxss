@@ -1,0 +1,150 @@
+@import "/wxss/same.wxss";
+
+.weui-cell__bd {
+  /*font-size: 32rpx !important;*/
+}
+
+.weui-cell {
+  padding: 15px;
+}
+
+.cardlist {
+  margin-bottom: 10px;
+  background: #fff;
+}
+
+.cardlist .cardlist_con {
+  border: 1px solid #e5e5e5;
+  background: #fff;
+}
+
+.cardlist .product {
+  padding: 15px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.cardlist .proimg {
+  margin-right: 0.8em;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+  overflow: hidden;
+}
+
+.cardlist .proimg image {
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+
+.cardlist .procon {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  min-width: 0;
+}
+
+.cardlist .name, .cardlist .trade {
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.cardlist .name {
+  /*font-size: 32rpx;*/
+  color: #373737;
+}
+
+.cardlist .call image {
+  width: 20px;
+  height: 20px;
+}
+
+.box {
+  position: relative;
+  margin-top: 10px;
+}
+.last_box{
+  margin-bottom: 150rpx;
+}
+.box:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  height: 1px;
+  border-top: 1rpx solid #e5e5e5;
+  color: #e5e5e5;
+}
+
+.iconimg image {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  margin-right: 0.8em;
+}
+
+.opt .item image {
+  width: 28px;
+  height: 28px;
+  vertical-align: middle;
+}
+
+.opt .item {
+  float: left;
+  width: 24.6%;
+  text-align: center;
+  margin: 1em 0;
+}
+
+.opt .item .title {
+  line-height: 2em;
+}
+.bottom_nav{
+  width: 100%;
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+  background: #ffffff;
+  border-top: 1rpx solid #eeeeee;
+  display: flex;
+  height: 100rpx;
+}
+.bottom_nav .nav_list{
+  width: 20%;
+  text-align: center;
+}
+.bottom_nav .nav_list image{
+  width: 50rpx;
+  height: 50rpx;
+    position: relative;
+  top: 5rpx;
+}
+.bottom_nav .nav_list:nth-child(3) image{
+  width: 77rpx;
+  height: 82rpx;
+  position: relative;
+  top: -23rpx;
+}
+.bottom_nav .nav_list:nth-child(3) .text{
+  position: relative;
+  top: -31rpx;
+}
+
+.bottom_nav .nav_list:nth-child(5) .text{
+  color:#34aadc; 
+}
+.bottom_nav .nav_list{
+  font-size: 22rpx;
+  color: #6f7378;
+}

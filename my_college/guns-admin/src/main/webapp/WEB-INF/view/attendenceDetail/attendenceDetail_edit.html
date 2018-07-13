@@ -1,0 +1,32 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <input type="hidden" id="id" value="${item.id}">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                            <#input id="id" name="" value="${item.id}" underline="true"/>
+                            <#input id="aid" name="考勤外键id" value="${item.aid}" underline="true"/>
+                            <#input id="sid" name="学生id" value="${item.sid}" />
+                </div>
+
+                <div class="col-sm-6">
+                            <#input id="punch" name="是否已考勤" value="${item.punch}" underline="true"/>
+                            <#input id="punchTime" name="考勤时间" value="${item.punchTime}" />
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="AttendenceDetailInfoDlg.editSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="AttendenceDetailInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/attendenceDetail/attendenceDetail/attendenceDetail_info.js"></script>
+@}

@@ -1,0 +1,152 @@
+<%include("../public/header.html"){}%>
+<%if(isEmpty(session.user)){%>
+<link href="https://cdn.bootcss.com/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.min.css"
+      rel="stylesheet">
+<link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css"
+      rel="stylesheet">
+<script src="/resources/js/iconfont.js"></script>
+<%}%>
+<body data-spy="scroll" data-target="sidebarMenu">
+<%include("../public/nav.btl"){}%>
+<input type='hidden' id='currentPage'>
+<!-- 主要内容 -->
+<div class="container" id="ck-message">
+    <div class="row">
+        <%if(isEmpty(session.user)){ %>
+        <div class="col-xs-12 col-sm-7 col-md-offset-1 col-md-6 col-lg-offset-1 col-lg-7 content">
+            <%}else{ %>
+            <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-lg-offset-2 col-lg-8 content">
+                <input type="hidden" value="${session.user.uid}" id="uid"/>
+                <input type="hidden" value="${session.user.nickname}" id="nickname"/>
+                <input type="hidden" id="icon"
+                       value="${session.user.icon==null||session.user.icon==''?'/resources/icon/dficon.png':session.user.icon}"/>
+                <div class="panel panel-default" id="ueditor">
+                    <div class="panel-heading" id="panelHead"></div>
+                    <textarea class="form-control visible-xs" rows="5" id="scontent"></textarea>
+                    <script class="hidden-xs" id="container" name="content" type="text/plain"></script>
+                    <button type="button" class="btn btn-default btn-block"
+                            id="messageSubmit">
+                        <span class="text-primary">发表</span>
+                    </button>
+                </div>
+                <!-- 显示区 -->
+            </div>
+            <% } %>
+            <!-- 显示区 -->
+        </div>
+
+        <%if(isEmpty(session.user)){ %>
+        <div class="hidden-xs col-sm-5 col-md-4 col-lg-3">
+            <div class="panel panel-default" id="my-right-slide"
+                 data-spy="affix" data-offset-top="650">
+                <div class="panel-heading"></div>
+                <div class="panel-body">
+                    <ul class="nav nav-tabs nav-justified" role="tablist"
+                        id="feature-tab">
+                        <li role="presentation" class="active text-center"><a
+                                href="#tab-login" role="tab" data-toggle="tab">登录</a></li>
+                        <li role="presentation" class="text-center"><a
+                                href="#tab-register" role="tab" data-toggle="tab">注册</a></li>
+                    </ul>
+
+                    <div class="tab-content" id="my-tab">
+                        <!-- 登录 -->
+                        <div role="tabpanel" class="tab-pane active" id="tab-login">
+                            <br>
+                            <%include("../public/login_form.btl"){}%>
+                        </div>
+
+                        <!-- 注册 -->
+                        <div role="tabpanel" class="tab-pane fade" id="tab-register">
+                            <br>
+                            <%include("../public/reg_form.btl"){}%>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% } %>
+    </div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <%if(isEmpty(session.user)){ %>
+            <div class="col-xs-12 col-sm-7 col-lg-offset-1 col-lg-7 text-muted text-center">
+                <%}else{ %>
+                <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-lg-offset-2 col-lg-8 text-muted text-center">
+                    <%}%>
+                    <hr class="visible-xs">
+                    <h6>
+                        Copyright &copy; 2017 mariojd.cn All Rights Reserved <span class="hidden-xs"> | </span><span
+                            class="visible-xs"><br></span> <a
+                            target="_blank" href="http://www.miitbeian.gov.cn"
+                            class="text-muted">粤ICP备17033077号-1 </a>
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<%if(!isEmpty(session.user)){ %>
+<script type="text/javascript" charset="utf-8"
+        src="/resources/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8"
+        src="/resources/ueditor/ueditor.all.min.js"></script>
+<script type="text/javascript" charset="utf-8"
+        src="/resources/ueditor/lang/zh-cn/zh-cn.js"></script>
+<script>
+    var ue = UE.getEditor('container', {
+        toolbars: [['fullscreen', 'emotion', 'indent', 'justifyleft',
+            'justifycenter', 'justifyright', 'bold', 'italic', 'underline',
+            'link']],
+        initialFrameWidth: '100%',
+        initialFrameHeight: 132,
+        elementPathEnabled: false,
+        wordCount: false,
+    });
+</script>
+<%}%>
+<script src="https://cdn.bootcss.com/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"></script>
+<script src="/resources/scripts/main.js"></script>
+<script>
+    /******************滚动条事件******************/
+    if ($(window).width() > 768) {
+        $(document).ready(function () {
+            var rightSlideWidth = $("#my-right-slide").width();//获取原来的宽度
+            $(window).scroll(function () {
+                var offsetTop = $(this).scrollTop(); //滚动条距离浏览器顶部的距离
+                if (offsetTop > 650) {
+                    $("#my-right-slide").width(rightSlideWidth);
+                }
+            });
+        });
+    }
+    /** ****************选项卡事件***************** */
+    $(function () {
+        $("#toLogin").attr("href", "#feature-tab");
+        $("#toReg").attr("href", "#feature-tab");
+        $('.navbar .navbar-right .hidden-xs a,.container #my-tab h5 a').click(
+                function (e) {
+                    var href = $(this).attr('href');
+                    var tabId = $(this).attr('data-tab');
+                    if ('#' !== href) {
+                        e.preventDefault();
+                        if (tabId) {
+                            $('#feature-tab a[href="#' + tabId + '"]').tab('show');
+                            if (tabId == "tab-login") {
+                                $("#username").focus();
+                            } else {
+                                $("#regEmail").focus();
+                            }
+                        }
+                    }
+                });
+    });
+    $(document).ready(function () {
+        user.changeCurrentPage(1);
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.mariojd.dao.ReadDao">
+
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+
+    <select id="getList" parameterType="java.util.Map" resultType="Read">
+        SELECT r.rid,r.title,r.second_title AS secondTitle,r.author,r.url,r.review,r.post_time AS postTime,a.nickname AS "admin.nickname"
+        FROM tb_read r LEFT JOIN tb_admin a on r.aid=a.aid
+        ORDER BY r.post_time DESC
+        LIMIT #{page.dbIndex}, #{page.dbNumber}
+    </select>
+
+    <select id="getCount" resultType="int">
+        SELECT count(*) FROM tb_read
+    </select>
+
+</mapper>

@@ -1,0 +1,56 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal" id="announcementInfoForm">
+
+            <input type="hidden" id="id" value="${item.id}">
+            <input type="hidden" id="contentVal" value='${item.content}'>
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                    <#select id="cid" name="班级" underline="true">
+                        @for(c in classes){
+                        <option value="${c.id}" ${c.id==item.cid?'selected':''}>${c.fullName}</option>
+                        @}
+                    </#select>
+                    <#input id="title" name="标题" value="${item.title}" underline="true"/>
+                    <#input id="publisher" name="发布人" value="${item.publisher}"/>
+                </div>
+
+                <div class="col-sm-6">
+                    <#input id="num" name="排序" value="${item.num}" underline="true"/>
+                    <#select id="status" name="状态">
+                        <option value="1" ${1==item.status?'selected':''}>启用</option>
+                        <option value="2" ${2==item.status?'selected':''}>冻结</option>
+                        <option value="3" ${3==item.status?'selected':''}>删除</option>
+                    </#select>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label class="col-sm-1 control-label">内容</label>
+                        <div class="col-sm-11">
+                            <div id="editor" class="editorHeight">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="AnnouncementInfoDlg.editSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="AnnouncementInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script type="text/javascript" src="${ctxPath}/static/js/plugins/wangEditor/wangEditor.js"></script>
+<script src="${ctxPath}/static/modular/announcement/announcement_info.js"></script>
+@}

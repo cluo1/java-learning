@@ -1,0 +1,36 @@
+<%include("../public/header.html"){}%>
+<link href="https://cdn.bootcss.com/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.min.css"
+      rel="stylesheet">
+<link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css"
+      rel="stylesheet">
+<body>
+<%include("../public/nav.btl"){}%>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <%include("../public/login_form.btl"){}%>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.bootcss.com/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"></script>
+<script
+        src="/resources/scripts/main.js"></script>
+<script src="/resources/js/iconfont.js"></script>
+<script>
+    $(function () {
+        $('.lg-btn').addClass('btn-lg');
+        $('.lg-group').addClass('form-group-lg');
+        if ($(window).width() >= 768) {
+            window.location.href = '/';
+        }
+        window.onresize = function () {
+            if ($(window).width() >= 768) {
+                window.location.href = '/';
+            }
+        }
+    });
+</script>
+</body>
+</html>

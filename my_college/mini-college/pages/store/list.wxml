@@ -1,0 +1,22 @@
+<view class="pagespacing">
+  <view class="notData {{storelist&&storelist.length>0?'hide':''}}">
+    <!--没有门店信息，去添加吧-->
+    <image src="/images/nomess.png" class="noicon"></image>
+  </view>
+  <view class="storelist" wx:for="{{storelist}}">
+    <navigator url="/pages/store/detail?store_id={{item.sid}}" class="product">
+      <view class="proimg">
+        <image class="" src="{{item.logo}}"></image>
+      </view>
+      <view class="procon">
+        <view class="name fs-11">{{item.name}}</view>
+        <view class="address">{{item.address}}</view>
+      </view>
+    </navigator>
+  </view>
+</view>
+<view class="fixbtn">
+  <navigator url="/pages/store/edit">
+    <button class="addbtn" bindtap="openaddpeole">新增门店</button>
+  </navigator>
+</view>

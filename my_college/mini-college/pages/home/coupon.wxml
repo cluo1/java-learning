@@ -1,0 +1,98 @@
+<view class="container">
+
+  <swiper indicator-dots="false" autoplay="true">
+    <block wx:for="{{banner}}">
+      <swiper-item>
+        <image src="{{item.image}}" class="slide-image" style="width:100%" mode="widthFix" data-route="{{item.route}}"  bindtap="redirectActivity" data-id="{{index}}" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <!--<navigator url="/pages/mall/mall" class="advert">
+    <image src="/images/activity/banner.png" style="width:100%" mode="widthFix"></image>
+  </navigator>-->
+  <view class="box">
+    <view class="weui-cells" bindtap="redirectCoupons" style="margin-top:0rpx;">
+      <view bindtap="redirectVerify" data-url="/pages/store/list" class="weui-cell" hover-class="weui-cell_active">
+        <view class="coupons">
+          <image src="/images/coupons.png" style="width:{{imgWidth}}px" mode="widthFix"></image>
+        </view>
+        <view class="weui-cell__bd" style=" overflow: hidden;height:44px;">
+          <view animation="{{animationData}}" style="line-height:22px;">
+            <block wx:for="{{coupons}}">
+              <view>{{item.title}}</view>
+              <view class="remark fs-08">{{item.distance}}</view>
+            </block>
+          </view>
+        </view>
+        <view class="tag {{isShowNewTag?'':'hide'}}" style="width:3em">
+          <view class="fs-08">
+            NEW
+          </view>
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </view>
+    </view>
+    <view class="weui-cells" bindtap="redirectMyCards" style="margin-top:10rpx;">
+      <view bindtap="redirectVerify" data-url="/pages/store/list" class="weui-cell" hover-class="weui-cell_active">
+        <view class="cards">
+          <image src="/images/cards.png" style="width:{{imgWidth}}px" mode="widthFix"></image>
+        </view>
+        <view class="weui-cell__bd">
+          <view>名片夹</view>
+          <view class="remark fs-08">你收藏的名片都在这里哦</view>
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </view>
+    </view>
+  </view>
+
+  <view class="weui-tab__panel" style="padding-top:0px">
+    <view class="title">我的卡券</view>
+    <view class="weui-tab__content">
+      <view class="notData" hidden="{{myCoupons&&myCoupons.length>0}}">
+        <image src="/images/nomess.png" class="noicon"></image>
+      </view>
+      <view class="couponlist" wx:for="{{myCoupons}}">
+        <view class="couponlist_con">
+          <navigator url="/pages/coupon/detail?wid={{item.wid}}" class="product">
+            <view class="proimg">
+              <image class="" src="{{item.logo}}"></image>
+            </view>
+            <view class="procon">
+              <view class="name">{{item.name}}
+                <text class="tag fs-08">{{item.type==1?'优惠券':'折扣券'}}</text>
+              </view>
+              <view class="explain fs-12">{{item.title}}</view>
+              <view class="usedate fs-08">有效期：{{item.start_time}} - {{item.end_time}}
+                <text class="distance  fs-08">{{item.distance}}</text>
+              </view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </view>
+    <view class="loadMore" hidden="{{myCoupons&&myCoupons.length<=0}}" bindtap="redirectMyCoupons">查看更多</view>
+  </view>
+</view>
+<view class='bottom_nav'>
+  <view class='nav_list' bindtap='red_url' data-url='../nearby/nearby'>
+    <image src='../../images/tabbar/footer_nearby.png'></image>
+    <view class='text'>发现</view>
+  </view>
+   <view class='nav_list' bindtap='red_url' data-url='../card/my'>
+    <image src='../../images/tabbar/footer_c.png'></image>
+    <view class='text'>名片</view>
+  </view>
+   <view class='nav_list' bindtap='red_shop'>
+    <image src='../../images/tabbar/shop.png'></image>
+    <view class='text'>吉虎商城</view>
+  </view>
+   <view class='nav_list' bindtap='red_url' data-url='../home/coupon'>
+    <image src='../../images/tabbar/footer_card_after.png'></image>
+    <view class='text'>卡片夹</view>
+  </view>
+   <view class='nav_list' bindtap='red_url' data-url='../personal/personal'>
+    <image src='../../images/tabbar/footer_personal.png'></image>
+    <view class='text'>我的</view>
+  </view>
+</view>

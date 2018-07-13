@@ -1,0 +1,123 @@
+<h3 class="page-header">抢购管理</h3>
+<a class="btn btn-primary" onclick="add();">添加</a>
+<a class="btn btn-danger">删除</a>
+<div id="seckill">
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered">
+            <thead>
+            <tr>
+                <th style="width: 3%"><input type="checkbox"></th>
+                <th style="width: 8%">编号</th>
+                <th style="width: 6%" class="hidden-sm">商品</th>
+                <th style="width: 13%">名称</th>
+                <th style="width: 8%">库存</th>
+                <th style="width: 8%">售价</th>
+                <th style="width: 8%">类别</th>
+                <th style="width: 11%" class="hidden-sm">开售时间</th>
+                <th style="width: 11%" class="hidden-sm">结束时间</th>
+                <th style="width: 11%" class="hidden-sm">上架时间</th>
+                <th style="width: 13%">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="(seckill,index) in seckillPages.content" class="picture">
+                <td><input type="checkbox" v-bind:value="seckill.sid"></td>
+                <td>{{seckill.sid}}</td>
+                <td class="hidden-sm"><img v-bind:src="seckill.surl==null||seckill.surl==''?'/images/default.jpg':seckill.surl"
+                           v-bind:layer-src="seckill.surl==null||seckill.surl==''?'/images/default.jpg':seckill.surl"
+                           v-on:click="show()" v-bind:layer-index="index"
+                           v-bind:alt="seckill.sname" rel="nofollow" width="100%">
+                <td class="control-length" v-bind:title="seckill.sname">{{seckill.sname}}</td>
+                <td>{{seckill.snumber}}</td>
+                <td>¥{{seckill.sprice}}</td>
+                <td>{{seckill.scategory}}</td>
+                <td class="hidden-sm">{{seckill.startTime}}</td>
+                <td class="hidden-sm">{{seckill.endTime}}</td>
+                <td class="hidden-sm">{{seckill.createTime}}</td>
+                <td>
+                    <a v-on:click="edit(seckill.sid)" class="text-success"> 编辑 </a>|
+                    <a v-on:click="_delete(seckill.sid,index,seckillPages.number+1)" class="text-danger"> 删除 </a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <span class="hidden-xs">共有 {{seckillPages.totalElements}} 条记录，当前为第 {{seckillPages.number+1}}/{{seckillPages.totalPages}} 页</span>
+    <span class="visible-xs">共{{seckillPages.totalElements}}条记录,当前为第{{seckillPages.number+1}}/{{seckillPages.totalPages}}页</span>
+    <nav aria-label="navigation" v-if="seckillPages.totalPages!=1">
+        <ul class="pager pull-right">
+            <li v-bind:class="{'disabled':seckillPages.first}"><a v-on:click="changePages(seckillPages.number)">
+                {{seckillPages.first==true?'首页':'上一页'}}
+            </a></li>
+            <li v-bind:class="{'disabled':seckillPages.last}"><a v-on:click="changePages(seckillPages.number+2)">
+                {{seckillPages.last==true?'尾页':'下一页'}}
+            </a></li>
+        </ul>
+    </nav>
+    <hr>
+</div>
+<script type="text/javascript">
+    function add() {
+        $('#main').load('/seckill/edit');
+    }
+    var vm = new Vue({
+        el: '#seckill',
+        data: {
+            seckillPages: '',
+            url: {
+                list: '/seckill/list/',
+                seckill: '/seckill/'
+            }
+        },
+        created: function () {
+            this.$http.get(this.url.list + 1).then(function (res) {
+                this.seckillPages = res.body;
+            });
+        },
+        methods: {
+            changePages: function (pageNumber) {
+                this.$http.get(this.url.list + pageNumber).then(function (res) {
+                    this.seckillPages = res.body;
+                });
+            },
+            edit: function (sid) {
+                $('#main').load('/seckill/' + sid);
+            },
+            _delete: function (sid, i, pageNumber) {
+                var _this = this;
+                layer.confirm('你确定要下架这个商品吗？', {
+                    title: '系统警告',
+                    skin: 'layui-layer-lan',//layui-layer-molv
+                    anim: 4, //动画类型0-7
+                    icon: 2,//图标-1~7
+                    btn: ['确认', '取消'] //按钮
+                }, function () {
+                    var index = layer.load(1, {time: 5 * 1000});
+                    $.ajax({
+                        type: 'DELETE',
+                        url: _this.url.notice + sid + '?index=' + i + '&pageNumber=' + pageNumber,
+                        success: function (res) {
+                            _this.seckillPages = res;
+                            layer.close(index);
+                            layer.msg('已删除');
+                        },
+                        error: function () {
+                            layer.close(index);
+                            layer.msg('删除失败');
+                        }
+                    });
+                }, function () {
+                    layer.msg('操作取消');
+                });
+            },
+            show: function () {
+                layer.photos({
+                    shade: 0.2,
+                    scrollbar: true,
+                    photos: '.picture',
+                    closeBtn: 2
+                });
+            }
+        }
+    });
+</script>

@@ -1,0 +1,44 @@
+<view class="container">
+
+  <view class="list">
+    <navigator url="/pages/mall/address/edit" class="noData {{addresslist&&addresslist.length>0?'hide':''}}">
+    暂未添加地址，点击去添加
+    </navigator>
+    <view class="weui-panel__bd" wx:for="{{addresslist}}">
+      <view class="weui-media-box weui-media-box_text" style="padding-bottom:0px" bindtap="redirectOrderConfirm" data-id="{{item.id}}">
+        <view class="name">收货人：{{item.name}}</view>
+        <view class="mobile">{{item.tel}}</view>
+        <view class="weui-media-box-desc">{{item.address}}</view>
+      </view>
+      <view class="weui-form-preview__ft" style="line-height:2.5em">
+        <view class="item checkbox" style="text-align: left;padding:0 5px;" bindtap="setDefault" data-id="{{item.id}}">
+          <!--<checkbox value="默认地址" checked="{{item.def==1?'checked':''}}" />-->
+          <view class="checkbox" style="width:20%;text-align:center">
+            <image src="{{item.def==1?'/images/icon/checkbox-checked.png':'/images/icon/checkbox.png'}}"></image>
+          </view>
+          <view  style="width:80%">默认地址</view>
+        </view>
+        <view class="item" style="text-align: right;padding:0 5px;">
+          <view class="edit" bindtap="redirectEdit" data-id="{{item.id}}">
+            <view>
+              <image src="/images/icon/edit.png"></image>
+            </view>
+            <view>编辑</view>
+          </view>
+          <view class="delete" bindtap="delete" data-id="{{item.id}}">
+          <view>
+              <image src="/images/icon/delete.png"></image>
+            </view>
+            <view>删除</view>
+          </view>
+        </view>
+      </view>
+      <view class="clear:both"></view>
+    </view>
+  </view>
+  <view class="fix-bottom">
+    <view>
+      <view class="submit" bindtap="redirectAdd" >添加新地址</view>
+    </view>
+  </view>
+</view>

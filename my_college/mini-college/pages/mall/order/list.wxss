@@ -1,0 +1,206 @@
+@import "/wxss/order.wxss";
+ .fixtop{
+   position: fixed;
+   top: 0px;
+ }
+.order  .consignee {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  line-height: 2em;
+  position: relative;
+}
+
+.order  .consignee .info view {
+  display: inline-block;
+  width: 50%;
+}
+
+.order  .consignee .info .mobile {
+  text-align: right;
+}
+
+.order  .consignee .icon {
+  display: inline-block;
+  position: absolute;
+  top: 2em;
+}
+
+.order  .consignee .icon image {
+  width: 16px;
+}
+
+.order  .consignee .address {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.order .other {
+  line-height: 2em;
+  border-bottom: 1px solid #eee;
+}
+
+.order .opt {
+  text-align: right;
+}
+
+.order .opt .delete {
+  display: inline-block;
+  position: absolute;
+  left: 15px;
+  height: 3em;
+  line-height: 3em;
+}
+
+.order .opt .delete image {
+  width: 16px;
+  vertical-align: middle;
+}
+
+.order .opt .item {
+  display: inline-block;
+  width: 5em;
+  height: 2em;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 2em;
+  border: 1px #ccc solid;
+  margin: 5px;
+}
+
+.opt .confirm, .opt .pay {
+  color: red;
+  border: red solid 1px !important;
+}
+
+.weui-navbar {
+  background: #fff;
+}
+
+.weui-navbar__item {
+  border-left: 1px solid #eee;
+  line-height: 3em;
+  padding: 0;
+}
+
+.weui-navbar__title {
+  vertical-align: middle;
+}
+
+.weui-bar__item_on {
+  border-bottom: 1px #48a7dd solid;
+}
+
+.fix-bottom view {
+  display: inline-block;
+  line-height: 3em;
+}
+
+.fix-bottom .total {
+  width: 61%;
+  text-align: left;
+  padding: 0 2%;
+}
+
+.fix-bottom .submit {
+  width: 35%;
+  background: #48a7dd !important;
+  color: #fff;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+.popup .content {
+  position: absolute;
+  width: 80%;
+  top: 10%;
+  left: 10%;
+  background: #fff;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.popup .content .bottom-btn view {
+  display: inline-block;
+  width: 49%;
+  text-align: center;
+  line-height: 3em;
+}
+
+.popup .content .weui-cells__title {
+  color: #48a7dd;
+}
+
+.tips {
+  position: relative;
+  float: left;
+  cursor: help;
+  /*display: inline-block;*/
+  text-decoration: none;
+  outline: none;
+  left: 10px;
+  height: 3em;
+  line-height: 3em;
+  vertical-align: middle;
+}
+
+.tips .delete {
+  line-height: 2em;
+  height: 2em;
+  color: #fff;
+  text-align: center;
+  visibility: hidden;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  z-index: 999;
+  width: 50px;
+  margin-left: -20px;
+  padding: 0 5px;
+  opacity: 0.9;
+  background-color: #000;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.tips:hover {
+  border: 0; /* IE6 fix */
+}
+
+.tips:hover .delete {
+  visibility: visible;
+}
+
+.tips .delete:before, .tips .delete:after {
+  content: "";
+  position: absolute;
+  z-index: 1000;
+  bottom: -7px;
+  left: 50%;
+  margin-left: -8px;
+  border-top: 8px solid #000;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 0;
+}
+
+.tips .delete:before {
+  border-top-color: #000;
+  bottom: -8px;
+}
+
+.tips .delete:active {
+  visibility: hidden;
+}

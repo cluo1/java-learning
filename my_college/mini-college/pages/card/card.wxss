@@ -1,0 +1,119 @@
+
+.flex-wrp {
+  background: #fff;
+  flex-direction: row;
+  padding: 1em 0;
+}
+
+
+.flex-wrp .flex-item {
+  width: 49%;
+  display: inline-block;
+  text-align: center;
+}
+
+.flex-wrp .weui-cell__bd{
+  width: 60%;
+  display:inline-block;
+
+}
+
+.flex-wrp .flex-item image {
+  width: 36px;
+  height:42px;
+  margin-right: 5px;
+}
+
+
+
+.weui-search-bar {
+  border: 0;
+  border-radius: 80px;
+}
+
+
+
+
+.cardlist {
+  margin-bottom: 10px;
+}
+
+.cardlist .cardlist_con {
+  border: 1px solid #e5e5e5;
+  background: #fff;
+}
+
+.cardlist .product {
+  padding: 15px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.cardlist .proimg {
+  margin-right: 0.8em;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+  overflow: hidden;
+}
+
+.cardlist .proimg image {
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+
+.cardlist .procon {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  min-width: 0;
+}
+
+.cardlist .name, .cardlist .trade {
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.cardlist .trade {
+  color: #6c6c6c;
+}
+
+
+.cardlist .name {
+  /*font-size: 1.6em;*/
+  margin-bottom: 5px;
+  color: #373737;
+}
+
+.cardlist .call image {
+  width: 30px;
+  height: 30px;
+}
+
+.placeholder {
+  text-align: center;
+  background-color: #ebebeb;
+  color: #cfcfcf;
+}
+
+.loading{
+  color: #888;
+  text-align: center;
+  line-height: 30px;  
+  /*border-top: 1px solid #cfcfcf*/
+}
+.weui-cell__bd view{
+  text-align: left;
+}

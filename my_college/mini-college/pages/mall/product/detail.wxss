@@ -1,0 +1,101 @@
+.fix-bottom view {
+  display: inline-block;
+ 
+}
+
+.fix-bottom .total {
+  width: 56%;
+  text-align: left;
+  padding: 0 2%;
+  border-top: 1px solid #eee;
+}
+
+.fix-bottom .submit {
+  width: 40%;
+  background: #48a7dd !important;
+  color: #fff;
+  border-top: 1px solid #48a7dd;
+}
+
+.store .logo image {
+  width: 40px;
+  height: 40px;
+}
+
+.produceInfo {
+  width: 100%; 
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.produceInfo view {
+  display: inline-block;
+}
+
+.produceInfo .cover {
+  width: 30%;
+  text-align: center;
+}
+
+.produceInfo .info {
+  width: 66%;
+  height: 80px;
+  position: relative;
+  
+}
+
+.produceInfo .info .name {
+  width: 90%;
+  line-height: 2em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow: hidden;
+  position: absolute;
+  left: 5px;
+   text-align: left;
+}
+.produceInfo .info .amount {
+  width: 60%;
+ line-height: 1em;
+  position: absolute;
+  left: 5px;
+  bottom: 0;
+  text-align: left;
+}
+.produceInfo .info .amount .market_price{
+  text-decoration:line-through;color:#ccc;margin-left:4px
+}
+.produceInfo .info .num {
+  width: 40%;
+  line-height: 2em;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  
+}
+.produceInfo .info .num view{
+ line-height: 1.5em;
+ width: 28%;
+ border-top: 1px #eee solid;
+ border-bottom: 1px #eee solid;
+ color: #000;
+}
+.produceInfo image {
+  width: 100px;
+  height: 80px;
+  border: 1px #eee solid;
+}
+
+.detail{
+  padding-bottom: 200px;
+   z-index: 998
+}
+
+.detail image{
+  display:block;
+}
+.tital-tip{
+  color:red;
+}

@@ -1,0 +1,120 @@
+<view class="cardlist">
+  <navigator url="/pages/card/make">
+    <view class="cardlist_con">
+      <view class="product">
+        <view class="proimg">
+          <image class="" src="{{userInfo.avatar}}"></image>
+        </view>
+        <view class="procon">
+          <view class="name">{{userInfo.name}}</view>
+          <view class="trade">{{userInfo.duty}}</view>
+        </view>
+        <view class="call" bindtap="editorlink">
+          <image class="" src="/images/editor_gray.png"></image>
+        </view>
+      </view>
+    </view>
+  </navigator>
+  <view class="opt">
+    <view bindtap="redirectCoupon" class="item" style="border-right:1px #e5e5e5 solid">
+      <image src="/images/icon/coupon.png"></image>
+      <view class="title">我的卡券</view>
+    </view>
+    <view class="item" bindtap="redirectVerify" data-url="/pages/store/list" style="border-right:1px #e5e5e5 solid">
+      <image src="/images/icon/store.png"></image>
+      <view class="title">我的门店</view>
+    </view>
+    <view class="item" bindtap="redirectVerify" data-url="/pages/coupon/myrelease" style="border-right:1px #e5e5e5 solid">
+      <image src="/images/icon/release.png"></image>
+      <view class="title">发布卡券</view>
+    </view>
+    <view class="item" bindtap="redirectRanking">
+      <image src="/images/icon/hot_b.png"></image>
+      <view class="title">人气榜</view>
+    </view>
+  </view>
+  <view style="clear:both"></view>
+</view>
+
+<view class="box">
+  <view class="weui-cells">
+    <view bindtap="redirectVerify" data-url="/pages/store/staff/list" class="weui-cell" hover-class="weui-cell_active">
+      <view class="iconimg">
+        <image src="/images/icon/manage.png"></image>
+      </view>
+      <view class="weui-cell__bd">核销员管理</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+  </view>
+</view>
+
+
+<view class="box">
+  <view class="weui-cells">
+
+    <navigator url="/pages/mall/order/list" class="weui-cell" hover-class="weui-cell_active">
+      <view class="iconimg">
+        <image src="/images/icon/orders.png"></image>
+      </view>
+      <view class="weui-cell__bd">我的订单</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+      <navigator url="/pages/activity/list" class="weui-cell" hover-class="weui-cell_active">
+      <view class="iconimg">
+        <image src="/images/icon/activity.png"></image>
+      </view>
+      <view class="weui-cell__bd">我的活动</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+  </view>
+</view>
+
+<view class="box last_box">
+  <view class="weui-cells">
+
+    <navigator url="/pages/personal/help" class="weui-cell" hover-class="weui-cell_active">
+      <view class="iconimg">
+        <image src="/images/icon/help.png"></image>
+      </view>
+      <view class="weui-cell__bd">帮助中心</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <view class="weui-cell" hover-class="weui-cell_active" bindtap="redirectSetting">
+      <view class="iconimg">
+        <image src="/images/icon/set.png"></image>
+      </view>
+      <view class="weui-cell__bd">设置</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+    <view class="weui-cell" hover-class="weui-cell_active" bindtap="callPhone">
+      <view class="iconimg">
+        <image src="/images/icon/kefu.png"></image>
+      </view>
+      <view class="weui-cell__bd">客服热线</view>
+      <view class="weui-cell__ft" bindtap="calling">400-999-7972</view>
+    </view>   
+  </view>
+</view>
+
+<view class='bottom_nav'>
+  <view class='nav_list' bindtap='red_url' data-url='../nearby/nearby'>
+    <image src='../../images/tabbar/footer_nearby.png'></image>
+    <view class='text'>发现</view>
+  </view>
+   <view class='nav_list' bindtap='red_url' data-url='../card/my'>
+    <image src='../../images/tabbar/footer_c.png'></image>
+    <view class='text'>名片</view>
+  </view>
+   <view class='nav_list' bindtap='red_shop'>
+    <image src='../../images/tabbar/shop.png'></image>
+    <view class='text'>吉虎商城</view>
+  </view>
+   <view class='nav_list' bindtap='red_url' data-url='../home/coupon'>
+    <image src='../../images/tabbar/footer_card.png'></image>
+    <view class='text'>卡片夹</view>
+  </view>
+   <view class='nav_list' bindtap='red_url' data-url='../personal/personal'>
+    <image src='../../images/tabbar/footer_personal_after.png'></image>
+    <view class='text'>我的</view>
+  </view>
+</view>

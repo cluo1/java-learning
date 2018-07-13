@@ -1,0 +1,42 @@
+page {
+ padding-bottom: 50px;
+}
+
+.weui-cells {
+  line-height: 3;
+}
+
+.weui-label {
+  color: #313030;
+}
+
+.releasebtn {
+  background: #48a7dd !important;
+  margin-bottom: 1.17647059em;
+}
+
+.stores {
+  margin-top: -1px;
+}
+
+.weui-cell__ft_in-access_down::after {
+  content: " ";
+  display: inline-block;
+  height: 6px;
+  width: 6px;
+  border-width: 0px 2px 2px 0;
+  border-color: #c8c8cd;
+  border-style: solid;
+  -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  top: -2px;
+  position: absolute;
+  top: 50%;
+  margin-top: -4px;
+  right: 2px;
+}
+
+.weui-cell__ft_in-access_down {
+  padding-right: 13px;
+  position: relative;
+}

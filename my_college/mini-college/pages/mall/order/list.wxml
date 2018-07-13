@@ -1,0 +1,159 @@
+<view class="container">
+  <view class="weui-navbar fixtop">
+    <block wx:for-items="{{tabs}}" wx:key="{{index}}">
+      <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+        <view class="weui-navbar__title">{{item}}</view>
+      </view>
+    </block>
+
+  </view>
+  <view class="weui-tab__panel">
+    <view class="weui-tab__content">
+      <view class="notData {{orders&&orders.length>0?'hide':''}}">
+        <image src="/images/nomess.png" class="noicon"></image>
+      </view>
+
+      <view class="order" wx:for="{{orders}}">
+        <view class="head">
+          <view class="head-left">
+
+            <!--<image src="{{item.checked?'/images/icon/radio-checked.png':'/images/icon/radio.png'}}" checked="{{item.checked}}" class="{{activeIndex==0?'':'hide'}}" style="margin-right:10px;" name="refundType" data-orderid="{{item.id}}" bindtap="selectOrder"></image>-->
+            <image src="/images/icon/mall-store.png"></image>
+            {{item.name}}
+          </view>
+          <view class="head-right fs-08">
+            {{item.status_title}}
+          </view>
+        </view>
+
+        <navigator class="product" wx:for="{{item.goods}}" url="/pages/mall/product/detail?pid={{item.gid}}">
+          <view class="cover">
+            <image src="{{item.thumb}}" style="width:{{5*proHeight/4}}px; height:{{proHeight}}px" mode="aspectFill"></image>
+          </view>
+
+          <view class="info" style="height:{{proHeight}}px">
+            <view class="name">{{item.title}}</view>
+            <view class="amount">
+              <text style="color:red">￥{{item.price}}</text>
+              <text class="fs-08 market_price">￥{{item.market_price}}</text>
+            </view>
+            <view class="number">x{{item.num}}</view>
+          </view>
+        </navigator>
+        <view class="total">
+          <view class="number">共{{item.goods_count}}件商品</view>
+          <view class="amount">小计：
+            <text style="color:red">￥{{item.order_amount}}</text>
+          </view>
+        </view>
+
+        <view class="consignee">
+          <view class="icon">
+            <image src="/images/icon/delivry-address.png" mode="widthFix"></image>
+          </view>
+          <view class="address" style="width:{{addressWidth}}px">
+            <view class="info">
+              <view class="name">收货人：{{item.username}}</view>
+              <view class="mobile">{{item.tel}}</view>
+            </view>
+            <view>收货地址：{{item.address}}</view>
+          </view>
+        </view>
+        <view class="other fs-09">
+          <view>
+            订单编号：{{item.order_no}}
+          </view>
+          <view>
+            创建时间：{{item.addtime}}
+          </view>
+        </view>
+
+
+        <view class="opt fs-09">
+          <!--<view bindtap="loadMoreMenu" class="tips">
+            <view> 更多</view>
+            <view class="delete" bindtap="delete" data-orderid="{{item.id}}">删除</view>
+          </view>-->
+
+          <view class="delete {{item.status==5||item.status==10?'':'hide'}}" bindtap="delete" data-orderid="{{item.id}}">
+            <image src="/images/icon/delete.png" mode="widthFix"></image>
+          </view>
+          <!--<view class="item" bindtap="redirectRefund" data-orderid="{{item.id}}" data-total="{{item.order_amount}}">申请售后</view>
+          <view class="item" bindtap="redirectRefund" data-orderid="{{item.id}}" data-total="{{item.order_amount}}">修改申请</view>
+          <view class="item" bindtap="cancelRefund" data-orderid="{{item.id}}">撤销申请</view>
+          
+          <view class="item" bindtap="redirectLogistics" data-orderid="{{item.id}}">查看物流</view>
+          <view class="item" bindtap="redirectRefund" data-orderid="{{item.id}}" data-total="{{item.order_amount}}">退款</view>
+          <view bindtap="confirmFinish" class="item confirm" data-orderid="{{item.id}}">确认收货</view>-->
+          <view class="item" bindtap="callTel" data-tel="{{item.merchant_tel}}">联系卖家</view>
+          <block wx:if="{{item.status==0}}">
+            <view class="item" bindtap="showConfirmPopup" data-orderid="{{item.id}}"> 取消订单</view>
+            <form bindsubmit="callPay" report-submit="true" data-orderid="{{item.id}}">
+              <button class="item pay"  style="overflow: unset;font-size:1em;background:#fff;padding:0" formType="submit">付款</button>
+            </form>
+          </block>
+          <block wx:if="{{item.status==1}}">
+            <view class="item" bindtap="redirectRefund" data-orderid="{{item.id}}" data-total="{{item.order_amount}}">退款</view>
+          </block>
+          <block wx:if="{{item.status==2}}">
+            <view class="item" bindtap="redirectRefund" data-orderid="{{item.id}}" data-total="{{item.order_amount}}">退款</view>
+            <view class="item" bindtap="redirectLogistics" data-orderid="{{item.id}}">查看物流</view>
+            <view bindtap="confirmFinish" class="item confirm" data-orderid="{{item.id}}">确认收货</view>
+          </block>
+          <block wx:if="{{item.status==3}}">
+            <view class="item" bindtap="cancelRefund" data-orderid="{{item.id}}">撤销申请</view>
+            <view class="item" bindtap="redirectRefund" data-orderid="{{item.id}}" data-total="{{item.order_amount}}">修改申请</view>
+          </block>
+          <block wx:if="{{item.status==10}}">
+            <view class="item" bindtap="redirectRefund" data-orderid="{{item.id}}" data-total="{{item.order_amount}}">申请售后</view>
+          </block>
+        </view>
+
+      </view>
+
+      <view class="weui-loadmore {{isShowLoading&&hasMore?'':'hide'}}">
+        <i class="weui-loading"></i>
+        <text class="weui-loadmore__tips  fs-08">正在加载</text>
+      </view>
+      <view class="weui-loadmore weui-loadmore_line {{(orders.length<=0)||hasMore||isShowLoading?'hide':''}}">
+        <text class="weui-loadmore__tips fs-08">我也是有底线的</text>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="fix-bottom {{order_no.length>0?'':'hide'}}">
+    <view class="total">
+      合计：￥{{totalAmount}}
+    </view>
+    <view class="submit" bindtap="mergeSubmit">合并付款</view>
+
+  </view>
+
+
+</view>
+
+<view class="popup {{isShowCancelOrderPopup?'':'hide'}}">
+  <view class="content">
+    <view class="weui-cells__title fs-12">请选择取消订单的理由</view>
+    <view class="weui-cells  weui-cells_after-title">
+      <radio-group class="radio-group" bindchange="cancelReasonChange">
+        <view class="weui-cell" wx:for="{{cancelReason}}">
+          <!--<view class="weui-cell__hd">
+        <view class="weui-label"></view>
+      </view>-->
+          <view class="weui-cell__bd fs-09">
+            {{item}}
+          </view>
+          <view class="weui-cell__fd">
+            <radio value="{{item}}" name="cancelReason" />
+          </view>
+        </view>
+      </radio-group>
+    </view>
+    <view class="bottom-btn">
+      <view class="cancel" bindtap="showConfirmPopup">取消</view>
+      <view class="confirm" bindtap="cancel" style=" border-left: 1px solid #ccc;">确定</view>
+    </view>
+  </view>
+</view>

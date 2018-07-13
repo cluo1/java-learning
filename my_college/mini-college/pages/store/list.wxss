@@ -1,0 +1,91 @@
+.storetitle {
+  color: #525252;
+  /*font-size:28rpx;*/
+  padding: 10px 15px;
+}
+
+.storelist {
+  margin-bottom: 10px;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  background: #fff;
+}
+
+.storelist .product {
+  padding: 10px 15px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.storelist .proimg {
+  margin-right: 0.8em;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #e5e5e5;
+  overflow: hidden;
+}
+
+.storelist .proimg image {
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+
+.storelist .procon {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  min-width: 0;
+  margin-right: 0.8em;
+}
+
+.storelist .name {
+  /*font-size: 32rpx;*/
+  color: #333;
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: break-word;
+  word-break: break-all;
+  margin-bottom: 5px;
+}
+
+.storelist .address {
+  /*font-size:25rpx;*/
+  color: #656464;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.storelist .proicon {
+  border-left: 1px solid #e5e5e5;
+}
+
+.storelist .proicon image {
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
+}
+
+.fixbtn button {
+  width: 90%;
+  border: 0;
+  border-radius: 0 !important;
+}
+
+.pagespacing{
+  margin-top: 10px;
+}

@@ -1,0 +1,37 @@
+<view class="pagespacing">
+  <view class="tips">
+    打开微信扫一扫，确认之后即可成为您的核销员
+  </view>
+  <view class="code">
+    <image src="{{stafflist.qrcode}}"></image>
+  </view>
+  <view class="topic {{stafflist.staff&&stafflist.staff.length>0?'':'hide'}}">我的核销员( {{stafflist.total}} )</view>
+  <view class="weui-cells weui-cells_after-title {{stafflist.staff&&stafflist.staff.length>0?'':'hide'}}" >
+    <view class="weui-cell title">
+      <view class="weui-cell__bd">
+        员工
+      </view>
+      <view class="weui-cell__bd">
+        手机号
+      </view>
+      <view class="weui-cell__bd">
+        操作
+      </view>
+    </view>
+    <view class="notData {{stafflist.staff&&stafflist.staff.length>0?'hide':''}}">
+      <!--您还没有核销员哦！-->
+      <image src="/images/nomess.png" class="noicon"></image>
+    </view>
+    <view class="weui-cell desc" wx:for="{{stafflist.staff}}">
+      <view class="weui-cell__bd">
+        {{item.name}}
+      </view>
+      <view class="weui-cell__bd">
+        {{item.mobile}}
+      </view>
+      <view class="weui-cell__bd delete" bindtap="delstafftip" data-staff_id='{{item.staff_id}}'>
+        删除
+      </view>
+    </view>
+  </view>
+</view>

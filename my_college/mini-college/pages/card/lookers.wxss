@@ -1,0 +1,33 @@
+.container .title {
+  line-height: 3em;
+  background: #fff;
+  height: 3em;
+  padding:  0 1em;
+}
+
+.container .title text {
+  color: #2b9bdb;
+}
+
+.weui-cell__bd .des {
+  color: #888;
+}
+
+.weui-cell__bd .tag {
+  color: #888;
+  border: 1px solid #ccc;
+  position: absolute;
+  margin-left: 5px;
+}
+.container .tip {
+  position: relative;
+  background: #ff9600;
+  color: #fff;
+  line-height: 2.5em;
+  height: 2.5em;
+}
+
+.container .tip .name{
+   text-align: center;
+   
+}

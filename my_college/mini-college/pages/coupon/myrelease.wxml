@@ -1,0 +1,75 @@
+<view class="container">
+  <view class="weui-navbar fixtop">
+    <block wx:for-items="{{tabs}}" wx:key="{{index}}">
+      <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+        <view class="weui-navbar__title">{{item}}</view>
+      </view>
+    </block>
+    <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+  </view>
+  <view class="weui-tab__panel_1">
+    <view class="notData" hidden="{{coupons&&coupons.length>0}}">
+      <image src="/images/nomess.png" class="noicon"></image>
+    </view>
+    <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+      <view class="myrelease" wx:for="{{coupons}}">
+        <navigator class="myrelease_con" url="/pages/coupon/detail?cid={{item.cid}}">
+          <view class="name">{{item.name}}</view>
+          <view class="explain fs-11">{{item.title}}</view>
+          <view class="date fs-08">有效日期：{{item.start_time}} - {{item.end_time}}</view>
+          <view class="date fs-08">创建日期：{{item.addtime}}</view>
+        </navigator>
+        <view class="state">
+          <image src="/images/card.png"></image>
+        </view>
+        <view class="myrelease_btn">
+          <view class="controlbtn " data-cid="{{item.cid}}" bindtap="delete">删除</view>
+          <navigator url="/pages/coupon/release?cid={{item.cid}}" class="controlbtn btnline">修改</navigator>
+          <view class="controlbtn btnline" data-cid="{{item.cid}}" bindtap="changeState" data-state='0'>发布</view>
+        </view>
+      </view>
+    </view>
+    <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+      <view class="myrelease" wx:for="{{coupons}}">
+        <navigator class="myrelease_con" url="/pages/coupon/detail?cid={{item.cid}}">
+          <view class="name">{{item.name}}</view>
+          <view class="explain fs-11">{{item.title}}</view>
+          <view class="date fs-08">有效日期：{{item.start_time}} - {{item.end_time}}</view>
+          <view class="date fs-08">创建日期：{{item.addtime}}</view>
+        </navigator>
+        <view class="state">
+          <image src="/images/card.png"></image>
+        </view>
+        <view class="myrelease_btn">
+          <navigator class="controlbtn" url="/pages/coupon/receiptor?cid={{item.cid}}&send_num={{item.send_num}}&use_num={{item.use_num}}">领取量（{{item.send_num}}）</navigator>
+          <navigator class="controlbtn btnline" url="/pages/coupon/receiptor?cid={{item.cid}}&send_num={{item.send_num}}&use_num={{item.use_num}}">使用量（{{item.use_num}}）</navigator>
+          <view class="controlbtn btnline" data-cid="{{item.cid}}" bindtap="changeState" data-state='1'>下架</view>
+        </view>
+      </view>
+    </view>
+    <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+      <view class="myrelease" wx:for="{{coupons}}">
+        <navigator class="myrelease_con" url="/pages/coupon/detail?cid={{item.cid}}">
+          <view class="name">{{item.name}}</view>
+          <view class="explain fs-11">{{item.title}}</view>
+          <view class="date fs-08">有效日期：{{item.start_time}} - {{item.end_time}}</view>
+          <view class="date fs-08">创建日期：{{item.addtime}}</view>
+        </navigator>
+        <view class="state">
+          <image src="/images/card.png"></image>
+        </view>
+        <view class="myrelease_btn">
+          <navigator class="controlbtn" url="/pages/coupon/receiptor?cid={{item.cid}}&send_num={{item.send_num}}&use_num={{item.use_num}}">领取量（{{item.send_num}}）</navigator>
+          <navigator class="controlbtn btnline" url="/pages/coupon/receiptor?cid={{item.cid}}&send_num={{item.send_num}}&use_num={{item.use_num}}">使用量（{{item.use_num}}）</navigator>
+          <view class="controlbtn btnline" data-cid="{{item.cid}}" bindtap="delete">删除</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="fixbtn">
+    <navigator url="/pages/coupon/release">
+      <button class="addbtn">新增优惠券</button>
+    </navigator>
+  </view>
+</view>

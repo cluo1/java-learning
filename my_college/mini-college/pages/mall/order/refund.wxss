@@ -1,0 +1,7 @@
+/* pages/mall/order/refund.wxss */
+.container{
+  padding-bottom: 50px;
+}
+.weui-cells{
+  line-height:3;
+}

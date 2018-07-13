@@ -1,0 +1,37 @@
+<view class="container">
+
+  <view class="detail">
+    
+      <image src="{{item}}" mode="widthFix" style="width:{{windowWidth}}px;" wx:for="{{productInfo.content}}"></image>
+    
+
+  </view>
+  <view class="fix-bottom">
+
+    <view class="produceInfo">
+      <view class="cover">
+        <image src="{{productInfo.thumb}}" mode="aspectFill"></image>
+      </view>
+
+      <view class="info">
+        <view class="name">{{productInfo.title}}</view>
+        <view class="amount">
+          <text style="color:red">￥{{productInfo.price}}</text>
+          <text class="fs-08 market_price">￥{{productInfo.market_price}}</text>
+          <view class="fs-08">库存：{{productInfo.quantity}}</view>
+        </view>
+        <view class="num">
+          <view catchtap="deleteProductNum" style="border-left: 1px #eee solid;color:{{textColor}}">-</view>
+          <view style="border-right: 1px #eee solid;border-left: 1px #eee solid;">{{productNum}}</view>
+          <view catchtap="addProductNum"  style="border-right: 1px #eee solid;">+</view>
+        </view>
+      </view>
+    </view>
+    <view class="total" style="line-height:3em">
+      合计：￥{{total}}
+      <text class="tital-tip">(包邮)</text>
+    </view>
+    <view class="submit" bindtap="submit"  style="line-height:3em;background:{{btn_submit_bgcolor}} !important;border-top:1px solid {{btn_submit_bgcolor}};">{{submitText}}</view>
+
+  </view>
+</view>

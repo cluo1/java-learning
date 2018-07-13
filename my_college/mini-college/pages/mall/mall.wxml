@@ -1,0 +1,200 @@
+
+<view class="container">
+
+  <view class="brank">
+    <image src="/images/activity/logo-9j.png" mode="widthFix" style="width:50%;"></image>
+    <view class="fs-08">哥弟集团旗下高端名优酒</view>
+  </view>
+
+  <view class="product">
+    <view class="item" data-pid="1" bindtap="redirectDetail">
+      <view class="cover">
+        <image src="/images/activity/pro-01.png" mode="widthFix"></image>
+      </view>
+
+
+      <view class="info fs-09">
+        <view class="titile">九暹53度幽雅酱香型白酒金银红尊珍品套装*125ml</view>
+        <view class="market_price">￥120</view>
+        <view class="price">活动价
+          <text style="color:#e69a46">￥</text>
+          <text style="color:#e69a46" class="fs-13">89</text>
+        </view>
+
+        <view class="btn-buy">立即抢购</view>
+      </view>
+    </view>
+
+    <view class="item" data-pid="2" bindtap="redirectDetail">
+      <view class="cover">
+        <image src="/images/activity/pro-02.png" mode="widthFix"></image>
+      </view>
+
+
+      <view class="info fs-09">
+        <view class="titile">九暹窖藏级53度幽雅酱香型白酒*125ML</view>
+        <view class="market_price">￥110</view>
+        <view class="price">活动价
+          <text style="color:#e69a46">￥</text>
+          <text style="color:#e69a46" class="fs-13">99</text>
+        </view>
+
+        <view class="btn-buy">立即抢购</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="brank">
+    <image src="/images/activity/logo-asm.png" mode="widthFix" style="width:69%;"></image>
+    <view class="fs-08">哥弟集团旗下高端品牌</view>
+  </view>
+
+  <view class="product">
+    <view class="item" data-pid="3" bindtap="redirectDetail">
+      <view class="cover">
+        <image src="/images/activity/pro-03.png" mode="widthFix"></image>
+      </view>
+
+
+      <view class="info fs-09">
+        <view class="titile">阿玛施尚采植物补水保湿亮肤面膜贴片7片装</view>
+        <view class="market_price">￥280</view>
+        <view class="price">活动价
+          <text style="color:#e69a46">￥</text>
+          <text style="color:#e69a46" class="fs-13">118</text>
+        </view>
+
+        <view class="btn-buy">立即抢购</view>
+      </view>
+    </view>
+
+    <view class="item" data-pid="4" bindtap="redirectDetail">
+      <view class="cover">
+        <image src="/images/activity/pro-04.png" mode="widthFix"></image>
+      </view>
+
+
+      <view class="info fs-09">
+        <view class="titile">阿玛施美希氨基酸凝肌补水保湿持久留香滋养美肤沐浴露*280ml</view>
+        <view class="market_price">￥96</view>
+        <view class="price">活动价
+          <text style="color:#e69a46">￥</text>
+          <text style="color:#e69a46" class="fs-13">59</text>
+        </view>
+
+        <view class="btn-buy">立即抢购</view>
+      </view>
+    </view>
+  </view>
+
+
+  <!--
+  <view class="sjbk">
+    <image src="/images/activity/sjbk.png" style="width:100%;" mode="widthFix"></image>
+  </view>
+  <view class="products">
+    <image src="/images/activity/pro-1.png" style="width: 100%;display:block;" mode="widthFix"></image>
+    <image src="/images/activity/pro-2.png" style="width: 100%;display:block;" mode="widthFix" data-pid="2" bindtap="redirectDetail"></image>
+    <image src="/images/activity/pro-3.png" style="width: 100%;display:block;" mode="widthFix" data-pid="3" bindtap="redirectDetail"></image>
+    <image src="/images/activity/pro-4.png" style="width: 100%;display:block;" mode="widthFix" data-pid="4" bindtap="redirectDetail"></image>
+  </view>-->
+
+  <view class="title-img">
+  <view class="border title-bg">
+      <view class="left">
+        <image src="/images/activity/flower1.png" style="width: 25%;" mode="widthFix"></image>
+      </view>
+      <view class="right">
+        <image src="/images/activity/flower2.png" style="width: 25%;" mode="widthFix"></image>
+      </view>
+    </view>
+
+      <image src="/images/activity/activity-title.png" style="width: 70%;" mode="widthFix"></image>
+
+  </view>
+
+  <view class="reward">
+
+    
+   
+    <view class="item reward-item-pad" bindtap="redircetPrize" data-pid="2">
+      <image src="/images/activity/r2.png" style="width: 60%;" mode="widthFix"></image>
+      <view class="title fs-09">二等奖</view>
+      <view class="fs-08">￥36000</view>
+      <view class="fs-08">神灯机器人</view>
+
+    </view>
+     <view class="item" bindtap="redircetPrize" data-pid="1">
+      <image src="/images/activity/r1.png" style="width: 60%;" mode="widthFix"></image>
+      <view class="title fs-09">一等奖</view>
+      <view class="fs-08">￥40000</view>
+      <view class="fs-08">多功能魔镜</view>
+    </view>
+    <view class="item reward-item-pad" bindtap="redircetPrize" data-pid="3">
+      <image src="/images/activity/r3.png" style="width: 60%;" mode="widthFix"></image>
+      <view class="title fs-09">三等奖</view>
+      <view class="fs-08">￥3000</view>
+      <view class="fs-08">空气净化器</view>
+    </view>
+  </view>
+  <view class="activity-tip  fs-08">
+      <view class="content">活动开始时间为6月30日，结束时间为7月31日。活动期间购买成交最高的前九名得到豪华礼品，一到三名为一等奖，四到六名为二等奖，七到九名为三等奖，活动结束一周后公布获奖名单。</view>
+      <navigator url="/pages/activity/result" class="check-ranking">查看排名</navigator>
+        <view class="border title-bg">
+      <view class="left">
+        <image src="/images/activity/flower3.png" style="width: 25%;" mode="widthFix"></image>
+      </view>
+      <view class="right">
+        <image src="/images/activity/flower4.png" style="width: 25%;" mode="widthFix"></image>
+      </view>
+    </view>
+    </view>
+    
+  </view>
+  <view class="rule">
+
+    <view class="title rule-title"><image src="/images/activity/title.png" mode="widthFix"></image></view>
+    <view class="step">
+      <view class="item col3">
+        <image src="/images/activity/step0.png" mode="widthFix"></image>
+        <view class="fs-08">1.发现</view>
+      </view>
+      <view class="item col3">
+        <image src="/images/activity/step1.png" mode="widthFix"></image>
+        <view class="fs-08">2.小程序</view>
+      </view>
+      <view class="item col3">
+        <image src="/images/activity/step-2.png" mode="widthFix"></image>
+        <view class="fs-08">3.天天卡券</view>
+      </view>     
+    </view>
+        <view class="step">
+      <view class="item col3">
+        <image src="/images/activity/step3.png" mode="widthFix"></image>
+        <view class="fs-08">4.卡券夹</view>
+      </view>
+      <view class="item col3">
+        <image src="/images/activity/step5.png" mode="widthFix"></image>
+        <view class="fs-08">5.爆款活动</view>
+      </view>
+      <view class="item col3">
+        <image src="/images/activity/step4.png" mode="widthFix"></image>
+        <view class="fs-08">6.分享爆款</view>
+      </view>     
+    </view>
+<!--
+    <view class="step" style="width:66.67%;margin:0 auto">
+      <view class="item col2">
+        <image src="/images/activity/step3.png" mode="widthFix"></image>
+        <view class="fs-08">卡券夹上方爆款</view>
+      </view>
+      <view class="item col2">
+        <image src="/images/activity/step4.png" mode="widthFix"></image>
+        <view class="fs-08">分享爆款详情</view>
+      </view>     
+    </view>-->
+    <!--<view class="title">活动时间</view>
+    <view class="time fs-08">2017年6月30日--2017年7月31日</view>-->
+    
+
+</view>

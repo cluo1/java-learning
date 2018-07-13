@@ -1,0 +1,13 @@
+.activity{
+  width: 90%;
+  margin: 0 auto;
+}
+.activity .item{
+  margin-top: 10px;
+}
+.activity .title{
+  background: #fff;
+  line-height: 3em;
+  padding:  0 1em;
+  border: 1px solid #eee;
+}
