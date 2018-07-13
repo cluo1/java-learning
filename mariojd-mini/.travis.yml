@@ -1,0 +1,27 @@
+language: java
+
+jdk:
+  - oraclejdk8
+
+notifications:
+  email:
+    recipients: dong1013@foxmail.com
+    on_success: always
+    on_failure: always
+
+#install:
+  # - cd mini-program && mvn clean package -Dmaven.test.skip=true -Dmaven.javadoc.skip=true
+  # - cd guns-parent && mvn clean package -Dmaven.test.skip=true -Dmaven.javadoc.skip=true
+
+script:
+  - cd mini-program && mvn clean package -Dmaven.test.skip=true -Dmaven.javadoc.skip=true
+  - scp -i ../id_rsa target/mini-program-0.0.1-SNAPSHOT.jar root@120.77.250.15:/root/mycollege/
+  - cd ../guns-parent && mvn clean package -Dmaven.test.skip=true -Dmaven.javadoc.skip=true
+  - scp -i ../id_rsa target/guns-admin-1.0.0-SNAPSHOT.jar root@120.77.250.15:/root/mycollege/
+
+#deploy:
+#  provider: script
+#  skip_cleanup: true
+#  script: scp -i id_rsa $TRAVIS_BUILD_DIR/mini-program-0.0.1-SNAPSHOT.jar root@120.77.250.15:/root/mycollege/
+#  on:
+#    branch: master

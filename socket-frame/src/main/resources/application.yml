@@ -1,0 +1,8 @@
+# Netty配置
+netty:
+  port: 10000
+  idle-time: 100
+
+# Tomcat配置
+server:
+  port: 9999

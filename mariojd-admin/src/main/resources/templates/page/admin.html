@@ -1,0 +1,110 @@
+<h3 class="page-header">个人资料</h3>
+<div class="col-xs-12 col-sm-10 col-md-8 col-lg-6">
+    <form class="form-horizontal" id="dataForm">
+        <div class="form-group">
+            <label class="col-sm-3 control-label textLeft">账户/角色</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" th:value="${session.admin.account+'/'+session.admin.role}"
+                       disabled>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label textLeft">个性昵称</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="nickname" name="nickname"
+                       placeholder="nickname" th:value="${session.admin.nickname}">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-3 control-label textLeft">修改密码</label>
+            <div class="col-sm-9">
+                <input type="password" class="form-control" id="password" name="password"
+                       placeholder="password">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="confimPassword" class="col-sm-3 control-label textLeft">确认密码</label>
+            <div class="col-sm-9">
+                <input type="password" class="form-control" id="confimPassword" name="confimPassword"
+                       placeholder="confirm password">
+            </div>
+        </div>
+        <div class="form-group tip-form-group">
+            <label class="text-danger col-sm-offset-3 col-sm-9"></label>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-9">
+                <button type="submit" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script th:inline="javascript">
+    $('#dataForm').validate({
+        rules: {
+            nickname: {
+                required: true,
+                rangelength: [1, 15]
+            },
+            password: {
+                rangelength: [8, 16]
+            },
+            confimPassword: {
+                equalTo: "#password"
+            }
+        },
+        messages: {
+            nickname: {
+                required: '昵称不能为空',
+                rangelength: '昵称长度为 1-15 位',
+            },
+            password: {
+                rangelength: '密码长度为 8-16 位'
+            },
+            confimPassword: {
+                equalTo: "对不起，两次输入的密码不一致"
+            }
+        },
+        errorPlacement: function (error) {
+            $('.text-danger').html(error);
+        },
+        submitHandler: function () {
+            var index = layer.load(1, {time: 5 * 1000});
+            var aidVal = [[${session.admin.aid}]];
+            var nickname = $('#nickname');
+            var password = $('#password');
+            $.ajax({
+                method: "PUT",
+                url: '/admin/' + aidVal,
+                data: {
+                    'nickname': nickname.val(),
+                    'password': password.val()
+                },
+                success: function (res) {
+                    if (res.success) {
+                        layer.close(index);
+                        layer.msg(res.message);
+                        $('#confimPassword').val('');
+                        password.val('');
+                        password.focus();
+                        var role = [[${session.admin.role}]];
+                        $('#myInfo').html('您好，' + nickname.val() + ' / ' + role + ' <span class="caret"></span>');
+                        if ($(window).width() >= 768) {
+                            var width = $('li.dropdown').width();
+                            width > 90 ? width : 90 + 'px';
+                            $('.dropdown-menu').css('width', width);
+                            $('.dropdown-menu').css('min-width', width);
+                        }
+                    } else {
+                        layer.close(index);
+                        $('.text-danger').html(res.message);
+                    }
+                },
+                error: function () {
+                    layer.close(index);
+                    layer.msg('出错了');
+                }
+            });
+        }
+    });
+</script>

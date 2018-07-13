@@ -1,2 +1,1 @@
-# RestTemplate_demo
-Spring RestTemplate demo 
+#### Spring RestTemplate示例源代码仓库

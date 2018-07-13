@@ -1,0 +1,132 @@
+<ol class="breadcrumb">
+    <span class="text-muted">当前位置：</span>
+    <li><a onclick="list();"> 每日简评</a></li>
+    <li class="active" th:text="*{read}?'编辑':'添加'"></li>
+</ol>
+<form class="col-xs-12 col-sm-10 col-lg-7 form-horizontal" id="editForm">
+    <input type="hidden" name="admin.aid" id="admin.aid" th:value="${session.admin.aid}">
+    <input type="hidden" name="rid" id="rid" th:value="*{read}?*{read.rid}:''">
+    <div class="form-group">
+        <label for="title" class="col-sm-3 col-lg-2 control-label">名称</label>
+        <div class="col-sm-9 col-lg-10">
+            <input type="text" class="form-control" id="title" name="title" th:value="*{read}?*{read.title}:''"
+                   placeholder="book name、music name、film name and so on...">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="secondTitle" class="col-sm-3 col-lg-2 control-label">系列</label>
+        <div class="col-sm-9 col-lg-10">
+            <input class="form-control" id="secondTitle" name="secondTitle" th:value="*{read}?*{read.secondTitle}:''"
+                   placeholder="series...">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="secondTitle" class="col-sm-3 col-lg-2 control-label">作者</label>
+        <div class="col-sm-9 col-lg-10">
+            <input class="form-control" id="author" name="author" th:value="*{read}?*{read.author}:''"
+                   placeholder="author，separated by spaces...">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="secondTitle" class="col-sm-3 col-lg-2 control-label">图片</label>
+        <div class="col-sm-9 col-lg-10">
+            <input class="form-control" id="url" name="url" th:value="*{read}?*{read.url}:''"
+                   placeholder="picture...">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="review" class="col-sm-3 col-lg-2 control-label">评语</label>
+        <div class="col-sm-9 col-lg-10">
+            <textarea class="form-control" id="review" name="review" th:text="*{read}?*{read.review}:''"
+                      rows="8" placeholder="your comments..."></textarea>
+        </div>
+    </div>
+    <div class="form-group tip-form-group">
+        <label class="text-danger col-sm-offset-3 col-sm-9 col-lg-offset-2 col-lg-10"></label>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-9 col-lg-offset-2 col-lg-10">
+            <button type="submit" class="btn btn-primary">保存</button>
+        </div>
+    </div>
+</form>
+<script>
+    function list() {
+        $('#main').load('/read/list');
+    }
+    $('#editForm').validate({
+        rules: {
+            title: {
+                required: true,
+                maxlength: 15
+            },
+            secondTitle: {
+                maxlength: 10
+            },
+            author: {
+                required: true,
+                maxlength: 30
+            },
+            review: {
+                required: true,
+                maxlength: 1500
+            }
+        },
+        messages: {
+            title: {
+                required: '简评对象不能为空',
+                maxlength: '最大长度为15个字符'
+            },
+            secondTitle: {
+                maxlength: '最大长度为10个字符'
+            },
+            author: {
+                required: '原创作者不能为空',
+                maxlength: '最大长度为30个字符'
+            },
+            review: {
+                required: '简评内容不能为空',
+                maxlength: '最大长度为1500个字符'
+            }
+        },
+        errorPlacement: function (error) {
+            $('.text-danger').html(error);
+        },
+        submitHandler: function () {
+            var index = layer.load(1, {time: 5 * 1000});
+            var rid = $('#rid').val();
+            var dt = $('#editForm').serialize();
+            if (rid == null || rid == '') {
+                $.ajax({
+                    method: 'POST',
+                    url: '/read',
+                    data: dt,
+                    success: function () {
+                        layer.close(index);
+                        layer.msg('添加成功');
+                        $('#main').load('/read/list');
+                    },
+                    error: function () {
+                        layer.close(index);
+                        layer.msg('添加失败');
+                    }
+                });
+            } else {
+                $.ajax({
+                    method: 'PUT',
+                    url: '/read/' + rid,
+                    data: dt,
+                    success: function (res) {
+                        layer.close(index);
+                        layer.msg(res.message);
+                        $('#main').load('/read/list');
+                    },
+                    error: function () {
+                        layer.close(index);
+                        layer.msg(res.message);
+                    }
+                });
+            }
+        }
+    });
+</script>

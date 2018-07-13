@@ -1,0 +1,54 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal" id="courseInfoForm">
+
+            <input type="hidden" id="id" value="">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                    <#select id="cid" name="班级" underline="true">
+                        @for(c in classes){
+                        <option value="${c.id}">${c.fullName}</option>
+                        @}
+                    </#select>
+                    <#select id="tid" name="老师" underline="true">
+                        @for(t in teachers){
+                        <option value="${t.id}">${t.name}</option>
+                        @}
+                    </#select>
+                    <#input id="name" name="课程名" underline="true"/>
+                    <#input id="startDate" name="开课日期" underline="true" type="date"
+                            clickFun="laydate({istime: false, format: 'YYYY-MM-DD'})"/>
+                    <#input id="endDate" name="结课日期" type="date"
+                            clickFun="laydate({istime: false, format: 'YYYY-MM-DD'})"/>
+                </div>
+
+                <div class="col-sm-6">
+                    <#select id="weekDay" name="上课日" underline="true">
+                        @for(d in dictList){
+                        <option value="${d.num}">${d.name}</option>
+                        @}
+                    </#select>
+                    <#input id="startTime" name="上课时间" underline="true" type="time"/>
+                    <#input id="endTime" name="下课时间" underline="true" type="time"/>
+                    <#input id="num" name="排序" underline="true"/>
+                    <#select id="status" name="状态">
+                        <option value="1" selected>启用</option>
+                        <option value="2">冻结</option>
+                    </#select>
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="CourseInfoDlg.addSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="CourseInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/course/course_info.js"></script>
+@}

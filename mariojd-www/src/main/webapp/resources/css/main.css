@@ -1,0 +1,261 @@
+body {
+    padding-top: 70px;
+}
+
+@media ( min-width: 768px) {
+    body {
+        background-color: #F3F5F7;
+    }
+
+    #seckill-detail {
+        padding-top: 30px;
+    }
+}
+
+@media ( max-width: 768px) {
+    #seckill:hover {
+        box-shadow: 0 0 15px #adaeaf;
+    }
+}
+
+.container a {
+    text-decoration: none;
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+/******************index********************/
+#index .panel {
+    box-shadow: 0 0 15px #cdcecf;
+}
+
+#index .panel:hover {
+    box-shadow: 0 0 20px #b8b9ba;
+}
+
+#index .media .left {
+    float: left;
+    margin: 0px 7px 0px 0;
+}
+
+#index .media .left img {
+    padding-bottom: 10px;
+    width: 119px;
+}
+
+#index .media span {
+    color: #999;
+    margin-left: 10px;
+}
+
+#index .media h5 {
+    color: #999;
+    text-indent: -6px;
+}
+
+#index .media p {
+    color: #666;
+}
+
+#index .media #small {
+    color: #999;
+}
+
+#index .media p:last-child {
+    line-height: 20px;
+    margin: -5px 0;
+    color: #a1a1a1;
+}
+
+@media (max-width: 768px) {
+    #index .media p:last-child {
+        margin-right: 4px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    #index .media p:last-child {
+        margin-right: 9px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #index .media p:last-child {
+        margin-right: 3px;
+    }
+}
+
+/*#index nav {*/
+/*padding: 0 10px;*/
+/*}*/
+
+#index nav span {
+    color: #999;
+    line-height: 36px;
+}
+
+/*#author #panel-body {*/
+/*background-color: #fcfcfc;*/
+/*}*/
+
+#author img:first-child {
+    border: 5px solid #eee;
+}
+
+#author img:first-child:hover {
+    box-shadow: 0 0 20px #c7c8c9;
+    transform: rotate(360deg);
+    -ms-transform: rotate(360deg); /* IE 9 */
+    -moz-transform: rotate(360deg); /* Firefox */
+    -webkit-transform: rotate(360deg); /* Safari 和 Chrome */
+    -o-transform: rotate(360deg); /* Opera */
+    transition: transform 5s linear 0s;
+}
+
+#author a {
+    margin-left: 3px;
+    color: #777;
+}
+
+#notice {
+    margin: 10px 11px -5px 0;
+}
+
+/******************footer********************/
+#footer {
+    background-color: #fff;
+    box-shadow: 0 -2px 4px #d6d6d6;
+}
+
+#footer .row {
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.footer .row {
+    padding-bottom: 5px;
+}
+
+.footer a:hover {
+    color: #777777;
+}
+
+.footer a:focus {
+    color: #777777;
+}
+
+/******************navbar********************/
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 1px 4px #d6d6d6;
+}
+
+.navbar-brand {
+    text-shadow: 4px 3px 2px #e0e1e2;
+}
+
+@media (min-width: 1200px) {
+    .navbar-header .navbar-brand {
+        margin-right: 47px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .navbar-header .navbar-brand {
+        margin-right: 30px;
+    }
+}
+
+.dropdown-menu {
+    padding: 0;
+}
+
+.dropdown-menu .divider {
+    margin: 0;
+}
+
+.dropdown-menu > li > a {
+    padding: 3px 0;
+    line-height: 36px;
+    height: 42px;
+}
+
+/*****************setting*********************/
+@media (min-width: 768px) {
+    #setting {
+        margin-top: 40px;
+    }
+
+    #line {
+        border: solid 1px #d6d6d6;
+        border-bottom: 0;
+    }
+}
+
+#setting #head {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#setting .nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+    background-color: #bebebe;
+}
+
+/****************forgot&detail**********************/
+#fd {
+    margin: 0;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.breadcrumb {
+    padding-left: 0px;
+}
+
+/****************icon**********************/
+.icon {
+    width: 1em;
+    height: 1em;
+    font-size: 18px;
+    vertical-align: -0.15em;
+    fill: currentColor;
+}
+
+.icon-login {
+    font-size: 20px;
+}
+
+.icon-qq:hover {
+    color: #12b8f6;
+}
+
+.icon-weixin:hover {
+    color: #2dcd23;
+}
+
+.icon-taobao:hover {
+    color: #ff6302;
+}
+
+.icon-setting {
+    font-size: 40px;
+
+}
+
+.icon-setting:hover {
+    /*animation-duration: 5s; !*设置动画在多少秒内完成*!*/
+    transform: rotateY(360deg); /*旋转元素*/
+    -ms-transform: rotateY(360deg); /* IE 9 */
+    -moz-transform: rotateY(360deg); /* Firefox */
+    -webkit-transform: rotateY(360deg); /* Safari 和 Chrome */
+    -o-transform: rotateY(360deg); /* Opera */
+    /*鼠标悬停改变元素状态，分别为CSS属性的name，transition效果完成时间，转速曲线，指定何时开始切换效果*/
+    transition: transform 2s linear 0s;
+}
+
+.icon-index {
+    font-size: 14px;
+}
+

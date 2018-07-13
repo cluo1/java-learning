@@ -1,0 +1,152 @@
+<h3 class="page-header">用户列表</h3>
+<a class="btn btn-primary" onclick="add();">添加</a>
+<a class="btn btn-danger">删除</a>
+<div id="user">
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered">
+            <thead>
+            <tr>
+                <th style="width: 3%">
+                    <input type="checkbox" id="selectAll"
+                           onclick="$('input[type=checkbox]').attr('checked',this.checked)">
+                </th>
+                <th style="width: 20%">昵称</th>
+                <th style="width: 13%">手机</th>
+                <th class="hidden-sm" style="width: 21%">邮箱</th>
+                <th style="width: 7%">博文</th>
+                <th style="width: 10%">状态</th>
+                <th class="hidden-sm" style="width: 7%">微信</th>
+                <th style="width: 19%">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="(user,index) in userPages.content">
+                <td>
+                    <input type="checkbox" v-bind:value="user.uid">
+                </td>
+                <td class="control-length" v-bind:title="user.nickname">{{user.nickname}}</td>
+                <td>{{user.telephone==null||user.telephone==''?'未绑定':user.telephone}}</td>
+                <td class="hidden-sm control-length" v-bind:title="user.email">{{user.email==null||user.email==''?'未绑定':user.email}}</td>
+                <td>{{user.count}}</td>
+                <td>
+                <span v-bind:class="{'label label-warning': user.state=='0','label label-success': user.state=='1'
+                        ,'label label-danger': user.state=='2'}">
+                    {{user.state==0?'待激活':user.state==1?'使用中':'已禁用'}}
+                </span>
+                </td>
+                <td class="hidden-sm"><span class="badge">{{user.openid==null||user.openid==''?'否':'是'}}</span>
+                </td>
+                <td>
+                    <a v-on:click="edit(user.uid)" class="text-success"> 编辑 </a>|
+                    <a v-on:click="operation(index,user.uid,user.state,user.telephone==null||user.telephone==''?user.email:user.telephone,userPages.number+1)"
+                       class="text-warning">
+                        {{user.state==0?'提醒':user.state==1?'禁用':'解除'}}
+                    </a>|
+                    <a v-on:click="_delete(user.uid,userPages.number+1,index)" class="text-danger"> 删除 </a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <span class="hidden-xs">共有 {{userPages.totalElements}} 条记录，当前为第 {{userPages.number+1}}/{{userPages.totalPages}} 页</span>
+    <span class="visible-xs">共{{userPages.totalElements}}条记录,当前为第{{userPages.number+1}}/{{userPages.totalPages}}页</span>
+    <nav aria-label="navigation" v-if="userPages.totalPages!=1">
+        <ul class="pager pull-right">
+            <li v-bind:class="{'disabled':userPages.first}"><a v-on:click="changePages(userPages.number)">
+                {{userPages.first==true?'首页':'上一页'}}
+            </a></li>
+            <li v-bind:class="{'disabled':userPages.last}"><a v-on:click="changePages(userPages.number+2)">
+                {{userPages.last==true?'尾页':'下一页'}}
+            </a></li>
+        </ul>
+    </nav>
+    <hr>
+</div>
+
+<script type="text/javascript">
+    function add() {
+        $('#main').load('/user/edit');
+    }
+    var vm = new Vue({
+        el: '#user',
+        data: {
+            userPages: '',
+            url: {
+                list: '/user/list/',
+                user: '/user/'
+            }
+        },
+        created: function () {
+            this.$http.get(this.url.list + 1).then(function (res) {
+                this.userPages = res.body;
+            });
+        },
+        methods: {
+            changePages: function (pageNumber) {
+                this.$http.get(this.url.list + pageNumber).then(function (res) {
+                    this.userPages = res.body;
+                });
+            },
+            edit: function (uid) {
+                $('#main').load('/user/' + uid);
+            },
+            _delete: function (uid, pageNumber, i) {
+                var _this = this;
+                layer.confirm('你确定要删除该用户吗？', {
+                    title: '系统警告',
+                    skin: 'layui-layer-molv',//layui-layer-molv
+                    anim: 6, //动画类型0-7
+                    icon: 2,//图标-1~7
+                    btn: ['确认', '取消'] //按钮
+                }, function () {
+                    var index = layer.load(1, {time: 5 * 1000});
+                    $.ajax({
+                        type: 'DELETE',
+                        url: _this.url.user + uid + '?index=' + i + '&pageNumber=' + pageNumber,
+                        success: function (res) {
+                            layer.close(index);
+                            layer.msg('删除成功');
+                            _this.userPages = res;
+                        },
+                        error: function () {
+                            layer.close(index);
+                            layer.msg('删除失败');
+                        }
+                    });
+                }, function () {
+                    layer.msg('取消删除');
+                });
+            },
+            operation: function (index, uid, state, account, pageNumber) {
+                var info = (state == 0 ? '提醒该用户激活吗？' : state == 1 ? '禁用该用户吗？' : '解除对此用户的禁用吗?');
+                var _this = this;
+                layer.confirm('你确定要' + info, {
+                    title: '系统提示',
+                    skin: 'layui-layer-lan',//layui-layer-molv
+                    anim: 3, //动画类型0-7
+                    icon: 3,//图标-1~7
+                    btn: ['确认', '取消'] //按钮
+                }, function () {
+                    $.post(_this.url.user + uid, {
+                        _method: 'PUT',
+                        'state': state,
+                        'account': account,
+                        'pageNumber': pageNumber
+                    }).then(function (res) {
+                        layer.msg(res.message);
+                        if (res.success && state != 0) {
+                            var changeState = state == 1 ? '2' : '1';
+                            _this.page.content[index].state = changeState;
+                        }
+                    }, function () {
+                        layer.msg('操作失败');
+                    });
+                }, function () {
+                    layer.msg('操作取消');
+                });
+            }
+        }
+    });
+</script>
+
+

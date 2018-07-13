@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1,user-scalable=no, maximum-scale=1, minimum-scale=1"/>
+    <meta name="Keywords" content="热爱、追求、坚持、努力，我就是我，是天空不一样的烟火 -- 马里奥(MARIO)"/>
+    <title>马里奥(MARIO) - 后台</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    <link th:href="@{/css/main.css}" rel="stylesheet"/>
+    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-validate/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.bootcss.com/layer/3.0.1/layer.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.2.6/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue-resource/1.3.1/vue-resource.min.js"></script>
+    <script src="https://cdn.bootcss.com/echarts/3.5.3/echarts.min.js"></script>
+    <script th:src="@{/scripts/main.js}"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-table/1.11.1/bootstrap-table.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-table/1.11.1/locale/bootstrap-table-zh-CN.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">马里奥后台管理系统</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav visible-xs">
+                <li><a class="report">网站统计</a></li>
+                <li><a class="user">用户列表</a></li>
+                <!--<li><a class="message">留言动态</a></li>-->
+                <li><a class="seckill">抢购管理</a></li>
+                <li><a class="order">订单信息</a></li>
+                <li><a class="read">每日简评</a></li>
+                <li><a class="notice">网站公告</a></li>
+            </ul>
+
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden-xs"><img th:src="@{/images/headicon.png}" width="35" class="img-responsive img-circle"
+                                           alt="管理员头像"></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false" id="myInfo"
+                       th:utext="${'您好，'+session.admin.nickname+' / '+session.admin.role+' <span class=caret></span>'}"></a>
+                    <ul class="dropdown-menu">
+                        <li class="text-center hidden-xs"><a class="admin">我的资料</a></li>
+                        <li role="separator" class="divider hidden-xs"></li>
+                        <li class="text-center hidden-xs"><a class="logout">退出登录</a></li>
+                        <li class="visible-xs"><a class="admin">我的资料</a></li>
+                        <li class="visible-xs"><a class="logout">退出登录</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="hidden-xs col-sm-2 sidebar">
+            <ul class="nav nav-pills nav-stacked" id="left">
+                <li class="active"><a class="report">网站统计<span class="sr-only">(current)</span><span
+                        class="glyphicon glyphicon-stats pull-right"></span></a></li>
+                <li><a class="user">用户列表<span class="glyphicon glyphicon-user pull-right"></span></a></li>
+                <!--<li><a class="message">留言动态<span class="glyphicon glyphicon-comment pull-right"></span></a></li>-->
+                <li><a class="seckill">抢购管理<span class="glyphicon glyphicon-bullhorn pull-right"></span></a></li>
+                <li><a class="order">订单信息<span class="glyphicon glyphicon-shopping-cart pull-right"></span></a></li>
+                <li><a class="read">每日简评<span class="glyphicon glyphicon-edit pull-right"></span></a></li>
+                <li><a class="notice">网站公告<span class="glyphicon glyphicon-list-alt pull-right"></span></a></li>
+                <li><a class="admin">我的资料<span class="glyphicon glyphicon-cog pull-right"></span></a></li>
+                <li><a class="logout">退出登陆<span class="glyphicon glyphicon-off pull-right"></span></a></li>
+            </ul>
+        </div>
+
+        <div class="col-xs-12 col-sm-offset-2 col-sm-10" id="main">
+            <!-- 内容显示区 -->
+        </div>
+    </div>
+</div>
+<script th:inline="javascript">
+    $(function () {
+        if ($(window).width() >= 768) {
+            var width = $('li.dropdown').width();
+            width > 90 ? width : 90 + 'px';
+            $('.dropdown-menu').css('width', width);
+            $('.dropdown-menu').css('min-width', width);
+        }
+        $('#main').load('/report');
+    });
+    $('.report').click(function () {
+        $('#main').load('/report');
+    });
+    $('.report,.user,.message,.seckill,.order,.read,.notice,.admin').click(function () {
+        var _this = $(this);
+        var cls = _this.attr('class');
+        if (!$('#left .' + cls).parent().hasClass('active')) {
+            if ($(window).width() >= 768) {
+                $('#left').find('li').removeClass('active');
+                $('#left .' + cls).parent().addClass('active')
+            }
+            if (cls == 'admin') {
+                var aid = [[${session.admin.aid}]];
+                $('#main').load('/' + cls + '/' + aid);
+            } else {
+                $('#main').load('/' + cls + '/list');
+            }
+        }
+    });
+    $(".logout").click(function () {
+        layer.confirm('你确定要退出当前系统吗？', {
+            title: '温馨提示',
+            skin: 'layui-layer-lan',
+            anim: 0, //动画类型
+            icon: 4,//图标-1~7
+            btn: ['确定', '取消'] //按钮
+        }, function () {
+            window.location.href = '/logout';
+        }, function () {
+            layer.msg('取消操作', {
+                time: 2000, //2s后自动关闭
+            });
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<%include("../public/header.html"){}%>
+<link href="https://cdn.bootcss.com/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.min.css"
+      rel="stylesheet">
+<body>
+<%include("../public/nav.btl"){}%>
+<div class="container">
+    <div class="row" id="fd">
+        <ul class="nav nav-pills nav-justified h4 hidden-xs">
+            <li role="presentation" class="active disabled"><a><span
+                    class="badge"><b class="h4"> 1. 验证账号 </b></span></a></li>
+            <li role="presentation" id="in-step2" class="disabled"><a><span
+                    class="badge"><b class="h4"> 2. 设置密码 </b></span></a></li>
+            <li role="presentation" id="in-step3" class="disabled"><a><span
+                    class="badge"><b class="h4"> 3. 完成修改 </b></span></a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div role="tabpanel" id="step1" class="tab-pane fade in active">
+                <br> <span class="hidden-xs"><br> <br></span>
+                <h4 class="visible-xs text-muted">
+                    <b>1. 验证账号</b>
+                </h4>
+                <form class="form-horizontal" id="step1Form">
+                    <div class="form-group form-group-lg">
+                        <label for="step1Username"
+                               class="hidden-xs col-sm-3 col-md-offset-2 col-md-2 control-label">用户名：</label>
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                            <input type="text" class="form-control" id="step1Username" name="step1Username"
+                                   placeholder="手机或邮箱">
+                        </div>
+                        <div class="hidden-xs col-sm-3 col-md-4">
+                            <label class="step1Error control-label"></label>
+                        </div>
+                    </div>
+                    <div class="form-group form-group-lg">
+                        <label for="step1Code"
+                               class="hidden-xs col-sm-3 col-md-offset-2 col-md-2 control-label">验证码：</label>
+                        <div class="col-xs-6 col-sm-3 col-md-2">
+                            <input type="text" class="form-control" id="step1Code" name="step1Code"
+                                   placeholder="验证码">
+                        </div>
+                        <div class="col-xs-6 col-sm-3 col-md-2">
+                            <button type="button" id="step1CodeBtn"
+                                    class="btn btn-primary btn-block btn-lg">获取验证码
+                            </button>
+                        </div>
+                    </div>
+                    <h5 class="visible-xs step1Error text-danger"></h5>
+                    <div class="form-group">
+                        <div
+                                class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
+                            <button type="submit" id="step1Next"
+                                    class="btn btn-primary btn-block btn-lg">下 一 步
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div role="tabpanel" id="step2"
+                 class="tab-pane fade in active sr-only">
+                <br> <span class="hidden-xs"><br> <br></span>
+                <h4 class="visible-xs text-muted">
+                    <b>2. 设置密码 </b>
+                </h4>
+                <form class="form-horizontal" id="step2Form">
+                    <div class="form-group form-group-lg">
+                        <label
+                                class="hidden-xs col-sm-3 col-md-offset-2 col-md-2 control-label">用户名：</label>
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                            <input type="text" class="form-control" id="step2Username" name="step2Username"
+                                   value="" disabled="disabled">
+                        </div>
+                    </div>
+                    <div class="form-group form-group-lg">
+                        <label for="step2Psw"
+                               class="hidden-xs col-sm-3 col-md-offset-2 col-md-2 control-label">新密码：</label>
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                            <input type="password" class="form-control" id="step2Psw" name="step2Psw"
+                                   placeholder="6-16位长度">
+                        </div>
+                    </div>
+                    <div class="form-group form-group-lg">
+                        <label for="step2ConfPsw"
+                               class="hidden-xs col-sm-3 col-md-offset-2 col-md-2 control-label">请确认：</label>
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                            <input type="password" class="form-control" id="step2ConfPsw" name="step2ConfPsw"
+                                   placeholder="确认新密码">
+                        </div>
+                        <div class="col-xs-12 col-sm-3 col-md-4">
+                            <label class="control-label" id="step2Error"></label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
+                            <button type="submit" id="step2Next"
+                                    class="btn btn-primary btn-block btn-lg">下 一 步
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div role="tabpanel" id="step3"
+                 class="tab-pane fade in active sr-only">
+                <br> <span class="hidden-xs"><br> <br></span>
+                <h4 class="visible-xs text-muted">
+                    <b>3. 完成修改 </b>
+                </h4>
+                <div class="row">
+                    <div
+                            class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4 text-default">
+                        <h5 class="text-center">
+                            <span id="msg">8</span> 秒后将自动跳转
+                        </h5>
+                        <h3 class="text-center">您的密码已修改成功</h3>
+                        <p></p>
+                        <a href="/" class="btn btn-primary btn-block btn-lg">立即登录</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script
+        src="https://cdn.bootcss.com/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"></script>
+<script
+        src="/resources/scripts/main.js"></script>
+</body>
+</html>
