@@ -1,5 +1,0 @@
-<view class="container">
- 
-        <image src="{{item}}" style="width: 100%;display:block" mode="widthFix" wx:for="{{images}}"></image>
-
-</view>

@@ -1,6 +1,0 @@
-.location image {
-  width: 20px;
-  height: 20px;
-  line-height: 30px;
-  vertical-align: middle;
-}
