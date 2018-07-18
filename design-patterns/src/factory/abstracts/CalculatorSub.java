@@ -1,4 +1,4 @@
-package factory.simple;
+package factory.abstracts;
 
 /**
  * Created by Jared on 2018/7/18 13:24.

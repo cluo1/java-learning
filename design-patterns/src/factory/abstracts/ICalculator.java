@@ -1,10 +1,10 @@
-package factory.simple;
+package factory.abstracts;
 
 /**
  * Created by Jared on 2018/7/18 13:22.
  * 计算器
  */
-public interface Calculator {
+public interface ICalculator {
 
     /**
      * 计算numberA和numberB并返回操作结果
