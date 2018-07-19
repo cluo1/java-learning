@@ -1,7 +1,5 @@
 package cn.mariojd.mini.program.exception;
 
-import org.apache.shiro.authc.AuthenticationException;
-import org.apache.shiro.authz.AuthorizationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
@@ -26,23 +24,23 @@ public class GlobalExceptionHandler {
     @Resource
     private ApplicationContext applicationContext;
 
-    @ResponseStatus(HttpStatus.FORBIDDEN)
-    @ExceptionHandler(AuthorizationException.class)
-    public Result handleAuthorizationException(Throwable e) {
-        logger.error("", e);
-        String code = MessageCodes.AUTH_PERMISSION;
-        String message = applicationContext.getMessage(code, null, Locale.getDefault());
-        return new Result(code, message);
-    }
-
-    @ResponseStatus(HttpStatus.UNAUTHORIZED)
-    @ExceptionHandler(AuthenticationException.class)
-    public Result handleAuthenticationException(Throwable e) {
-        logger.error("", e);
-        String code = MessageCodes.AUTH_TOKEN;
-        String message = applicationContext.getMessage(code, null, Locale.getDefault());
-        return new Result(code, message);
-    }
+//    @ResponseStatus(HttpStatus.FORBIDDEN)
+//    @ExceptionHandler(AuthorizationException.class)
+//    public Result handleAuthorizationException(Throwable e) {
+//        logger.error("", e);
+//        String code = MessageCodes.AUTH_PERMISSION;
+//        String message = applicationContext.getMessage(code, null, Locale.getDefault());
+//        return new Result(code, message);
+//    }
+//
+//    @ResponseStatus(HttpStatus.UNAUTHORIZED)
+//    @ExceptionHandler(AuthenticationException.class)
+//    public Result handleAuthenticationException(Throwable e) {
+//        logger.error("", e);
+//        String code = MessageCodes.AUTH_TOKEN;
+//        String message = applicationContext.getMessage(code, null, Locale.getDefault());
+//        return new Result(code, message);
+//    }
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(FailedLoginException.class)

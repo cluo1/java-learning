@@ -1,10 +1,12 @@
 package cn.mariojd.mini.program.controller;
 
-import cn.mariojd.mini.program.entity.*;
+import cn.mariojd.mini.program.entity.Announcement;
+import cn.mariojd.mini.program.entity.Classes;
+import cn.mariojd.mini.program.entity.Province;
+import cn.mariojd.mini.program.entity.School;
 import cn.mariojd.mini.program.service.MiniService;
 import cn.mariojd.mini.program.vo.req.*;
 import cn.mariojd.mini.program.vo.resp.AuthorizeResultVO;
-import com.luwei.module.shiro.service.IdHelper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
@@ -46,7 +48,7 @@ public class MiniController {
      */
     @PutMapping("phone")
     public void bindPhone(@RequestBody @Valid BindPhoneVO phoneVO) {
-        miniService.bindPhone(phoneVO, IdHelper.getId());
+        // miniService.bindPhone(phoneVO, IdHelper.getId());
     }
 
     /**
@@ -70,7 +72,7 @@ public class MiniController {
      */
     @PutMapping("province/school")
     public void submitConfirmInfo(@RequestBody @Valid ProvAndSchoolAndRoleVO vo) {
-        miniService.submitConfirmInfo(vo, IdHelper.getId());
+        //miniService.submitConfirmInfo(vo, IdHelper.getId());
     }
 
     /**
@@ -86,7 +88,7 @@ public class MiniController {
      */
     @PutMapping("teacher/classes")
     public void teacherSubmitClassesInfo(@RequestBody @Valid TeacherClassesVO classesVO) {
-        miniService.teacherSubmitClassesInfo(classesVO, IdHelper.getId());
+        //miniService.teacherSubmitClassesInfo(classesVO, IdHelper.getId());
     }
 
     /**
@@ -94,16 +96,16 @@ public class MiniController {
      */
     @PutMapping("student/classes")
     public void studentSubmitClassesInfo(@RequestBody @Valid StudentClassesVO classesVO) {
-        miniService.studentSubmitClassesInfo(classesVO, IdHelper.getId());
+        //miniService.studentSubmitClassesInfo(classesVO, IdHelper.getId());
     }
 
     /**
      * 获得个人信息
      */
-    @GetMapping("info")
-    public MiniUser getInfo() {
-        return miniService.getInfo(IdHelper.getId());
-    }
+//    @GetMapping("info")
+//    public MiniUser getInfo() {
+//        return miniService.getInfo(IdHelper.getId());
+//    }
 
     /**
      * 获得班级的公告信息
@@ -116,9 +118,9 @@ public class MiniController {
     /**
      * 老师获得所有的班级信息
      */
-    @GetMapping("teacher/classes")
-    public List<Classes> getClassesByUid() {
-        return miniService.getClassesByUid(IdHelper.getId());
-    }
+//    @GetMapping("teacher/classes")
+//    public List<Classes> getClassesByUid() {
+//        return miniService.getClassesByUid(IdHelper.getId());
+//    }
 
 }

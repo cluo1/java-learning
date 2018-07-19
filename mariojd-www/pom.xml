@@ -158,10 +158,11 @@
             <artifactId>commons-fileupload</artifactId>
             <version>${commons.fileupload}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/cn.meddb/ueditor -->
         <dependency>
-            <groupId>com.baidu</groupId>
+            <groupId>cn.meddb</groupId>
             <artifactId>ueditor</artifactId>
-            <version>${ueditor.version}</version>
+            <version>20180110</version>
         </dependency>
         <dependency>
             <groupId>org.json</groupId>
@@ -319,9 +320,9 @@
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>9.2.10.v20150310</version>
-                <configuration>
-                    <scanIntervalSeconds>5</scanIntervalSeconds>
-                </configuration>
+                <!--<configuration>-->
+                    <!--<scanIntervalSeconds>5</scanIntervalSeconds>-->
+                <!--</configuration>-->
             </plugin>
         </plugins>
     </build>

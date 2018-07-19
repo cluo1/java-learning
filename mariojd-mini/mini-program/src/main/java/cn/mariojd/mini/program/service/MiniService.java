@@ -2,12 +2,9 @@ package cn.mariojd.mini.program.service;
 
 import cn.mariojd.mini.program.dto.WeChatUser;
 import cn.mariojd.mini.program.entity.*;
-import cn.mariojd.mini.program.exception.MessageCodes;
-import cn.mariojd.mini.program.exception.ValidationException;
 import cn.mariojd.mini.program.util.WeChatUtil;
 import cn.mariojd.mini.program.vo.req.*;
 import cn.mariojd.mini.program.vo.resp.AuthorizeResultVO;
-import com.luwei.module.shiro.service.ShiroTokenService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
@@ -34,8 +31,8 @@ public class MiniService {
     @Resource
     private AliSMSWebService aliSMSWebService;
 
-    @Resource
-    private ShiroTokenService shiroTokenService;
+//    @Resource
+//    private ShiroTokenService shiroTokenService;
 
     @Resource
     private RestTemplate restTemplate;
@@ -65,9 +62,9 @@ public class MiniService {
         }
 
         int userId = miniUser.getId();
-        shiroTokenService.afterLogout(userId);
+        //shiroTokenService.afterLogout(userId);
         String token = StringUtils.deleteAny(UUID.randomUUID().toString(), "-");
-        shiroTokenService.afterLogin(userId, token);
+        //shiroTokenService.afterLogin(userId, token);
         return new AuthorizeResultVO(token);
     }
 
@@ -82,7 +79,7 @@ public class MiniService {
         MiniUser miniUser = restTemplate.getForObject(url, MiniUser.class, phone);
         if (Objects.isNull(miniUser)) {
             //手机号可以注册
-            aliSMSWebService.getVerCode(phone);
+            //aliSMSWebService.getVerCode(phone);
             logger.info("-------------------------验证码发送成功-------------------------------");
         }
     }
@@ -95,14 +92,14 @@ public class MiniService {
      */
     public void bindPhone(BindPhoneVO phoneVO, int userId) {
         String phone = phoneVO.getPhone();
-        if (aliSMSWebService.checkVerCode(phone, phoneVO.getCode())) {
-            logger.info("-------------------------通过验证码验证--------------------");
-            String url = "http://127.0.0.1:" + port + "/mini/user/{uid}/phone/{phone}";
-            restTemplate.put(url, null, userId, phone);
-        } else {
-            logger.info("-------------------------通过验证码验证错误--------------------");
-            throw new ValidationException(MessageCodes.AUTH_PICCAPTCHA_WRONG);
-        }
+//        if (aliSMSWebService.checkVerCode(phone, phoneVO.getCode())) {
+//            logger.info("-------------------------通过验证码验证--------------------");
+//            String url = "http://127.0.0.1:" + port + "/mini/user/{uid}/phone/{phone}";
+//            restTemplate.put(url, null, userId, phone);
+//        } else {
+//            logger.info("-------------------------通过验证码验证错误--------------------");
+//            throw new ValidationException(MessageCodes.AUTH_PICCAPTCHA_WRONG);
+//        }
     }
 
     /**
