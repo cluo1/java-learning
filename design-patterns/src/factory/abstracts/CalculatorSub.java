@@ -2,7 +2,7 @@ package factory.abstracts;
 
 /**
  * Created by Jared on 2018/7/18 13:24.
- * 减法运算
+ * 具有减法运算功能的计算器
  */
 public class CalculatorSub implements ICalculator {
 

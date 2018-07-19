@@ -14,20 +14,6 @@ public enum TypeEnum {
     /**
      * 减
      */
-    SUB,
-
-    /**
-     * 乘
-     */
-    MUL,
-
-    /**
-     * 除
-     */
-    DIV;
-
-
-    TypeEnum() {
-    }
+    SUB,;
 
 }

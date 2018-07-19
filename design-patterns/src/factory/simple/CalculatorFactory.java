@@ -21,12 +21,6 @@ public class CalculatorFactory {
             case SUB:
                 calculator = new CalculatorSub();
                 break;
-            case MUL:
-                calculator = new CalculatorMul();
-                break;
-            case DIV:
-                calculator = new CalculatorDiv();
-                break;
             default:
                 break;
         }

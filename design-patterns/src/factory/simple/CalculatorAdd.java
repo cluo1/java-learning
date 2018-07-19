@@ -2,7 +2,7 @@ package factory.simple;
 
 /**
  * Created by Jared on 2018/7/18 13:24.
- * 加法运算
+ * 具有加法运算功能的计算器
  */
 public class CalculatorAdd implements ICalculator {
 

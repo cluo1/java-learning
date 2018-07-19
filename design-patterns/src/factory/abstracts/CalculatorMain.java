@@ -9,9 +9,9 @@ public class CalculatorMain {
         int numberA = 23;
         int numberB = 18;
 
-        // 从抽象工厂获取任意生产某一功能计算器的工厂
+        // 从抽象工厂获取生产某一功能计算器的工厂实例
         ICalculatorFactory calculatorFactory = new CalculatorSubFactory();
-        // 从当前工厂获取制造某一功能的计算器
+        // 从当前工厂获取制造某一功能的计算器实例
         ICalculator calculator = calculatorFactory.productCalculator();
         // 计算
         int result = calculator.compute(numberA, numberB);

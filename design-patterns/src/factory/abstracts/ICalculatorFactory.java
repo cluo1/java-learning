@@ -6,9 +6,9 @@ package factory.abstracts;
 public interface ICalculatorFactory {
 
     /**
-     * 生产某一功能的计算器
+     * 获取生产某一功能的计算器工厂实例
      *
-     * @return
+     * @return 返回生产某一功能计算器的工厂实例
      */
     ICalculator productCalculator();
 
