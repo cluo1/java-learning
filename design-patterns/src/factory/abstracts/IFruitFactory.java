@@ -2,7 +2,7 @@ package factory.abstracts;
 
 /**
  * Created by Jared on 2018/7/23 13:38.
- * 水果工厂类
+ * 水果工厂抽象类
  */
 public interface IFruitFactory {
 
