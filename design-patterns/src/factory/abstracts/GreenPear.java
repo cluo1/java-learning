@@ -7,8 +7,8 @@ package factory.abstracts;
 public class GreenPear implements IPear {
 
     @Override
-    public void buyPearForSave() {
-        System.out.println("buy green pear , and save");
+    public void describe() {
+        System.out.println("This is green pear");
     }
 
 }

@@ -6,17 +6,19 @@ package factory.abstracts;
 public class Main {
 
     public static void main(String[] args) {
-        IFruitFactory mysqlFactory = new MysqlFactory();
-        IApple apple = mysqlFactory.createApple();
-        apple.buyAppleForSave();
-        IPear pear = mysqlFactory.createPear();
-        pear.buyPearForSave();
+        IFruitFactory factoryA = new FactoryA();
+        IApple apple = factoryA.createApple();
+        apple.describe();
+        IPear pear = factoryA.createPear();
+        pear.describe();
 
-        IFruitFactory sqlServerFactory = new SqlServerFactory();
-        apple = sqlServerFactory.createApple();
-        apple.buyAppleForSave();
-        pear = sqlServerFactory.createPear();
-        pear.buyPearForSave();
+        System.out.println("-------------------");
+
+        IFruitFactory factoryB = new FactoryB();
+        apple = factoryB.createApple();
+        apple.describe();
+        pear = factoryB.createPear();
+        pear.describe();
     }
 
 }

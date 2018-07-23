@@ -2,9 +2,9 @@ package factory.abstracts;
 
 /**
  * Created by Jared on 2018/7/23 13:43.
- * 用Mysql存储绿色水果
+ * 工厂A负责生产青苹果和青梨
  */
-public class MysqlFactory implements IFruitFactory {
+public class FactoryA implements IFruitFactory {
 
     @Override
     public IApple createApple() {

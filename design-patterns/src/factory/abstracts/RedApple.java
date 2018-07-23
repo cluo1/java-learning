@@ -7,8 +7,8 @@ package factory.abstracts;
 public class RedApple implements IApple {
 
     @Override
-    public void buyAppleForSave() {
-        System.out.println("buy red apple , and save");
+    public void describe() {
+        System.out.println("This is red apple");
     }
 
 }

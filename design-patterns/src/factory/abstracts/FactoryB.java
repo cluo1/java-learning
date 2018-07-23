@@ -2,9 +2,9 @@ package factory.abstracts;
 
 /**
  * Created by Jared on 2018/7/23 13:51.
- * 除绿色水果外的其他水果保存在SqlServer
+ * 工厂B负责生产红苹果和黄梨
  */
-public class SqlServerFactory implements IFruitFactory {
+public class FactoryB implements IFruitFactory {
 
     @Override
     public IApple createApple() {

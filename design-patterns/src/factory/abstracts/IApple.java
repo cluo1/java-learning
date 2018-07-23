@@ -7,8 +7,8 @@ package factory.abstracts;
 public interface IApple {
 
     /**
-     * 购买苹果并保存
+     * 具体描述
      */
-    void buyAppleForSave();
+    void describe();
 
 }

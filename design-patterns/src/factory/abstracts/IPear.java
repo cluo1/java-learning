@@ -7,8 +7,8 @@ package factory.abstracts;
 public interface IPear {
 
     /**
-     * 购买梨子并保存
+     * 具体描述
      */
-    void buyPearForSave();
+    void describe();
 
 }
