@@ -6,6 +6,8 @@ package singleton.safe;
  * <p>
  * a.线程安全
  * b.非延迟加载
+ * c.代码更简洁，支持序列化机制
+ * ps: 这是实现单例模式的最佳方式，但未被广泛使用。
  */
 public enum EnumSingleton {
 
