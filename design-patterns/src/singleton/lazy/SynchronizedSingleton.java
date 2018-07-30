@@ -8,14 +8,14 @@ package singleton.lazy;
  * b.实现延迟加载
  * c.类加载快但获取对象慢
  */
-public class SynchronizedLazySingleton {
+public class SynchronizedSingleton {
 
-    private static SynchronizedLazySingleton instance = null;
+    private static SynchronizedSingleton instance = null;
 
     /**
      * 私有构造器
      */
-    private SynchronizedLazySingleton() {
+    private SynchronizedSingleton() {
     }
 
     /**
@@ -24,9 +24,9 @@ public class SynchronizedLazySingleton {
      *
      * @return 当前实例
      */
-    public static synchronized SynchronizedLazySingleton getInstance() {
+    public static synchronized SynchronizedSingleton getInstance() {
         if (instance == null) {
-            instance = new SynchronizedLazySingleton();
+            instance = new SynchronizedSingleton();
         }
         return instance;
     }

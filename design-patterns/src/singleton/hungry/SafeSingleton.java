@@ -5,17 +5,17 @@ package singleton.hungry;
  * 单例模式：饿汉式
  * <p>
  * a.线程安全
- * b.提前初始化占用资源
+ * b.提前初始化(占用资源)
  * c.类加载慢但获取对象快
  */
-public class HungrySingleton {
+public class SafeSingleton {
 
-    private static final HungrySingleton INSTANCE = new HungrySingleton();
+    private static final SafeSingleton INSTANCE = new SafeSingleton();
 
     /**
      * 私有构造器
      */
-    private HungrySingleton() {
+    private SafeSingleton() {
     }
 
     /**
@@ -23,7 +23,7 @@ public class HungrySingleton {
      *
      * @return 当前实例
      */
-    public static HungrySingleton getInstance() {
+    public static SafeSingleton getInstance() {
         return INSTANCE;
     }
 
