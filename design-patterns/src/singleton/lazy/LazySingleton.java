@@ -8,14 +8,14 @@ package singleton.lazy;
  * b.实现延迟加载
  * c.类加载快但获取对象慢
  */
-public class UnsafeSingleton {
+public class LazySingleton {
 
-    private static UnsafeSingleton instance = null;
+    private static LazySingleton instance = null;
 
     /**
      * 私有构造器
      */
-    private UnsafeSingleton() {
+    private LazySingleton() {
     }
 
     /**
@@ -24,9 +24,9 @@ public class UnsafeSingleton {
      *
      * @return 当前实例
      */
-    public static UnsafeSingleton getInstance() {
+    public static LazySingleton getInstance() {
         if (instance == null) {
-            instance = new UnsafeSingleton();
+            instance = new LazySingleton();
         }
         return instance;
     }

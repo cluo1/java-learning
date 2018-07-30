@@ -8,14 +8,14 @@ package singleton.hungry;
  * b.提前初始化(占用资源)
  * c.类加载慢但获取对象快
  */
-public class SafeSingleton {
+public class HungrySingleton {
 
-    private static final SafeSingleton INSTANCE = new SafeSingleton();
+    private static final HungrySingleton INSTANCE = new HungrySingleton();
 
     /**
      * 私有构造器
      */
-    private SafeSingleton() {
+    private HungrySingleton() {
     }
 
     /**
@@ -23,7 +23,7 @@ public class SafeSingleton {
      *
      * @return 当前实例
      */
-    public static SafeSingleton getInstance() {
+    public static HungrySingleton getInstance() {
         return INSTANCE;
     }
 
