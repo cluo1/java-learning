@@ -17,7 +17,7 @@ public class Main {
         privateTeacher.setName("小张老师");
         System.out.println(privateTeacher2);
 
-        //-----------------------------------------------------------------------//
+        //--------------------------------//
 
         Student student2 = new Student("李四");
         Student student3 = new Student("王五");
@@ -32,6 +32,5 @@ public class Main {
         publicTeacher.setName("小王老师");
         System.out.println(publicTeacher2);
     }
-
 
 }
