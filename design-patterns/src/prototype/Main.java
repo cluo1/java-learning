@@ -9,20 +9,28 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        Cloth c1 = new Cloth("上衣");
-        Cloth c2 = new Cloth("裤子");
-        List<Cloth> cloths = new LinkedList<>();
-        cloths.add(c1);
-        cloths.add(c2);
+        Student student = new Student("张三");
+        PrivateTeacher privateTeacher = new PrivateTeacher("小张", student);
+        PrivateTeacher privateTeacher2 = (PrivateTeacher) privateTeacher.clone();
 
-        User user = new User("张三", 20, cloths);
-        User cloneUser = (User) user.clone();
-        System.out.println(cloneUser);
+        student.setName("张三学生");
+        privateTeacher.setName("小张老师");
+        System.out.println(privateTeacher2);
 
-        user.setAge(22);
-        Cloth c3 = new Cloth("鞋子");
-        cloths.add(c3);
-        System.out.println(cloneUser);
+        //-----------------------------------------------------------------------//
+
+        Student student2 = new Student("李四");
+        Student student3 = new Student("王五");
+        List<Student> studentList = new LinkedList<>();
+        studentList.add(student2);
+        studentList.add(student3);
+        PublicTeacher publicTeacher = new PublicTeacher("小王", studentList);
+        PublicTeacher publicTeacher2 = (PublicTeacher) publicTeacher.clone();
+
+
+        student2.setName("李四学生");
+        publicTeacher.setName("小王老师");
+        System.out.println(publicTeacher2);
     }
 
 

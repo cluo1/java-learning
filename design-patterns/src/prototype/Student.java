@@ -2,12 +2,13 @@ package prototype;
 
 /**
  * Created by Jared on 2018/7/31 10:07.
+ * 学生对象
  */
-public class Cloth implements Cloneable{
+public class Student implements Cloneable {
 
     private String name;
 
-    public Cloth(String name) {
+    public Student(String name) {
         this.name = name;
     }
 
@@ -21,7 +22,7 @@ public class Cloth implements Cloneable{
 
     @Override
     public String toString() {
-        return "Cloth{" +
+        return "Student{" +
                 "name='" + name + '\'' +
                 '}';
     }
@@ -30,4 +31,5 @@ public class Cloth implements Cloneable{
     protected Object clone() throws CloneNotSupportedException {
         return super.clone();
     }
+
 }
