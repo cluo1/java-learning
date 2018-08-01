@@ -9,7 +9,7 @@ public class Main {
         // 指挥者
         Director director = new Director();
         Builder builder = new BuilderImpl();
-        // 由指挥者控制建造过程
+        // 指挥者调用所控制的建造过程
         director.buildProduct(builder);
 
         // 建造完成后返回最终产品
