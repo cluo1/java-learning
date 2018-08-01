@@ -7,7 +7,7 @@ package builder;
 public class Director {
 
     /**
-     * 构造所需产品的最终形态
+     * 控制并构造所需产品的最终形态
      *
      * @param builder
      */
