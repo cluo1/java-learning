@@ -9,13 +9,13 @@ public class BuilderImpl implements Builder {
     private Product product = new Product();
 
     @Override
-    public void partOne() {
-        product.addPart("部件1");
+    public void partA() {
+        product.addPart("部件A");
     }
 
     @Override
-    public void partTwo() {
-        product.addPart("部件2");
+    public void partB() {
+        product.addPart("部件B");
     }
 
     @Override

@@ -7,17 +7,17 @@ package builder;
 public interface Builder {
 
     /**
-     * 部件一
+     * 部件A
      */
-    void partOne();
+    void partA();
 
     /**
-     * 部件二
+     * 部件B
      */
-    void partTwo();
+    void partB();
 
     /**
-     * 获取当前产品
+     * 获取产品
      *
      * @return
      */

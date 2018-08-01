@@ -24,7 +24,7 @@ public class Product {
     }
 
     /**
-     * 展示当前产品的最终形态
+     * 展示产品的部件组成
      */
     void show() {
         parts.forEach(part -> System.out.print(part + "  "));
