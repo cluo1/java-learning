@@ -6,11 +6,9 @@ package adapter;
 public class Main {
 
     public static void main(String[] args) {
-        Target target = new Target();
-        Adapter adapter = new Adapter(target);
-
-        Request request = new Request(adapter);
-        request.console();
+        Adaptee adaptee = new Adaptee();
+        Target target = new Adapter(adaptee);
+        target.console();
     }
 
 }
