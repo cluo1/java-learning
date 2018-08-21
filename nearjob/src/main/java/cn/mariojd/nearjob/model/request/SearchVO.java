@@ -25,7 +25,7 @@ public class SearchVO {
      * 经度
      */
     @Range(min = 73, max = 135, message = "经度范围应在73 - 135°E之间")
-    private Float location;
+    private Float longitude;
 
     /**
      * 纬度

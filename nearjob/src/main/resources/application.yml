@@ -1,8 +1,11 @@
 spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
   datasource:
-    url:
-    username:
-    password:
+    url: jdbc:postgresql://localhost:12432/nearjob
+    username: nearjob
+    password: nearjob
   data:
     elasticsearch:
-      cluster-nodes: localhost:
+      cluster-nodes: localhost:12900

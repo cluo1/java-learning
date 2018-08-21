@@ -8,4 +8,25 @@ import lombok.Data;
  */
 @Data
 public class SearchResultVO {
+
+    /**
+     * 岗位名称
+     */
+    private String jobName;
+
+    /**
+     * 薪酬范围
+     */
+    private String jobSalary;
+
+    /**
+     * 岗位经验
+     */
+    private String jobExperience;
+
+    /**
+     * 学历要求
+     */
+    private String jobEducation;
+
 }
