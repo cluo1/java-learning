@@ -14,8 +14,11 @@ import java.util.Date;
 @Table(name = "tb_java")
 public class Java extends BaseEntity {
 
-    public Java(Integer id, String jobName, String jobSalary, String jobExperience, String jobEducation, String jobAdvantage, String companyShortName, String companyLocation, Date postJobTime) {
-        super(id, jobName, jobSalary, jobExperience, jobEducation, jobAdvantage, companyShortName, companyLocation, postJobTime);
+    public Java() {
+    }
+
+    public Java(String positionId, String jobName, String jobSalary, String jobExperience, String jobEducation, String jobAdvantage, String companyShortName, String companyLocation, Date postJobTime) {
+        super(positionId, jobName, jobSalary, jobExperience, jobEducation, jobAdvantage, companyShortName, companyLocation, postJobTime);
     }
 
 }

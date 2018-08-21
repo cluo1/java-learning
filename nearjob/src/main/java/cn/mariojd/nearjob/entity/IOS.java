@@ -14,7 +14,11 @@ import java.util.Date;
 @Table(name = "tb_ios")
 public class IOS extends BaseEntity {
 
-    public IOS(Integer id, String jobName, String jobSalary, String jobExperience, String jobEducation, String jobAdvantage, String companyShortName, String companyLocation, Date postJobTime) {
-        super(id, jobName, jobSalary, jobExperience, jobEducation, jobAdvantage, companyShortName, companyLocation, postJobTime);
+    public IOS() {
     }
+
+    public IOS(String positionId, String jobName, String jobSalary, String jobExperience, String jobEducation, String jobAdvantage, String companyShortName, String companyLocation, Date postJobTime) {
+        super(positionId, jobName, jobSalary, jobExperience, jobEducation, jobAdvantage, companyShortName, companyLocation, postJobTime);
+    }
+
 }

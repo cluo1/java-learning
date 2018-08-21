@@ -19,3 +19,9 @@ spring:
   mvc:
     servlet:
       load-on-startup: 1
+server:
+  port: 10000
+  undertow:
+    accesslog:
+      dir: logs
+      enabled: true

@@ -4,6 +4,8 @@ import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.Range;
 
+import javax.validation.constraints.NotNull;
+
 /**
  * @author Jared
  * @date 2018/8/21 9:36
@@ -19,24 +21,23 @@ public class SearchVO {
     /**
      * 岗位id
      */
+    @NotNull(message = "求职方向还没选呢")
     private Integer jobId;
 
     /**
      * 经度
      */
-    @Range(min = 73, max = 135, message = "经度范围应在73 - 135°E之间")
-    private Float longitude;
+    private Double longitude;
 
     /**
      * 纬度
      */
-    @Range(min = 4, max = 54, message = "纬度范围应在4 - 54°N之间")
-    private Float latitude;
+    private Double latitude;
 
     /**
      * 距离范围
      */
-    @Range(min = 0, max = 10, message = "搜索范围应在0 - 10km之间")
+    @Range(min = 0, max = 10, message = "搜索范围太广啦")
     private Integer distance;
 
     /**
@@ -47,7 +48,8 @@ public class SearchVO {
     /**
      * 搜索关键字
      */
-    @Length(max = 20, message = "关键字搜索限制最大长度为20")
+    @Length(max = 20, message = "搜索内容太长啦")
     private String keyword;
+
 
 }

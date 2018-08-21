@@ -30,9 +30,9 @@ public class SearchController {
     private SearchService searchService;
 
     @GetMapping
-    public Page<SearchResultVO> findBySearchVO(@ModelAttribute @Valid SearchVO searchVO,
-                                               @PageableDefault(size = 20) Pageable pageable) {
-        return searchService.findBySearchVO(searchVO, pageable);
+    public Page<SearchResultVO> findPage(@ModelAttribute @Valid SearchVO searchVO,
+                                         @PageableDefault(size = 15) @Valid Pageable pageable) {
+        return searchService.findPage(searchVO, pageable);
     }
 
 }

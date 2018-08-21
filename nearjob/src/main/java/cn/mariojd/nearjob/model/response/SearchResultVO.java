@@ -12,6 +12,11 @@ import java.util.Date;
 public class SearchResultVO {
 
     /**
+     * 唯一标志
+     */
+    private String positionId;
+
+    /**
      * 岗位名称
      */
     private String jobName;
