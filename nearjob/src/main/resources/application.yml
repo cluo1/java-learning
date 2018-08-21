@@ -2,10 +2,20 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            # @See: https://github.com/pgjdbc/pgjdbc/issues/1102
+            non_contextual_creation: true
   datasource:
     url: jdbc:postgresql://localhost:12432/nearjob
     username: nearjob
     password: nearjob
   data:
     elasticsearch:
-      cluster-nodes: localhost:12900
+      cluster-nodes: localhost:9300
+      cluster-name: docker-cluster
+  mvc:
+    servlet:
+      load-on-startup: 1

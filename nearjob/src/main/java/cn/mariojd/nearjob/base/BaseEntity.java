@@ -1,11 +1,9 @@
 package cn.mariojd.nearjob.base;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 /**
@@ -13,13 +11,17 @@ import java.util.Date;
  * @date 2018/8/21 9:03
  */
 @Data
+@Entity
+// @See: https://blog.csdn.net/mhmyqn/article/details/37996673
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@NoArgsConstructor
 public class BaseEntity {
 
     /**
      * 自增主键
      */
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.TABLE)
     private Integer id;
 
     /**
@@ -162,5 +164,19 @@ public class BaseEntity {
      * 过期时间
      */
     private Date expiredTime;
+
+    public BaseEntity(Integer id, String jobName, String jobSalary, String jobExperience,
+                      String jobEducation, String jobAdvantage, String companyShortName,
+                      String companyLocation, Date postJobTime) {
+        this.id = id;
+        this.jobName = jobName;
+        this.jobSalary = jobSalary;
+        this.jobExperience = jobExperience;
+        this.jobEducation = jobEducation;
+        this.jobAdvantage = jobAdvantage;
+        this.companyShortName = companyShortName;
+        this.companyLocation = companyLocation;
+        this.postJobTime = postJobTime;
+    }
 
 }

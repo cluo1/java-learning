@@ -1,9 +1,11 @@
 package cn.mariojd.nearjob.service;
 
+import cn.mariojd.nearjob.base.BaseService;
 import cn.mariojd.nearjob.document.Job;
+import cn.mariojd.nearjob.entity.Java;
 import cn.mariojd.nearjob.model.request.SearchVO;
 import cn.mariojd.nearjob.model.response.SearchResultVO;
-import cn.mariojd.nearjob.repository.SearchRepository;
+import cn.mariojd.nearjob.repository.JobRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.GeoDistanceQueryBuilder;
@@ -23,10 +25,10 @@ import java.util.Objects;
  */
 @Slf4j
 @Service
-public class SearchService {
+public class SearchService extends BaseService {
 
     @Resource
-    private SearchRepository searchRepository;
+    private JobRepository jobRepository;
 
     public Page<SearchResultVO> findBySearchVO(SearchVO searchVO, Pageable pageable) {
         BoolQueryBuilder queryBuilder = new BoolQueryBuilder();
@@ -56,7 +58,7 @@ public class SearchService {
             queryBuilder.filter(builder);
         }
 
-        Page<Job> jobPage = searchRepository.search(queryBuilder, pageable);
+        Page<Job> jobPage = jobRepository.search(queryBuilder, pageable);
         return jobPage.map(this::toSearchResultVO);
     }
 
@@ -68,7 +70,10 @@ public class SearchService {
      */
     private SearchResultVO toSearchResultVO(Job job) {
         SearchResultVO resultVO = new SearchResultVO();
-        BeanUtils.copyProperties(job, resultVO);
+        // Integer jobId = job.getJobId();
+        String positionId = job.getPositionId();
+        Java java = javaDao.findByPositionId(positionId);
+        BeanUtils.copyProperties(java, resultVO);
         return resultVO;
     }
 

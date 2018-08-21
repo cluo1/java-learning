@@ -1,5 +1,7 @@
 package cn.mariojd.nearjob.document;
 
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
@@ -14,6 +16,8 @@ import org.springframework.data.elasticsearch.core.geo.GeoPoint;
  */
 @Data
 @Document(indexName = "nearjob", type = "job")
+// @See: https://fangjian0423.github.io/2017/05/24/spring-data-es-query-problem/
+@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class Job {
 
     /**
