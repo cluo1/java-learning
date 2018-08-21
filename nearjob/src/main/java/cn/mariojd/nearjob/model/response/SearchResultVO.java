@@ -2,6 +2,8 @@ package cn.mariojd.nearjob.model.response;
 
 import lombok.Data;
 
+import java.util.Date;
+
 /**
  * @author Jared
  * @date 2018/8/21 9:51
@@ -28,5 +30,25 @@ public class SearchResultVO {
      * 学历要求
      */
     private String jobEducation;
+
+    /**
+     * 岗位优势
+     */
+    private String jobAdvantage;
+
+    /**
+     * 公司简称
+     */
+    private String companyShortName;
+
+    /**
+     * 公司地址
+     */
+    private String companyLocation;
+
+    /**
+     * 发布时间
+     */
+    private Date postJobTime;
 
 }

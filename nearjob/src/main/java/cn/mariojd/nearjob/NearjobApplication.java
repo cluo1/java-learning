@@ -7,6 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class NearjobApplication {
 
     public static void main(String[] args) {
+        // @See: https://www.jianshu.com/p/1d5257eecf08
+        System.setProperty("es.set.netty.runtime.available.processors", "false");
         SpringApplication.run(NearjobApplication.class, args);
     }
 }

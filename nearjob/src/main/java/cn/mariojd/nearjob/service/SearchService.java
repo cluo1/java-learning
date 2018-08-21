@@ -13,7 +13,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
-import reactor.core.publisher.Flux;
 
 import javax.annotation.Resource;
 import java.util.Objects;
@@ -29,7 +28,7 @@ public class SearchService {
     @Resource
     private SearchRepository searchRepository;
 
-    public Flux<SearchResultVO> findBySearchVO(SearchVO searchVO, Pageable pageable) {
+    public Page<SearchResultVO> findBySearchVO(SearchVO searchVO, Pageable pageable) {
         BoolQueryBuilder queryBuilder = new BoolQueryBuilder();
 
         Integer cityId = searchVO.getCityId();
@@ -57,15 +56,20 @@ public class SearchService {
             queryBuilder.filter(builder);
         }
 
-
-        Page<Job> search = searchRepository.search(queryBuilder, pageable);
-        return null;
+        Page<Job> jobPage = searchRepository.search(queryBuilder, pageable);
+        return jobPage.map(this::toSearchResultVO);
     }
 
-    private Job toSearchResultVO(Job document) {
+    /**
+     * Job -> SearchResultVO
+     *
+     * @param job
+     * @return SearchResultVO
+     */
+    private SearchResultVO toSearchResultVO(Job job) {
         SearchResultVO resultVO = new SearchResultVO();
-        BeanUtils.copyProperties(document, resultVO);
-        return null;
+        BeanUtils.copyProperties(job, resultVO);
+        return resultVO;
     }
 
 }

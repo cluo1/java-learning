@@ -17,13 +17,13 @@ import org.springframework.data.elasticsearch.core.geo.GeoPoint;
 public class Job {
 
     /**
-     * 主键id
+     * 主键id(同下)
      */
     @Id
     private String id;
 
     /**
-     * 唯一标志
+     * 标志id(同上)
      */
     @Field(type = FieldType.Keyword)
     private String positionId;
