@@ -10,7 +10,7 @@ import javax.persistence.Table;
  * @date 2018/8/21 9:01
  */
 @Table(name = "tb_android")
-public class Andrioid extends BaseEntity {
+public class Android extends BaseEntity {
 
 
 }
