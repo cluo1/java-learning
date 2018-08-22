@@ -4,6 +4,7 @@ import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.Range;
 
+import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotNull;
 
 /**
@@ -27,11 +28,13 @@ public class SearchVO {
     /**
      * 经度
      */
+    @Digits(integer = 3, fraction = 30, message = "经度坐标异常")
     private Double longitude;
 
     /**
      * 纬度
      */
+    @Digits(integer = 2, fraction = 30, message = "纬度坐标异常")
     private Double latitude;
 
     /**

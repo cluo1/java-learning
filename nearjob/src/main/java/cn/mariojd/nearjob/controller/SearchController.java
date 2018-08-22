@@ -6,7 +6,6 @@ import cn.mariojd.nearjob.service.SearchService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,7 +30,7 @@ public class SearchController {
 
     @GetMapping
     public Page<SearchResultVO> findPage(@ModelAttribute @Valid SearchVO searchVO,
-                                         @PageableDefault(size = 15) @Valid Pageable pageable) {
+                                         Pageable pageable) {
         return searchService.findPage(searchVO, pageable);
     }
 
