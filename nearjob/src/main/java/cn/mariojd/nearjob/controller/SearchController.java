@@ -32,7 +32,7 @@ public class SearchController {
 
     @GetMapping
     public Page<SearchResultVO> findPage(@ModelAttribute @Valid SearchVO searchVO,
-                                         @PageableDefault(sort = "postJobTime", direction = Sort.Direction.DESC) Pageable pageable) {
+                                         @PageableDefault(sort = "post_job_time", direction = Sort.Direction.DESC) Pageable pageable) {
         return searchService.findPage(searchVO, pageable);
     }
 
