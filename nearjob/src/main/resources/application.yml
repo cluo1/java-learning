@@ -4,6 +4,7 @@ server:
     accesslog:
       dir: logs
       enabled: true
+      prefix: access.
 
 spring:
   jpa:
