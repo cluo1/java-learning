@@ -19,7 +19,7 @@ public abstract class BaseEntity {
      * 自增主键
      */
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
 
     /**
