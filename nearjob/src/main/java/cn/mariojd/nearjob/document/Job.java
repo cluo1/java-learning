@@ -10,6 +10,8 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
 import org.springframework.data.elasticsearch.annotations.GeoPointField;
 import org.springframework.data.elasticsearch.core.geo.GeoPoint;
 
+import java.util.Date;
+
 /**
  * @author Jared
  * @date 2018/8/21 10:27
@@ -61,5 +63,11 @@ public class Job {
      */
     @Field(type = FieldType.Text, analyzer = "ik_max_word", searchAnalyzer = "ik_max_word")
     private String keyword;
+
+    /**
+     * 发布时间
+     */
+    @Field(type = FieldType.Date)
+    private Date postJobTime;
 
 }
