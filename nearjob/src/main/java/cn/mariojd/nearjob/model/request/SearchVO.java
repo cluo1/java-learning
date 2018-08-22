@@ -6,6 +6,7 @@ import org.hibernate.validator.constraints.Range;
 
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotNull;
+import java.util.Objects;
 
 /**
  * @author Jared
@@ -22,8 +23,7 @@ public class SearchVO {
     /**
      * 岗位id
      */
-    @NotNull(message = "求职方向还没选呢")
-    private Integer jobId;
+    private Integer jobId = 1;
 
     /**
      * 经度
@@ -41,7 +41,7 @@ public class SearchVO {
      * 距离范围
      */
     @Range(min = 0, max = 10, message = "搜索范围太广啦")
-    private Integer distance;
+    private Integer distance = 3;
 
     /**
      * 数据来源
@@ -51,8 +51,6 @@ public class SearchVO {
     /**
      * 搜索关键字
      */
-    @Length(max = 20, message = "搜索内容太长啦")
     private String keyword;
-
 
 }
