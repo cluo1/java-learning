@@ -1,9 +1,9 @@
 package cn.mariojd.nearjob.service;
 
+import cn.mariojd.nearjob.base.BaseDao;
 import cn.mariojd.nearjob.base.BaseEntity;
 import cn.mariojd.nearjob.base.BaseService;
 import cn.mariojd.nearjob.document.Job;
-import cn.mariojd.nearjob.entity.Java;
 import cn.mariojd.nearjob.model.request.SearchVO;
 import cn.mariojd.nearjob.model.response.IndexResultVO;
 import cn.mariojd.nearjob.repository.JobRepository;
@@ -69,7 +69,7 @@ public class IndexService extends BaseService {
             queryBuilder.filter(builder);
         }
 
-        return jobRepository.search(queryBuilder, pageable).map(this::toSearchResultVO);
+        return jobRepository.search(queryBuilder, pageable).map(s -> toSearchResultVO(s, resources.get(jobId)));
     }
 
     /**
@@ -78,10 +78,10 @@ public class IndexService extends BaseService {
      * @param job
      * @return IndexResultVO
      */
-    private IndexResultVO toSearchResultVO(Job job) {
+    private IndexResultVO toSearchResultVO(Job job, BaseDao baseDao) {
         IndexResultVO resultVO = new IndexResultVO();
-        Java java = javaDao.findByPositionId(job.getPositionId());
-        BeanUtils.copyProperties(java, resultVO);
+        BaseEntity baseEntity = baseDao.findByPositionId(job.getPositionId());
+        BeanUtils.copyProperties(baseEntity, resultVO);
         return resultVO;
     }
 

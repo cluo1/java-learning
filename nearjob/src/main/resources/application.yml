@@ -6,7 +6,7 @@ server:
       enabled: true
       prefix: access.
 
-
+host: localhost
 
 spring:
   jpa:
@@ -22,12 +22,12 @@ spring:
             non_contextual_creation: true
     open-in-view: false
   datasource:
-    url: jdbc:postgresql://localhost:12432/nearjob
+    url: jdbc:postgresql://${host}:12432/nearjob
     username: nearjob
     password: nearjob
   data:
     elasticsearch:
-      cluster-nodes: localhost:9300
+      cluster-nodes: ${host}:9300
       cluster-name: docker-cluster
     web:
       pageable:
@@ -37,6 +37,7 @@ spring:
     servlet:
       load-on-startup: 1
   redis:
+    host: ${host}
     port: 12379
     database: 3
     password: redis6379

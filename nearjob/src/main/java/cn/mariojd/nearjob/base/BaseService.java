@@ -1,8 +1,6 @@
 package cn.mariojd.nearjob.base;
 
-import cn.mariojd.nearjob.dao.JavaDao;
-
-import javax.annotation.Resource;
+import java.util.HashMap;
 
 /**
  * @author Jared
@@ -10,7 +8,6 @@ import javax.annotation.Resource;
  */
 public class BaseService {
 
-    @Resource
-    protected JavaDao javaDao;
+    public static HashMap<Integer, BaseDao> resources = null;
 
 }
