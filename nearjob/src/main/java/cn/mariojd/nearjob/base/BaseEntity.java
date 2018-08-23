@@ -1,6 +1,8 @@
 package cn.mariojd.nearjob.base;
 
 import lombok.Data;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -10,9 +12,10 @@ import java.util.Date;
  * @date 2018/8/21 9:03
  */
 @Data
-@Entity
+//@Entity
 // @See: https://blog.csdn.net/mhmyqn/article/details/37996673
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+//@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@MappedSuperclass
 public abstract class BaseEntity {
 
     /**
@@ -146,11 +149,14 @@ public abstract class BaseEntity {
     /**
      * 更新时间
      */
+    @LastModifiedDate
     private Date updateTime;
 
     /**
      * 创建时间
      */
+    @CreatedDate
+    @Column(updatable = false)
     private Date createTime;
 
     /**

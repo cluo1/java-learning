@@ -1,5 +1,6 @@
 package cn.mariojd.nearjob.service;
 
+import cn.mariojd.nearjob.base.BaseEntity;
 import cn.mariojd.nearjob.base.BaseService;
 import cn.mariojd.nearjob.document.Job;
 import cn.mariojd.nearjob.entity.Java;

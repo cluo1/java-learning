@@ -6,12 +6,16 @@ server:
       enabled: true
       prefix: access.
 
+
+
 spring:
   jpa:
     hibernate:
       ddl-auto: update
     properties:
       hibernate:
+        session_factory:
+          interceptor: cn.mariojd.nearjob.interceptor.TableInterceptor
         jdbc:
           lob:
             # @See: https://github.com/pgjdbc/pgjdbc/issues/1102
