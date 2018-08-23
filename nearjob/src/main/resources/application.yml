@@ -32,3 +32,7 @@ spring:
   mvc:
     servlet:
       load-on-startup: 1
+  redis:
+    port: 12379
+    database: 3
+    password: redis6379
