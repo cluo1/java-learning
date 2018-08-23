@@ -1,8 +1,8 @@
 package cn.mariojd.nearjob.controller;
 
 import cn.mariojd.nearjob.model.request.SearchVO;
-import cn.mariojd.nearjob.model.response.SearchResultVO;
-import cn.mariojd.nearjob.service.SearchService;
+import cn.mariojd.nearjob.model.response.IndexResultVO;
+import cn.mariojd.nearjob.service.IndexService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -17,23 +17,23 @@ import javax.annotation.Resource;
 import javax.validation.Valid;
 
 /**
- * 搜索模块
+ * 首页模块
  *
  * @author Jared
  * @date 2018/8/21 9:20
  */
 @RestController
-@RequestMapping("api/search")
+@RequestMapping("api/index")
 @Slf4j
-public class SearchController {
+public class IndexController {
 
     @Resource
-    private SearchService searchService;
+    private IndexService indexService;
 
     @GetMapping
-    public Page<SearchResultVO> findPage(@ModelAttribute @Valid SearchVO searchVO,
-                                         @PageableDefault(sort = "post_job_time", direction = Sort.Direction.DESC) Pageable pageable) {
-        return searchService.findPage(searchVO, pageable);
+    public Page<IndexResultVO> findPage(@ModelAttribute @Valid SearchVO searchVO,
+                                        @PageableDefault(sort = "postJobTime", direction = Sort.Direction.DESC) Pageable pageable) {
+        return indexService.findPage(searchVO, pageable);
     }
 
 }

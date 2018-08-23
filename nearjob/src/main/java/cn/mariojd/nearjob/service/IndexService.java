@@ -4,7 +4,7 @@ import cn.mariojd.nearjob.base.BaseService;
 import cn.mariojd.nearjob.document.Job;
 import cn.mariojd.nearjob.entity.Java;
 import cn.mariojd.nearjob.model.request.SearchVO;
-import cn.mariojd.nearjob.model.response.SearchResultVO;
+import cn.mariojd.nearjob.model.response.IndexResultVO;
 import cn.mariojd.nearjob.repository.JobRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.elasticsearch.common.unit.DistanceUnit;
@@ -26,24 +26,31 @@ import java.util.Objects;
  */
 @Slf4j
 @Service
-public class SearchService extends BaseService {
+public class IndexService extends BaseService {
 
     @Resource
     private JobRepository jobRepository;
 
-    public Page<SearchResultVO> findPage(SearchVO searchVO, Pageable pageable) {
+    /**
+     * 获取首页展示数据
+     *
+     * @param searchVO
+     * @param pageable
+     * @return
+     */
+    public Page<IndexResultVO> findPage(SearchVO searchVO, Pageable pageable) {
         BoolQueryBuilder queryBuilder = new BoolQueryBuilder();
         int jobId = searchVO.getJobId();
-        queryBuilder.must(new MatchQueryBuilder("job_id", jobId));
+        queryBuilder.must(new MatchQueryBuilder("jobId", jobId));
 
         Integer cityId = searchVO.getCityId();
         if (Objects.nonNull(cityId)) {
-            queryBuilder.must(new MatchQueryBuilder("city_id", cityId));
+            queryBuilder.must(new MatchQueryBuilder("cityId", cityId));
         }
 
         Integer sourceFrom = searchVO.getSourceFrom();
         if (Objects.nonNull(sourceFrom)) {
-            queryBuilder.must(new MatchQueryBuilder("source_from", sourceFrom));
+            queryBuilder.must(new MatchQueryBuilder("sourceFrom", sourceFrom));
         }
 
         String keyword = searchVO.getKeyword();
@@ -65,13 +72,13 @@ public class SearchService extends BaseService {
     }
 
     /**
-     * Job -> SearchResultVO
+     * Job -> IndexResultVO
      *
      * @param job
-     * @return SearchResultVO
+     * @return IndexResultVO
      */
-    private SearchResultVO toSearchResultVO(Job job) {
-        SearchResultVO resultVO = new SearchResultVO();
+    private IndexResultVO toSearchResultVO(Job job) {
+        IndexResultVO resultVO = new IndexResultVO();
         Java java = javaDao.findByPositionId(job.getPositionId());
         BeanUtils.copyProperties(java, resultVO);
         return resultVO;

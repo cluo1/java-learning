@@ -9,7 +9,7 @@ import java.util.Date;
  * @date 2018/8/21 9:51
  */
 @Data
-public class SearchResultVO {
+public class IndexResultVO {
 
     /**
      * 唯一标志
