@@ -1,3 +1,8 @@
+# 服务host配置
+nearjob:
+  host: localhost
+
+# 端口和日志配置
 server:
   port: 10000
   undertow:
@@ -6,14 +11,15 @@ server:
       enabled: true
       prefix: access.
 
-host: localhost
-
+# Jpa、Redis、Postgres和Elastic配置
 spring:
   jpa:
     hibernate:
       ddl-auto: update
     properties:
       hibernate:
+        show_sql: true
+        # format_sql: true
         session_factory:
           interceptor: cn.mariojd.nearjob.interceptor.TableInterceptor
         jdbc:
@@ -22,12 +28,12 @@ spring:
             non_contextual_creation: true
     open-in-view: false
   datasource:
-    url: jdbc:postgresql://${host}:12432/nearjob
+    url: jdbc:postgresql://${nearjob.host}:12432/nearjob
     username: nearjob
     password: nearjob
   data:
     elasticsearch:
-      cluster-nodes: ${host}:9300
+      cluster-nodes: ${nearjob.host}:9300
       cluster-name: docker-cluster
     web:
       pageable:
@@ -37,7 +43,7 @@ spring:
     servlet:
       load-on-startup: 1
   redis:
-    host: ${host}
+    host: ${nearjob.host}
     port: 12379
     database: 3
     password: redis6379
