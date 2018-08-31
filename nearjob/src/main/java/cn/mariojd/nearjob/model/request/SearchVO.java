@@ -1,12 +1,9 @@
 package cn.mariojd.nearjob.model.request;
 
 import lombok.Data;
-import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.Range;
 
 import javax.validation.constraints.Digits;
-import javax.validation.constraints.NotNull;
-import java.util.Objects;
 
 /**
  * @author Jared
