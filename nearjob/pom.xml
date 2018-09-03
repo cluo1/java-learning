@@ -82,6 +82,26 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>0.4.9</version>
+                <configuration>
+                    <!-- 镜像名称  -->
+                    <imageName>${project.artifactId}:${project.version}</imageName>
+                    <!-- docker远程服务器地址 -->
+                    <dockerHost>http://localhost:22375</dockerHost>
+                    <!-- Dockerfile文件存放目录 -->
+                    <dockerDirectory>src/main/docker</dockerDirectory>
+                    <resources>
+                        <resource>
+                            <directory>${project.build.directory}</directory>
+                            <include>${project.build.finalName}.jar</include>
+                        </resource>
+                    </resources>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
