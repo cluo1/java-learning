@@ -56,4 +56,9 @@ public class IndexResultVO {
      */
     private Date postJobTime;
 
+    /**
+     * 两者距离
+     */
+    private Double distance;
+
 }

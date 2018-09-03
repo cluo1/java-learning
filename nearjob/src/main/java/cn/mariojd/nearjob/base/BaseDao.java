@@ -13,7 +13,7 @@ import org.springframework.data.repository.NoRepositoryBean;
 public interface BaseDao<T extends BaseEntity> extends JpaRepository<T, Integer> {
 
     @Query(value = "SELECT new #{#entityName}(positionId,jobName,jobSalary,jobExperience,jobEducation,jobAdvantage," +
-            "companyShortName,companyLocation,postJobTime) FROM #{#entityName} WHERE positionId=?1")
+            "companyShortName,companyLocation,postJobTime,companyLatitude,companyLongitude) FROM #{#entityName} WHERE positionId=?1")
     T findByPositionId(String positionId);
 
 }

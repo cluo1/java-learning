@@ -50,4 +50,9 @@ public class SearchVO {
      */
     private String keyword;
 
+    /**
+     * 是否按距离排序
+     */
+    private Boolean sortByDistance = false;
+
 }

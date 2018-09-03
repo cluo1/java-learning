@@ -104,12 +104,12 @@ public abstract class BaseEntity {
     /**
      * 地址纬度
      */
-    private Float companyLatitude;
+    private Double companyLatitude;
 
     /**
      * 地址经度
      */
-    private Float companyLongitude;
+    private Double companyLongitude;
 
     /**
      * 公司主页
@@ -173,8 +173,8 @@ public abstract class BaseEntity {
     }
 
     public BaseEntity(String positionId, String jobName, String jobSalary, String jobExperience,
-                      String jobEducation, String jobAdvantage, String companyShortName,
-                      String companyLocation, Date postJobTime) {
+                      String jobEducation, String jobAdvantage, String companyShortName, String companyLocation,
+                      Date postJobTime, Double companyLatitude, Double companyLongitude) {
         this.positionId = positionId;
         this.jobName = jobName;
         this.jobSalary = jobSalary;
@@ -184,6 +184,8 @@ public abstract class BaseEntity {
         this.companyShortName = companyShortName;
         this.companyLocation = companyLocation;
         this.postJobTime = postJobTime;
+        this.companyLatitude = companyLatitude;
+        this.companyLongitude = companyLongitude;
     }
 
 }
