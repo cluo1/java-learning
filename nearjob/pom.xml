@@ -84,12 +84,13 @@
             </plugin>
 
             <plugin>
+                <!-- https://mvnrepository.com/artifact/com.spotify/docker-maven-plugin -->
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
-                <version>0.4.9</version>
+                <version>1.1.1</version>
                 <configuration>
                     <!-- 镜像名称  -->
-                    <imageName>${project.artifactId}:${project.version}</imageName>
+                    <imageName>${project.artifactId}</imageName>
                     <!-- docker远程服务器地址 -->
                     <dockerHost>http://localhost:22375</dockerHost>
                     <!-- Dockerfile文件存放目录 -->

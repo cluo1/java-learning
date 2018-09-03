@@ -1,6 +1,6 @@
 FROM openjdk:8
 VOLUME /opt/tmp
-ADD nearjob.jar app.jar
+ADD nearjob.jar nearjob.jar
 
-ENTRYPOINT ["java","-jar","app.jar"]
-EXPOSE 8080
+ENTRYPOINT ["java","-jar","-Xms64m","-Xmx64m","-Dnearjob.host=localhost","-Dspring.redis.port=12379","nearjob.jar"]
+EXPOSE 10000
