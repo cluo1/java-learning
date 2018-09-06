@@ -4,6 +4,7 @@ import cn.mariojd.nearjob.base.BaseDao;
 import cn.mariojd.nearjob.base.BaseEntity;
 import cn.mariojd.nearjob.base.BaseService;
 import cn.mariojd.nearjob.document.Job;
+import cn.mariojd.nearjob.enums.SortEnum;
 import cn.mariojd.nearjob.model.request.SearchVO;
 import cn.mariojd.nearjob.model.response.IndexResultVO;
 import cn.mariojd.nearjob.repository.JobRepository;
@@ -13,8 +14,6 @@ import org.elasticsearch.common.unit.DistanceUnit;
 import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.GeoDistanceQueryBuilder;
 import org.elasticsearch.index.query.MatchQueryBuilder;
-import org.elasticsearch.search.sort.GeoDistanceSortBuilder;
-import org.elasticsearch.search.sort.SortOrder;
 import org.springframework.beans.BeanUtils;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -78,10 +77,21 @@ public class IndexService extends BaseService {
 
         Page<IndexResultVO> resultVOPage = jobRepository.search(queryBuilder, pageable).map(source ->
                 toSearchResultVO(source, latitude, longitude, resources.get(jobId)));
-        if (searchVO.getSortByDistance()) {
-            List<IndexResultVO> resultVOList = resultVOPage.stream().sorted(Comparator.comparingDouble(IndexResultVO::getDistance))
-                    .collect(Collectors.toList());
-            resultVOPage = new PageImpl<>(resultVOList, pageable, resultVOList.size());
+
+        List<IndexResultVO> resultVOList;
+        SortEnum sort = searchVO.getSort();
+        switch (sort) {
+            case DISTANCE:
+                resultVOList = resultVOPage.stream().sorted(Comparator.comparingDouble(IndexResultVO::getDistance))
+                        .collect(Collectors.toList());
+                resultVOPage = new PageImpl<>(resultVOList, pageable, resultVOList.size());
+                break;
+            case POST_TIME:
+                resultVOList = resultVOPage.stream().sorted(Comparator.comparing(IndexResultVO::getPostJobTime).reversed())
+                        .collect(Collectors.toList());
+                resultVOPage = new PageImpl<>(resultVOList, pageable, resultVOList.size());
+            default:
+                break;
         }
         return resultVOPage;
     }
@@ -94,7 +104,7 @@ public class IndexService extends BaseService {
      */
     private IndexResultVO toSearchResultVO(Job job, Double latitude, Double longitude, BaseDao baseDao) {
         IndexResultVO resultVO = new IndexResultVO();
-        BaseEntity baseEntity = baseDao.findByPositionId(job.getPositionId());
+        BaseEntity baseEntity = baseDao.findPartByPositionId(job.getPositionId());
         BeanUtils.copyProperties(baseEntity, resultVO);
         if (Objects.nonNull(latitude) && Objects.nonNull(baseEntity.getCompanyLongitude())) {
             double distance = GeoDistance.ARC.calculate(latitude, longitude, baseEntity.getCompanyLatitude(),

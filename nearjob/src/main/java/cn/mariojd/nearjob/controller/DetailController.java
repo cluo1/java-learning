@@ -26,10 +26,9 @@ public class DetailController {
     private DetailService detailService;
 
     @GetMapping
-    public Page<JobDetailVO> findDetail(@RequestParam @NotBlank(message = "positionId is needed") String positionId,
-                                        @RequestParam @NotNull(message = "jobId is needed") int jobId) {
+    public JobDetailVO findDetail(@RequestParam @NotBlank String positionId,
+                                  @RequestParam int jobId) {
         return detailService.findDetail(positionId, jobId);
     }
-
 
 }

@@ -173,17 +173,18 @@ public abstract class BaseEntity {
     }
 
     public BaseEntity(String positionId, String jobName, String jobSalary, String jobExperience,
-                      String jobEducation, String jobAdvantage, String companyShortName, String companyLocation,
-                      Date postJobTime, Double companyLatitude, Double companyLongitude) {
+                      String jobEducation, String companyScale, String companyShortName, String companyFullName,
+                      Date postJobTime,Integer sourceFrom, Double companyLatitude, Double companyLongitude) {
         this.positionId = positionId;
         this.jobName = jobName;
         this.jobSalary = jobSalary;
         this.jobExperience = jobExperience;
         this.jobEducation = jobEducation;
-        this.jobAdvantage = jobAdvantage;
+        this.companyScale = companyScale;
         this.companyShortName = companyShortName;
-        this.companyLocation = companyLocation;
+        this.companyFullName = companyFullName;
         this.postJobTime = postJobTime;
+        this.sourceFrom = sourceFrom;
         this.companyLatitude = companyLatitude;
         this.companyLongitude = companyLongitude;
     }

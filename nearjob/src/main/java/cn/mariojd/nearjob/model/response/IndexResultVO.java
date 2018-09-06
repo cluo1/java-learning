@@ -12,7 +12,7 @@ import java.util.Date;
 public class IndexResultVO {
 
     /**
-     * 唯一标志
+     * 标志id
      */
     private String positionId;
 
@@ -27,19 +27,19 @@ public class IndexResultVO {
     private String jobSalary;
 
     /**
-     * 岗位经验
-     */
-    private String jobExperience;
-
-    /**
      * 学历要求
      */
     private String jobEducation;
 
     /**
-     * 岗位优势
+     * 岗位经验
      */
-    private String jobAdvantage;
+    private String jobExperience;
+
+    /**
+     * 公司规模
+     */
+    private String companyScale;
 
     /**
      * 公司简称
@@ -47,14 +47,19 @@ public class IndexResultVO {
     private String companyShortName;
 
     /**
-     * 公司地址
+     * 公司全称
      */
-    private String companyLocation;
+    private String companyFullName;
 
     /**
      * 发布时间
      */
     private Date postJobTime;
+
+    /**
+     * 数据来源
+     */
+    private Integer sourceFrom;
 
     /**
      * 两者距离

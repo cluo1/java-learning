@@ -1,5 +1,6 @@
 package cn.mariojd.nearjob.model.request;
 
+import cn.mariojd.nearjob.enums.SortEnum;
 import lombok.Data;
 import org.hibernate.validator.constraints.Range;
 
@@ -51,8 +52,8 @@ public class SearchVO {
     private String keyword;
 
     /**
-     * 是否按距离排序
+     * 排序规则
      */
-    private Boolean sortByDistance = false;
+    private SortEnum sort = SortEnum.DISTANCE;
 
 }

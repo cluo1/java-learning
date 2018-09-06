@@ -31,8 +31,7 @@ public class IndexController {
     private IndexService indexService;
 
     @GetMapping
-    public Page<IndexResultVO> findPage(@ModelAttribute @Valid SearchVO searchVO,
-                                        @PageableDefault(sort = "postJobTime", direction = Sort.Direction.DESC) Pageable pageable) {
+    public Page<IndexResultVO> findPage(@ModelAttribute @Valid SearchVO searchVO, Pageable pageable) {
         return indexService.findPage(searchVO, pageable);
     }
 

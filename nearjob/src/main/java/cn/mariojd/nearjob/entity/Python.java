@@ -17,8 +17,8 @@ public class Python extends BaseEntity {
     public Python() {
     }
 
-    public Python(String positionId, String jobName, String jobSalary, String jobExperience, String jobEducation, String jobAdvantage, String companyShortName, String companyLocation, Date postJobTime, Double companyLatitude, Double companyLongitude) {
-        super(positionId, jobName, jobSalary, jobExperience, jobEducation, jobAdvantage, companyShortName, companyLocation, postJobTime, companyLatitude, companyLongitude);
+    public Python(String positionId, String jobName, String jobSalary, String jobExperience, String jobEducation, String companyScale, String companyShortName, String companyFullName, Date postJobTime, Integer sourceFrom, Double companyLatitude, Double companyLongitude) {
+        super(positionId, jobName, jobSalary, jobExperience, jobEducation, companyScale, companyShortName, companyFullName, postJobTime, sourceFrom, companyLatitude, companyLongitude);
     }
 
 }
