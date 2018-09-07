@@ -1,5 +1,6 @@
 package cn.mariojd.nearjob.model.response;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import java.util.Date;
@@ -54,6 +55,7 @@ public class IndexResultVO {
     /**
      * 发布时间
      */
+    @JsonFormat(pattern = "MM-dd HH:mm")
     private Date postJobTime;
 
     /**
