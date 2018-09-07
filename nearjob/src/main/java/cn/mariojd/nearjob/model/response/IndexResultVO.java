@@ -55,7 +55,7 @@ public class IndexResultVO {
     /**
      * 发布时间
      */
-    @JsonFormat(pattern = "MM-dd HH:mm")
+    @JsonFormat(pattern = "MM-dd HH:mm", timezone = "GTM+8")
     private Date postJobTime;
 
     /**

@@ -4,7 +4,6 @@ import cn.mariojd.nearjob.base.BaseDao;
 import cn.mariojd.nearjob.base.BaseEntity;
 import cn.mariojd.nearjob.base.BaseService;
 import cn.mariojd.nearjob.document.Job;
-import cn.mariojd.nearjob.enums.SortEnum;
 import cn.mariojd.nearjob.model.request.SearchVO;
 import cn.mariojd.nearjob.model.response.IndexResultVO;
 import cn.mariojd.nearjob.repository.JobRepository;
@@ -16,16 +15,12 @@ import org.elasticsearch.index.query.GeoDistanceQueryBuilder;
 import org.elasticsearch.index.query.MatchQueryBuilder;
 import org.springframework.beans.BeanUtils;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import javax.annotation.Resource;
-import java.util.Comparator;
-import java.util.List;
 import java.util.Objects;
-import java.util.stream.Collectors;
 
 /**
  * @author Jared
@@ -75,25 +70,8 @@ public class IndexService extends BaseService {
             queryBuilder.filter(builder);
         }
 
-        Page<IndexResultVO> resultVOPage = jobRepository.search(queryBuilder, pageable).map(source ->
+        return jobRepository.search(queryBuilder, pageable).map(source ->
                 toSearchResultVO(source, latitude, longitude, resources.get(jobId)));
-
-        List<IndexResultVO> resultVOList;
-        SortEnum sort = searchVO.getSort();
-        switch (sort) {
-            case DISTANCE:
-                resultVOList = resultVOPage.stream().sorted(Comparator.comparingDouble(IndexResultVO::getDistance))
-                        .collect(Collectors.toList());
-                resultVOPage = new PageImpl<>(resultVOList, pageable, resultVOList.size());
-                break;
-            case POST_TIME:
-                resultVOList = resultVOPage.stream().sorted(Comparator.comparing(IndexResultVO::getPostJobTime).reversed())
-                        .collect(Collectors.toList());
-                resultVOPage = new PageImpl<>(resultVOList, pageable, resultVOList.size());
-            default:
-                break;
-        }
-        return resultVOPage;
     }
 
     /**
