@@ -66,6 +66,11 @@ public class IndexResultVO {
     /**
      * 两者距离
      */
-    private Double distance;
+    private String distance;
+
+    /**
+     * 公司logo
+     */
+    private String companyLogo;
 
 }

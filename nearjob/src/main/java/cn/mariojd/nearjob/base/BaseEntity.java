@@ -169,12 +169,17 @@ public abstract class BaseEntity {
      */
     private Date expiredTime;
 
+    /**
+     * 公司logo
+     */
+    private String companyLogo;
+
     protected BaseEntity() {
     }
 
-    public BaseEntity(String positionId, String jobName, String jobSalary, String jobExperience,
-                      String jobEducation, String companyScale, String companyShortName, String companyFullName,
-                      Date postJobTime,Integer sourceFrom, Double companyLatitude, Double companyLongitude) {
+    public BaseEntity(String positionId, String jobName, String jobSalary, String jobExperience, String jobEducation,
+                      String companyScale, String companyShortName, String companyFullName, Date postJobTime,
+                      Integer sourceFrom, Double companyLatitude, Double companyLongitude, String companyLogo) {
         this.positionId = positionId;
         this.jobName = jobName;
         this.jobSalary = jobSalary;
@@ -187,6 +192,11 @@ public abstract class BaseEntity {
         this.sourceFrom = sourceFrom;
         this.companyLatitude = companyLatitude;
         this.companyLongitude = companyLongitude;
+        this.companyLogo = companyLogo;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Double.parseDouble(String.format("%.1f", 8.01)));
     }
 
 }

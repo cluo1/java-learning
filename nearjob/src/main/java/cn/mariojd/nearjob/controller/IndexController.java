@@ -5,6 +5,7 @@ import cn.mariojd.nearjob.model.response.IndexResultVO;
 import cn.mariojd.nearjob.service.IndexService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
@@ -31,8 +32,8 @@ public class IndexController {
     private IndexService indexService;
 
     @GetMapping
-    public Page<IndexResultVO> findPage(@ModelAttribute @Valid SearchVO searchVO, Pageable pageable) {
-        return indexService.findPage(searchVO, pageable);
+    public Page<IndexResultVO> findPage(@ModelAttribute @Valid SearchVO searchVO) {
+        return indexService.findPage(searchVO);
     }
 
 }

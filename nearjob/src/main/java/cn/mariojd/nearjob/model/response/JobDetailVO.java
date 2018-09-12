@@ -101,4 +101,9 @@ public class JobDetailVO {
      */
     private String sourceUrl;
 
+    /**
+     * 公司logo
+     */
+    private String companyLogo;
+
 }

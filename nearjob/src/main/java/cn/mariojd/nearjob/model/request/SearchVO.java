@@ -1,9 +1,12 @@
 package cn.mariojd.nearjob.model.request;
 
+import cn.mariojd.nearjob.enums.SortEnum;
 import lombok.Data;
 import org.hibernate.validator.constraints.Range;
 
 import javax.validation.constraints.Digits;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Size;
 
 /**
  * @author Jared
@@ -18,7 +21,7 @@ public class SearchVO {
     private Integer cityId;
 
     /**
-     * 岗位id
+     * 岗位id(默认：1-Java)
      */
     private Integer jobId = 1;
 
@@ -49,5 +52,21 @@ public class SearchVO {
      * 搜索关键字
      */
     private String keyword;
+
+    /**
+     * 排序条件(默认：按距离)
+     */
+    private SortEnum sort = SortEnum.DISTANCE;
+
+    /**
+     * 当前Page
+     */
+    private Integer page = 0;
+
+    /**
+     * 请求Size
+     */
+    @Range(min = 10, max = 20, message = "size error")
+    private Integer size = 15;
 
 }

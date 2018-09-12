@@ -4,6 +4,7 @@ import cn.mariojd.nearjob.base.BaseDao;
 import cn.mariojd.nearjob.base.BaseEntity;
 import cn.mariojd.nearjob.base.BaseService;
 import cn.mariojd.nearjob.document.Job;
+import cn.mariojd.nearjob.enums.SortEnum;
 import cn.mariojd.nearjob.model.request.SearchVO;
 import cn.mariojd.nearjob.model.response.IndexResultVO;
 import cn.mariojd.nearjob.repository.JobRepository;
@@ -17,9 +18,9 @@ import org.elasticsearch.search.sort.GeoDistanceSortBuilder;
 import org.elasticsearch.search.sort.SortOrder;
 import org.springframework.beans.BeanUtils;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilder;
-import org.springframework.data.elasticsearch.core.query.SearchQuery;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -41,10 +42,9 @@ public class IndexService extends BaseService {
      * 获取首页展示数据
      *
      * @param searchVO
-     * @param pageable
      * @return
      */
-    public Page<IndexResultVO> findPage(SearchVO searchVO, Pageable pageable) {
+    public Page<IndexResultVO> findPage(SearchVO searchVO) {
         BoolQueryBuilder boolQueryBuilder = new BoolQueryBuilder();
         int jobId = searchVO.getJobId();
         boolQueryBuilder.must(new MatchQueryBuilder("jobId", jobId));
@@ -73,17 +73,29 @@ public class IndexService extends BaseService {
             distanceQueryBuilder.point(latitude, longitude);
             distanceQueryBuilder.distance(String.valueOf(distance), DistanceUnit.KILOMETERS);
             boolQueryBuilder.filter(distanceQueryBuilder);
-
         }
-        // 按照距离排序
-        GeoDistanceSortBuilder distanceSortBuilder =
-                new GeoDistanceSortBuilder("location", latitude, longitude);
-        distanceSortBuilder.unit(DistanceUnit.KILOMETERS);
-        distanceSortBuilder.order(SortOrder.ASC);
-        SearchQuery query = new NativeSearchQueryBuilder().withQuery(boolQueryBuilder)
-                .withSort(distanceSortBuilder).withPageable(pageable).build();
 
-        return jobRepository.search(query).map(source ->
+        NativeSearchQueryBuilder nativeSearchQueryBuilder = new NativeSearchQueryBuilder().withQuery(boolQueryBuilder);
+
+        SortEnum sortEnum = searchVO.getSort();
+        PageRequest pageable = PageRequest.of(searchVO.getPage(), searchVO.getSize());
+        switch (sortEnum) {
+            case DISTANCE:
+                // 按距离升序
+                GeoDistanceSortBuilder distanceSortBuilder =
+                        new GeoDistanceSortBuilder("location", latitude, longitude);
+                distanceSortBuilder.unit(DistanceUnit.KILOMETERS);
+                distanceSortBuilder.order(SortOrder.ASC);
+                nativeSearchQueryBuilder.withSort(distanceSortBuilder);
+                break;
+            case TIME:
+                // 按时间倒序
+                pageable = PageRequest.of(searchVO.getPage(), searchVO.getSize(), Sort.Direction.DESC, "postJobTime");
+            default:
+                break;
+        }
+
+        return jobRepository.search(nativeSearchQueryBuilder.withPageable(pageable).build()).map(source ->
                 toSearchResultVO(source, latitude, longitude, resources.get(jobId)));
     }
 
@@ -101,7 +113,7 @@ public class IndexService extends BaseService {
             // 计算两点距离
             double distance = GeoDistance.ARC.calculate(latitude, longitude,
                     baseEntity.getCompanyLatitude(), baseEntity.getCompanyLongitude(), DistanceUnit.KILOMETERS);
-            resultVO.setDistance(Double.parseDouble(String.format("%.1f", distance)));
+            resultVO.setDistance(String.format("%.1f", distance));
         }
         return resultVO;
     }
