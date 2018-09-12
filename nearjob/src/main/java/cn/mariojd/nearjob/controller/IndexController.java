@@ -32,8 +32,9 @@ public class IndexController {
     private IndexService indexService;
 
     @GetMapping
-    public Page<IndexResultVO> findPage(@ModelAttribute @Valid SearchVO searchVO) {
-        return indexService.findPage(searchVO);
+    public Page<IndexResultVO> findPage(@ModelAttribute @Valid SearchVO searchVO,
+                                        Pageable pageable) {
+        return indexService.findPage(searchVO, pageable);
     }
 
 }

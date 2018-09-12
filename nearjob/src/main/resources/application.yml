@@ -35,10 +35,10 @@ spring:
     elasticsearch:
       cluster-nodes: ${nearjob.host}:9300
       cluster-name: docker-cluster
-    # web:
-      # pageable:
-        # max-page-size: 20
-        # default-page-size: 15
+    web:
+      pageable:
+        max-page-size: 20
+        default-page-size: 15
   mvc:
     servlet:
       load-on-startup: 1
