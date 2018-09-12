@@ -18,10 +18,10 @@ spring:
       ddl-auto: update
     properties:
       hibernate:
-        show_sql: true
+        # show_sql: true
         # format_sql: true
-        session_factory:
-          interceptor: cn.mariojd.nearjob.interceptor.TableInterceptor
+        # session_factory:
+          # interceptor: cn.mariojd.nearjob.interceptor.TableInterceptor
         jdbc:
           lob:
             # @See: https://github.com/pgjdbc/pgjdbc/issues/1102
