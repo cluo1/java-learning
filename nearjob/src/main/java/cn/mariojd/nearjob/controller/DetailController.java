@@ -26,8 +26,7 @@ public class DetailController {
     private DetailService detailService;
 
     @GetMapping
-    public JobDetailVO findDetail(@RequestParam @NotBlank String positionId,
-                                  @RequestParam int jobId) {
+    public JobDetailVO findDetail(@RequestParam @NotBlank String positionId, @RequestParam int jobId) {
         return detailService.findDetail(positionId, jobId);
     }
 
