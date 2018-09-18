@@ -72,6 +72,16 @@ public class JobDetailVO {
     private String companyLocation;
 
     /**
+     * 地址纬度
+     */
+    private Double companyLatitude;
+
+    /**
+     * 地址经度
+     */
+    private Double companyLongitude;
+
+    /**
      * 融资情况
      */
     private String companyFinance;
