@@ -139,6 +139,11 @@ public class Example {
         System.out.println("intSummaryStatistics = " + intSummaryStatistics); // IntSummaryStatistics{sumAndCount=6, sum=63, min=3, average=10.500000, max=23}
     }
 
+    private void groupBy() {
+        Map<Boolean, List<Integer>> collect = Stream.of(array).collect(Collectors.groupingBy(n -> n >= 10));
+        System.out.println("collect = " + collect); // {false=[3, 3, 9], true=[10, 15, 23]}
+    }
+
     public static void main(String[] args) {
         Example example = new Example();
         example.map();
@@ -154,8 +159,9 @@ public class Example {
         example.peek();
         example.reduce();
         example.flatMap();
-        example.summaryStatistics();
         example.present();
+        example.summaryStatistics();
+        example.groupBy();
     }
 
 }
