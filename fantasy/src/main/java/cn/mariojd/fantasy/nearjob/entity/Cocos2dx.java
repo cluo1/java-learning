@@ -1,6 +1,6 @@
-package cn.mariojd.fantasy.entity;
+package cn.mariojd.fantasy.nearjob.entity;
 
-import cn.mariojd.fantasy.base.BaseEntity;
+import cn.mariojd.fantasy.nearjob.base.BaseEntity;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;

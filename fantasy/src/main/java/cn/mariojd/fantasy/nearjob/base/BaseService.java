@@ -1,4 +1,4 @@
-package cn.mariojd.fantasy.base;
+package cn.mariojd.fantasy.nearjob.base;
 
 import java.util.HashMap;
 

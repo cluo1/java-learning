@@ -1,4 +1,4 @@
-package cn.mariojd.fantasy.base;
+package cn.mariojd.fantasy.nearjob.base;
 
 import lombok.Data;
 import org.springframework.data.annotation.CreatedDate;

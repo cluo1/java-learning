@@ -1,6 +1,6 @@
-package cn.mariojd.fantasy.repository;
+package cn.mariojd.fantasy.nearjob.repository;
 
-import cn.mariojd.fantasy.document.Job;
+import cn.mariojd.fantasy.nearjob.document.Job;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 
 /**

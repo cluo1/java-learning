@@ -1,8 +1,8 @@
-package cn.mariojd.fantasy.service;
+package cn.mariojd.fantasy.nearjob.service;
 
-import cn.mariojd.fantasy.base.BaseEntity;
-import cn.mariojd.fantasy.base.BaseService;
-import cn.mariojd.fantasy.model.response.JobDetailVO;
+import cn.mariojd.fantasy.nearjob.base.BaseEntity;
+import cn.mariojd.fantasy.nearjob.base.BaseService;
+import cn.mariojd.fantasy.nearjob.model.response.JobDetailVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;

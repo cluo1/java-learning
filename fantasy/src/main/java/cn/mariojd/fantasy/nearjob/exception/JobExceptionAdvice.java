@@ -1,6 +1,6 @@
-package cn.mariojd.fantasy.exception;
+package cn.mariojd.fantasy.nearjob.exception;
 
-import cn.mariojd.fantasy.base.BaseResponse;
+import cn.mariojd.fantasy.nearjob.base.BaseResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;

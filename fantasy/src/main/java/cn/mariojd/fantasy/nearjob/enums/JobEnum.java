@@ -1,4 +1,4 @@
-package cn.mariojd.fantasy.enums;
+package cn.mariojd.fantasy.nearjob.enums;
 
 /**
  * @author Jared

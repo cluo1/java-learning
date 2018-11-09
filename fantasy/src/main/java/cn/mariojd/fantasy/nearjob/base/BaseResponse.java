@@ -1,6 +1,6 @@
-package cn.mariojd.fantasy.base;
+package cn.mariojd.fantasy.nearjob.base;
 
-import cn.mariojd.fantasy.enums.JobEnum;
+import cn.mariojd.fantasy.nearjob.enums.JobEnum;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;

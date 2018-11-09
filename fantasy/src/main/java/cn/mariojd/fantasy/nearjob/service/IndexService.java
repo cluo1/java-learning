@@ -1,12 +1,12 @@
-package cn.mariojd.fantasy.service;
+package cn.mariojd.fantasy.nearjob.service;
 
-import cn.mariojd.fantasy.base.BaseDao;
-import cn.mariojd.fantasy.base.BaseEntity;
-import cn.mariojd.fantasy.base.BaseService;
-import cn.mariojd.fantasy.document.Job;
-import cn.mariojd.fantasy.model.request.SearchVO;
-import cn.mariojd.fantasy.model.response.IndexResultVO;
-import cn.mariojd.fantasy.repository.JobRepository;
+import cn.mariojd.fantasy.nearjob.base.BaseDao;
+import cn.mariojd.fantasy.nearjob.base.BaseEntity;
+import cn.mariojd.fantasy.nearjob.base.BaseService;
+import cn.mariojd.fantasy.nearjob.document.Job;
+import cn.mariojd.fantasy.nearjob.model.request.SearchVO;
+import cn.mariojd.fantasy.nearjob.model.response.IndexResultVO;
+import cn.mariojd.fantasy.nearjob.repository.JobRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.elasticsearch.common.geo.GeoDistance;
 import org.elasticsearch.common.unit.DistanceUnit;

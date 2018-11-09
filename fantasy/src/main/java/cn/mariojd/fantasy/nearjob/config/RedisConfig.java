@@ -1,4 +1,4 @@
-package cn.mariojd.fantasy.config;
+package cn.mariojd.fantasy.nearjob.config;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;

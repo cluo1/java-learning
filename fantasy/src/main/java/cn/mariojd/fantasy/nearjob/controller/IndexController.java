@@ -1,8 +1,8 @@
-package cn.mariojd.fantasy.controller;
+package cn.mariojd.fantasy.nearjob.controller;
 
-import cn.mariojd.fantasy.model.request.SearchVO;
-import cn.mariojd.fantasy.model.response.IndexResultVO;
-import cn.mariojd.fantasy.service.IndexService;
+import cn.mariojd.fantasy.nearjob.model.request.SearchVO;
+import cn.mariojd.fantasy.nearjob.model.response.IndexResultVO;
+import cn.mariojd.fantasy.nearjob.service.IndexService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

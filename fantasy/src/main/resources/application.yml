@@ -22,7 +22,7 @@ spring:
         # show_sql: true
         # format_sql: true
         # session_factory:
-          # interceptor: cn.mariojd.fantasy.interceptor.TableInterceptor
+          # interceptor: cn.mariojd.fantasy.nearjob.interceptor.TableInterceptor
         jdbc:
           lob:
             # @See: https://github.com/pgjdbc/pgjdbc/issues/1102

@@ -1,7 +1,7 @@
 package cn.mariojd.fantasy;
 
-import cn.mariojd.fantasy.base.BaseDao;
-import cn.mariojd.fantasy.base.BaseService;
+import cn.mariojd.fantasy.nearjob.base.BaseDao;
+import cn.mariojd.fantasy.nearjob.base.BaseService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

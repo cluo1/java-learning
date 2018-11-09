@@ -1,7 +1,7 @@
-package cn.mariojd.fantasy.dao;
+package cn.mariojd.fantasy.nearjob.dao;
 
-import cn.mariojd.fantasy.base.BaseDao;
-import cn.mariojd.fantasy.entity.PHP;
+import cn.mariojd.fantasy.nearjob.base.BaseDao;
+import cn.mariojd.fantasy.nearjob.entity.PHP;
 
 /**
  * @author Jared

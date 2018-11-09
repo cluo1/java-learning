@@ -1,4 +1,4 @@
-package cn.mariojd.fantasy.model.request;
+package cn.mariojd.fantasy.nearjob.model.request;
 
 import lombok.Data;
 import org.hibernate.validator.constraints.Range;

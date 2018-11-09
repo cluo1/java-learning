@@ -1,4 +1,4 @@
-package cn.mariojd.fantasy.model.response;
+package cn.mariojd.fantasy.nearjob.model.response;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;

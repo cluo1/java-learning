@@ -1,7 +1,7 @@
-package cn.mariojd.fantasy.controller;
+package cn.mariojd.fantasy.nearjob.controller;
 
-import cn.mariojd.fantasy.model.response.JobDetailVO;
-import cn.mariojd.fantasy.service.DetailService;
+import cn.mariojd.fantasy.nearjob.model.response.JobDetailVO;
+import cn.mariojd.fantasy.nearjob.service.DetailService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

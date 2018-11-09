@@ -1,4 +1,4 @@
-package cn.mariojd.fantasy.interceptor;
+package cn.mariojd.fantasy.nearjob.interceptor;
 
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.EmptyInterceptor;

@@ -1,4 +1,4 @@
-package cn.mariojd.fantasy.base;
+package cn.mariojd.fantasy.nearjob.base;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

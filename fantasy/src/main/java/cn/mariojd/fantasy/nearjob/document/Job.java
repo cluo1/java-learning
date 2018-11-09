@@ -1,4 +1,4 @@
-package cn.mariojd.fantasy.document;
+package cn.mariojd.fantasy.nearjob.document;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
