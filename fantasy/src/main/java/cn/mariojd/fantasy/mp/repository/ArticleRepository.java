@@ -13,7 +13,7 @@ public interface ArticleRepository extends ElasticsearchRepository<Article, Inte
 
     Page<Article> findByMpsId(int mpsId, Pageable pageable);
 
-    Page<Article> findByMpsIdAndTitleLikeOrAuthorLikeOrDigestLikeOrContentLike(
+    Page<Article> findByMpsIdOrTitleLikeOrAuthorLikeOrDigestLikeOrContentLike(
             int mpsId, String title, String author, String digest, String content, Pageable pageable);
 
 }

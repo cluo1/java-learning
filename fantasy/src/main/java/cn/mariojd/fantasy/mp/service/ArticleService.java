@@ -39,7 +39,7 @@ public class ArticleService {
         if (StringUtils.isEmpty(word)) {
             return articleRepository.findByMpsId(mpsId, pageable).map(this::toArticleResultVO);
         }
-        return articleRepository.findByMpsIdAndTitleLikeOrAuthorLikeOrDigestLikeOrContentLike(
+        return articleRepository.findByMpsIdOrTitleLikeOrAuthorLikeOrDigestLikeOrContentLike(
                 mpsId, word, word, word, word, pageable).map(this::toArticleResultVO);
     }
 
