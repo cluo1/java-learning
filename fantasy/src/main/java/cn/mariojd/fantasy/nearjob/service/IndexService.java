@@ -63,7 +63,7 @@ public class IndexService extends BaseService {
             boolQueryBuilder.must(new MatchQueryBuilder("keyword", keyword));
         }
 
-        NativeSearchQueryBuilder nativeSearchQueryBuilder = new NativeSearchQueryBuilder();
+        NativeSearchQueryBuilder builder = new NativeSearchQueryBuilder();
 
         Double latitude = searchVO.getLatitude();
         Double longitude = searchVO.getLongitude();
@@ -80,11 +80,11 @@ public class IndexService extends BaseService {
                     new GeoDistanceSortBuilder("location", latitude, longitude);
             distanceSortBuilder.unit(DistanceUnit.KILOMETERS);
             distanceSortBuilder.order(SortOrder.ASC);
-            nativeSearchQueryBuilder.withSort(distanceSortBuilder);
+            builder.withSort(distanceSortBuilder);
         }
 
-        nativeSearchQueryBuilder.withQuery(boolQueryBuilder);
-        return jobRepository.search(nativeSearchQueryBuilder.withPageable(pageable).build()).map(source ->
+        builder.withFilter(boolQueryBuilder).withPageable(pageable);
+        return jobRepository.search(builder.build()).map(source ->
                 toSearchResultVO(source, latitude, longitude, resources.get(jobId)));
     }
 
