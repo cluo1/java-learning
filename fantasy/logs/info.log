@@ -1,0 +1,440 @@
+2018-11-10 13:07:54,013 INFO  c.m.fantasy.FantasyApplication[50]: Starting FantasyApplication on Jared with PID 21576 (started by jd in D:\IntelliJ IDEA\github\java-learning\fantasy)
+2018-11-10 13:07:54,020 INFO  c.m.fantasy.FantasyApplication[662]: No active profile set, falling back to default profiles: default
+2018-11-10 13:07:55,724 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext[590]: Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@37eca4c0: startup date [Sat Nov 10 13:07:55 CST 2018]; root of context hierarchy
+2018-11-10 13:08:03,128 INFO  o.s.d.r.c.RepositoryConfigurationDelegate[163]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-10 13:08:03,332 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.AndroidDao.
+2018-11-10 13:08:03,340 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.CDao.
+2018-11-10 13:08:03,343 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.Cocos2dxDao.
+2018-11-10 13:08:03,348 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.CPlusPlusDao.
+2018-11-10 13:08:03,352 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.CSharpDao.
+2018-11-10 13:08:03,355 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.GoDao.
+2018-11-10 13:08:03,359 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.HadoopDao.
+2018-11-10 13:08:03,362 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.Html5Dao.
+2018-11-10 13:08:03,365 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.IosDao.
+2018-11-10 13:08:03,370 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.JavaDao.
+2018-11-10 13:08:03,373 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.NetDao.
+2018-11-10 13:08:03,376 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.NodeJSDao.
+2018-11-10 13:08:03,380 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.PhpDao.
+2018-11-10 13:08:03,383 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.PythonDao.
+2018-11-10 13:08:03,386 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.U3dDao.
+2018-11-10 13:08:03,390 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.WebDao.
+2018-11-10 13:08:03,624 INFO  o.s.d.r.c.RepositoryConfigurationDelegate[163]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-10 13:08:03,661 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data JPA - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.mp.repository.ArticleRepository.
+2018-11-10 13:08:03,683 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data JPA - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.repository.JobRepository.
+2018-11-10 13:08:03,796 INFO  o.s.d.r.c.RepositoryConfigurationDelegate[163]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-10 13:08:03,866 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.mp.repository.ArticleRepository.
+2018-11-10 13:08:03,866 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.AndroidDao.
+2018-11-10 13:08:03,867 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.CDao.
+2018-11-10 13:08:03,867 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.Cocos2dxDao.
+2018-11-10 13:08:03,868 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.CPlusPlusDao.
+2018-11-10 13:08:03,869 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.CSharpDao.
+2018-11-10 13:08:03,870 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.GoDao.
+2018-11-10 13:08:03,870 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.HadoopDao.
+2018-11-10 13:08:03,871 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.Html5Dao.
+2018-11-10 13:08:03,871 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.IosDao.
+2018-11-10 13:08:03,871 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.JavaDao.
+2018-11-10 13:08:03,872 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.NetDao.
+2018-11-10 13:08:03,873 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.NodeJSDao.
+2018-11-10 13:08:03,874 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.PhpDao.
+2018-11-10 13:08:03,874 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.PythonDao.
+2018-11-10 13:08:03,874 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.U3dDao.
+2018-11-10 13:08:03,875 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.WebDao.
+2018-11-10 13:08:03,875 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.repository.JobRepository.
+2018-11-10 13:08:05,109 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[326]: Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5e182b46] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-10 13:08:06,447 INFO  org.xnio[104]: XNIO version 3.3.8.Final
+2018-11-10 13:08:06,536 INFO  org.xnio.nio[55]: XNIO NIO Implementation Version 3.3.8.Final
+2018-11-10 13:08:07,157 INFO  io.undertow.servlet[360]: Initializing Spring embedded WebApplicationContext
+2018-11-10 13:08:07,158 INFO  o.s.web.context.ContextLoader[285]: Root WebApplicationContext: initialization completed in 11434 ms
+2018-11-10 13:08:07,339 INFO  o.s.b.w.s.ServletRegistrationBean[187]: Servlet dispatcherServlet mapped to [/]
+2018-11-10 13:08:07,355 INFO  o.s.b.w.s.FilterRegistrationBean[245]: Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-10 13:08:07,358 INFO  o.s.b.w.s.FilterRegistrationBean[245]: Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-10 13:08:07,359 INFO  o.s.b.w.s.FilterRegistrationBean[245]: Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-11-10 13:08:07,359 INFO  o.s.b.w.s.FilterRegistrationBean[245]: Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-10 13:08:08,130 INFO  c.z.hikari.HikariDataSource[110]: HikariPool-1 - Starting...
+2018-11-10 13:08:09,272 INFO  c.z.hikari.HikariDataSource[123]: HikariPool-1 - Start completed.
+2018-11-10 13:08:09,717 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean[361]: Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-11-10 13:08:09,791 INFO  o.h.j.internal.util.LogHelper[31]: HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-11-10 13:08:10,253 INFO  org.hibernate.Version[45]: HHH000412: Hibernate Core {5.2.17.Final}
+2018-11-10 13:08:10,255 INFO  org.hibernate.cfg.Environment[213]: HHH000206: hibernate.properties not found
+2018-11-10 13:08:10,423 INFO  o.h.annotations.common.Version[66]: HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-11-10 13:08:11,286 INFO  org.hibernate.dialect.Dialect[157]: HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-11-10 13:08:15,613 INFO  o.h.e.j.e.i.LobCreatorBuilderImpl[85]: HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2018-11-10 13:08:15,617 INFO  o.h.type.BasicTypeRegistry[148]: HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@54f21902
+2018-11-10 13:08:18,723 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean[415]: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-11-10 13:08:20,741 INFO  o.e.plugins.PluginsService[176]: no modules loaded
+2018-11-10 13:08:20,743 INFO  o.e.plugins.PluginsService[179]: loaded plugin [org.elasticsearch.index.reindex.ReindexPlugin]
+2018-11-10 13:08:20,744 INFO  o.e.plugins.PluginsService[179]: loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2018-11-10 13:08:20,745 INFO  o.e.plugins.PluginsService[179]: loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2018-11-10 13:08:20,745 INFO  o.e.plugins.PluginsService[179]: loaded plugin [org.elasticsearch.script.mustache.MustachePlugin]
+2018-11-10 13:08:20,745 INFO  o.e.plugins.PluginsService[179]: loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2018-11-10 13:08:24,340 INFO  o.s.d.e.c.TransportClientFactoryBean[106]: Adding transport node : 193.112.0.219:9300
+2018-11-10 13:08:48,644 INFO  o.s.w.s.h.SimpleUrlHandlerMapping[373]: Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-10 13:08:51,058 INFO  o.h.h.i.QueryTranslatorFactoryInitiator[47]: HHH000397: Using ASTQueryTranslatorFactory
+2018-11-10 13:08:51,945 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter[574]: Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@37eca4c0: startup date [Sat Nov 10 13:07:55 CST 2018]; root of context hierarchy
+2018-11-10 13:08:52,110 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping[547]: Mapped "{[/api/article],methods=[GET]}" onto public org.springframework.data.domain.Page<cn.mariojd.fantasy.mp.model.response.ArticleResultVO> cn.mariojd.fantasy.mp.controller.ArticleController.findPage(cn.mariojd.fantasy.mp.model.request.ArticleSearchVO,org.springframework.data.domain.Pageable)
+2018-11-10 13:08:52,115 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping[547]: Mapped "{[/api/detail],methods=[GET]}" onto public cn.mariojd.fantasy.nearjob.model.response.JobDetailVO cn.mariojd.fantasy.nearjob.controller.DetailController.findDetail(java.lang.String,int)
+2018-11-10 13:08:52,117 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping[547]: Mapped "{[/api/index],methods=[GET]}" onto public org.springframework.data.domain.Page<cn.mariojd.fantasy.nearjob.model.response.IndexResultVO> cn.mariojd.fantasy.nearjob.controller.IndexController.findPage(cn.mariojd.fantasy.nearjob.model.request.SearchVO,org.springframework.data.domain.Pageable)
+2018-11-10 13:08:52,122 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping[547]: Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-11-10 13:08:52,123 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping[547]: Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-11-10 13:08:52,171 INFO  o.s.w.s.h.SimpleUrlHandlerMapping[373]: Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-10 13:08:52,172 INFO  o.s.w.s.h.SimpleUrlHandlerMapping[373]: Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-10 13:08:52,250 INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver[288]: Detected @ExceptionHandler methods in jobExceptionAdvice
+2018-11-10 13:08:53,500 INFO  o.s.j.e.a.AnnotationMBeanExporter[433]: Registering beans for JMX exposure on startup
+2018-11-10 13:08:53,502 INFO  o.s.j.e.a.AnnotationMBeanExporter[895]: Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-11-10 13:08:53,511 INFO  o.s.j.e.a.AnnotationMBeanExporter[668]: Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-11-10 13:08:53,548 INFO  io.undertow.servlet[360]: Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-11-10 13:08:53,549 INFO  o.s.w.s.DispatcherServlet[494]: FrameworkServlet 'dispatcherServlet': initialization started
+2018-11-10 13:08:53,574 INFO  o.s.w.s.DispatcherServlet[509]: FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2018-11-10 13:08:53,694 INFO  o.s.b.w.e.u.UndertowServletWebServer[148]: Undertow started on port(s) 10000 (http) with context path ''
+2018-11-10 13:08:53,701 INFO  c.m.fantasy.FantasyApplication[59]: Started FantasyApplication in 72.113 seconds (JVM running for 108.168)
+2018-11-10 13:08:54,081 INFO  io.lettuce.core.EpollProvider[104]: Starting without optional epoll library
+2018-11-10 13:08:54,089 INFO  io.lettuce.core.KqueueProvider[104]: Starting without optional kqueue library
+2018-11-10 13:16:09,876 INFO  c.m.fantasy.FantasyApplication[50]: Starting FantasyApplication on Jared with PID 6376 (started by jd in D:\IntelliJ IDEA\github\java-learning\fantasy)
+2018-11-10 13:16:09,980 INFO  c.m.fantasy.FantasyApplication[662]: No active profile set, falling back to default profiles: default
+2018-11-10 13:16:10,431 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext[590]: Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2babf189: startup date [Sat Nov 10 13:16:10 CST 2018]; root of context hierarchy
+2018-11-10 13:16:12,462 INFO  o.s.d.r.c.RepositoryConfigurationDelegate[163]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-10 13:16:12,550 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.AndroidDao.
+2018-11-10 13:16:12,557 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.CDao.
+2018-11-10 13:16:12,561 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.Cocos2dxDao.
+2018-11-10 13:16:12,566 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.CPlusPlusDao.
+2018-11-10 13:16:12,570 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.CSharpDao.
+2018-11-10 13:16:12,574 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.GoDao.
+2018-11-10 13:16:12,578 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.HadoopDao.
+2018-11-10 13:16:12,582 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.Html5Dao.
+2018-11-10 13:16:12,586 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.IosDao.
+2018-11-10 13:16:12,589 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.JavaDao.
+2018-11-10 13:16:12,594 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.NetDao.
+2018-11-10 13:16:12,598 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.NodeJSDao.
+2018-11-10 13:16:12,601 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.PhpDao.
+2018-11-10 13:16:12,605 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.PythonDao.
+2018-11-10 13:16:12,609 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.U3dDao.
+2018-11-10 13:16:12,613 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.WebDao.
+2018-11-10 13:16:12,702 INFO  o.s.d.r.c.RepositoryConfigurationDelegate[163]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-10 13:16:12,739 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data JPA - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.mp.repository.ArticleRepository.
+2018-11-10 13:16:12,766 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data JPA - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.repository.JobRepository.
+2018-11-10 13:16:12,844 INFO  o.s.d.r.c.RepositoryConfigurationDelegate[163]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-10 13:16:12,881 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.mp.repository.ArticleRepository.
+2018-11-10 13:16:12,881 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.AndroidDao.
+2018-11-10 13:16:12,882 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.CDao.
+2018-11-10 13:16:12,882 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.Cocos2dxDao.
+2018-11-10 13:16:12,883 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.CPlusPlusDao.
+2018-11-10 13:16:12,883 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.CSharpDao.
+2018-11-10 13:16:12,884 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.GoDao.
+2018-11-10 13:16:12,885 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.HadoopDao.
+2018-11-10 13:16:12,885 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.Html5Dao.
+2018-11-10 13:16:12,886 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.IosDao.
+2018-11-10 13:16:12,886 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.JavaDao.
+2018-11-10 13:16:12,886 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.NetDao.
+2018-11-10 13:16:12,887 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.NodeJSDao.
+2018-11-10 13:16:12,888 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.PhpDao.
+2018-11-10 13:16:12,889 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.PythonDao.
+2018-11-10 13:16:12,890 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.U3dDao.
+2018-11-10 13:16:12,890 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.WebDao.
+2018-11-10 13:16:12,891 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.repository.JobRepository.
+2018-11-10 13:16:13,803 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[326]: Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7cd8e91b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-10 13:16:14,450 INFO  org.xnio[104]: XNIO version 3.3.8.Final
+2018-11-10 13:16:14,472 INFO  org.xnio.nio[55]: XNIO NIO Implementation Version 3.3.8.Final
+2018-11-10 13:16:14,628 INFO  io.undertow.servlet[360]: Initializing Spring embedded WebApplicationContext
+2018-11-10 13:16:14,628 INFO  o.s.web.context.ContextLoader[285]: Root WebApplicationContext: initialization completed in 4197 ms
+2018-11-10 13:16:14,745 INFO  o.s.b.w.s.ServletRegistrationBean[187]: Servlet dispatcherServlet mapped to [/]
+2018-11-10 13:16:14,756 INFO  o.s.b.w.s.FilterRegistrationBean[245]: Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-10 13:16:14,758 INFO  o.s.b.w.s.FilterRegistrationBean[245]: Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-10 13:16:14,759 INFO  o.s.b.w.s.FilterRegistrationBean[245]: Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-11-10 13:16:14,759 INFO  o.s.b.w.s.FilterRegistrationBean[245]: Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-10 13:16:15,279 INFO  c.z.hikari.HikariDataSource[110]: HikariPool-1 - Starting...
+2018-11-10 13:16:15,451 INFO  c.z.hikari.HikariDataSource[123]: HikariPool-1 - Start completed.
+2018-11-10 13:16:15,641 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean[361]: Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-11-10 13:16:15,662 INFO  o.h.j.internal.util.LogHelper[31]: HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-11-10 13:16:15,861 INFO  org.hibernate.Version[45]: HHH000412: Hibernate Core {5.2.17.Final}
+2018-11-10 13:16:15,864 INFO  org.hibernate.cfg.Environment[213]: HHH000206: hibernate.properties not found
+2018-11-10 13:16:15,961 INFO  o.h.annotations.common.Version[66]: HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-11-10 13:16:16,220 INFO  org.hibernate.dialect.Dialect[157]: HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-11-10 13:16:18,690 INFO  o.h.e.j.e.i.LobCreatorBuilderImpl[85]: HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2018-11-10 13:16:18,694 INFO  o.h.type.BasicTypeRegistry[148]: HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@ad5cffa
+2018-11-10 13:16:20,204 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean[415]: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-11-10 13:16:20,705 INFO  o.e.plugins.PluginsService[176]: no modules loaded
+2018-11-10 13:16:20,706 INFO  o.e.plugins.PluginsService[179]: loaded plugin [org.elasticsearch.index.reindex.ReindexPlugin]
+2018-11-10 13:16:20,707 INFO  o.e.plugins.PluginsService[179]: loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2018-11-10 13:16:20,707 INFO  o.e.plugins.PluginsService[179]: loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2018-11-10 13:16:20,708 INFO  o.e.plugins.PluginsService[179]: loaded plugin [org.elasticsearch.script.mustache.MustachePlugin]
+2018-11-10 13:16:20,708 INFO  o.e.plugins.PluginsService[179]: loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2018-11-10 13:16:22,249 INFO  o.s.d.e.c.TransportClientFactoryBean[106]: Adding transport node : 193.112.0.219:9300
+2018-11-10 13:16:24,287 INFO  o.s.w.s.h.SimpleUrlHandlerMapping[373]: Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-10 13:16:25,503 INFO  o.h.h.i.QueryTranslatorFactoryInitiator[47]: HHH000397: Using ASTQueryTranslatorFactory
+2018-11-10 13:16:26,202 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter[574]: Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2babf189: startup date [Sat Nov 10 13:16:10 CST 2018]; root of context hierarchy
+2018-11-10 13:16:26,311 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping[547]: Mapped "{[/api/article],methods=[GET]}" onto public org.springframework.data.domain.Page<cn.mariojd.fantasy.mp.model.response.ArticleResultVO> cn.mariojd.fantasy.mp.controller.ArticleController.findPage(cn.mariojd.fantasy.mp.model.request.ArticleSearchVO,org.springframework.data.domain.Pageable)
+2018-11-10 13:16:26,316 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping[547]: Mapped "{[/api/detail],methods=[GET]}" onto public cn.mariojd.fantasy.nearjob.model.response.JobDetailVO cn.mariojd.fantasy.nearjob.controller.DetailController.findDetail(java.lang.String,int)
+2018-11-10 13:16:26,317 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping[547]: Mapped "{[/api/index],methods=[GET]}" onto public org.springframework.data.domain.Page<cn.mariojd.fantasy.nearjob.model.response.IndexResultVO> cn.mariojd.fantasy.nearjob.controller.IndexController.findPage(cn.mariojd.fantasy.nearjob.model.request.SearchVO,org.springframework.data.domain.Pageable)
+2018-11-10 13:16:26,321 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping[547]: Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-11-10 13:16:26,322 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping[547]: Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-11-10 13:16:26,365 INFO  o.s.w.s.h.SimpleUrlHandlerMapping[373]: Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-10 13:16:26,365 INFO  o.s.w.s.h.SimpleUrlHandlerMapping[373]: Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-10 13:16:26,392 INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver[288]: Detected @ExceptionHandler methods in jobExceptionAdvice
+2018-11-10 13:16:27,292 INFO  o.s.j.e.a.AnnotationMBeanExporter[433]: Registering beans for JMX exposure on startup
+2018-11-10 13:16:27,294 INFO  o.s.j.e.a.AnnotationMBeanExporter[895]: Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-11-10 13:16:27,305 INFO  o.s.j.e.a.AnnotationMBeanExporter[668]: Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-11-10 13:16:27,326 INFO  io.undertow.servlet[360]: Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-11-10 13:16:27,326 INFO  o.s.w.s.DispatcherServlet[494]: FrameworkServlet 'dispatcherServlet': initialization started
+2018-11-10 13:16:27,353 INFO  o.s.w.s.DispatcherServlet[509]: FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms
+2018-11-10 13:16:27,409 INFO  o.s.b.w.e.u.UndertowServletWebServer[148]: Undertow started on port(s) 10000 (http) with context path ''
+2018-11-10 13:16:27,415 INFO  c.m.fantasy.FantasyApplication[59]: Started FantasyApplication in 18.982 seconds (JVM running for 27.046)
+2018-11-10 13:16:27,555 INFO  io.lettuce.core.EpollProvider[104]: Starting without optional epoll library
+2018-11-10 13:16:27,559 INFO  io.lettuce.core.KqueueProvider[104]: Starting without optional kqueue library
+2018-11-10 13:25:28,752 INFO  c.m.fantasy.FantasyApplication[50]: Starting FantasyApplication on Jared with PID 23636 (started by jd in D:\IntelliJ IDEA\github\java-learning\fantasy)
+2018-11-10 13:25:28,762 INFO  c.m.fantasy.FantasyApplication[662]: No active profile set, falling back to default profiles: default
+2018-11-10 13:25:28,888 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext[590]: Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@15f2eda3: startup date [Sat Nov 10 13:25:28 CST 2018]; root of context hierarchy
+2018-11-10 13:25:30,222 INFO  o.s.d.r.c.RepositoryConfigurationDelegate[163]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-10 13:25:30,322 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.AndroidDao.
+2018-11-10 13:25:30,331 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.CDao.
+2018-11-10 13:25:30,337 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.Cocos2dxDao.
+2018-11-10 13:25:30,343 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.CPlusPlusDao.
+2018-11-10 13:25:30,346 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.CSharpDao.
+2018-11-10 13:25:30,350 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.GoDao.
+2018-11-10 13:25:30,355 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.HadoopDao.
+2018-11-10 13:25:30,360 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.Html5Dao.
+2018-11-10 13:25:30,363 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.IosDao.
+2018-11-10 13:25:30,370 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.JavaDao.
+2018-11-10 13:25:30,375 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.NetDao.
+2018-11-10 13:25:30,388 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.NodeJSDao.
+2018-11-10 13:25:30,393 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.PhpDao.
+2018-11-10 13:25:30,399 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.PythonDao.
+2018-11-10 13:25:30,404 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.U3dDao.
+2018-11-10 13:25:30,436 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.WebDao.
+2018-11-10 13:25:30,613 INFO  o.s.d.r.c.RepositoryConfigurationDelegate[163]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-10 13:25:30,733 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data JPA - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.mp.repository.ArticleRepository.
+2018-11-10 13:25:30,779 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data JPA - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.repository.JobRepository.
+2018-11-10 13:25:30,869 INFO  o.s.d.r.c.RepositoryConfigurationDelegate[163]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-10 13:25:30,947 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.mp.repository.ArticleRepository.
+2018-11-10 13:25:30,949 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.AndroidDao.
+2018-11-10 13:25:30,950 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.CDao.
+2018-11-10 13:25:30,952 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.Cocos2dxDao.
+2018-11-10 13:25:30,953 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.CPlusPlusDao.
+2018-11-10 13:25:30,954 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.CSharpDao.
+2018-11-10 13:25:30,955 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.GoDao.
+2018-11-10 13:25:30,958 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.HadoopDao.
+2018-11-10 13:25:30,959 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.Html5Dao.
+2018-11-10 13:25:30,960 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.IosDao.
+2018-11-10 13:25:30,961 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.JavaDao.
+2018-11-10 13:25:30,961 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.NetDao.
+2018-11-10 13:25:30,963 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.NodeJSDao.
+2018-11-10 13:25:30,963 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.PhpDao.
+2018-11-10 13:25:30,964 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.PythonDao.
+2018-11-10 13:25:30,965 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.U3dDao.
+2018-11-10 13:25:30,966 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.WebDao.
+2018-11-10 13:25:30,966 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.repository.JobRepository.
+2018-11-10 13:25:32,248 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[326]: Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8711dfbd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-10 13:25:32,744 INFO  org.xnio[104]: XNIO version 3.3.8.Final
+2018-11-10 13:25:32,769 INFO  org.xnio.nio[55]: XNIO NIO Implementation Version 3.3.8.Final
+2018-11-10 13:25:32,940 INFO  io.undertow.servlet[360]: Initializing Spring embedded WebApplicationContext
+2018-11-10 13:25:32,941 INFO  o.s.web.context.ContextLoader[285]: Root WebApplicationContext: initialization completed in 4053 ms
+2018-11-10 13:25:33,045 INFO  o.s.b.w.s.ServletRegistrationBean[187]: Servlet dispatcherServlet mapped to [/]
+2018-11-10 13:25:33,058 INFO  o.s.b.w.s.FilterRegistrationBean[245]: Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-10 13:25:33,060 INFO  o.s.b.w.s.FilterRegistrationBean[245]: Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-10 13:25:33,061 INFO  o.s.b.w.s.FilterRegistrationBean[245]: Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-11-10 13:25:33,061 INFO  o.s.b.w.s.FilterRegistrationBean[245]: Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-10 13:25:33,552 INFO  c.z.hikari.HikariDataSource[110]: HikariPool-1 - Starting...
+2018-11-10 13:25:33,720 INFO  c.z.hikari.HikariDataSource[123]: HikariPool-1 - Start completed.
+2018-11-10 13:25:33,972 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean[361]: Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-11-10 13:25:33,991 INFO  o.h.j.internal.util.LogHelper[31]: HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-11-10 13:25:34,116 INFO  org.hibernate.Version[45]: HHH000412: Hibernate Core {5.2.17.Final}
+2018-11-10 13:25:34,122 INFO  org.hibernate.cfg.Environment[213]: HHH000206: hibernate.properties not found
+2018-11-10 13:25:34,209 INFO  o.h.annotations.common.Version[66]: HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-11-10 13:25:34,454 INFO  org.hibernate.dialect.Dialect[157]: HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-11-10 13:25:37,183 INFO  o.h.e.j.e.i.LobCreatorBuilderImpl[85]: HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2018-11-10 13:25:37,186 INFO  o.h.type.BasicTypeRegistry[148]: HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@3b56947a
+2018-11-10 13:25:38,757 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean[415]: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-11-10 13:25:39,223 INFO  o.e.plugins.PluginsService[176]: no modules loaded
+2018-11-10 13:25:39,225 INFO  o.e.plugins.PluginsService[179]: loaded plugin [org.elasticsearch.index.reindex.ReindexPlugin]
+2018-11-10 13:25:39,226 INFO  o.e.plugins.PluginsService[179]: loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2018-11-10 13:25:39,226 INFO  o.e.plugins.PluginsService[179]: loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2018-11-10 13:25:39,226 INFO  o.e.plugins.PluginsService[179]: loaded plugin [org.elasticsearch.script.mustache.MustachePlugin]
+2018-11-10 13:25:39,227 INFO  o.e.plugins.PluginsService[179]: loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2018-11-10 13:25:40,975 INFO  o.s.d.e.c.TransportClientFactoryBean[106]: Adding transport node : 193.112.0.219:9300
+2018-11-10 13:25:42,935 INFO  o.s.w.s.h.SimpleUrlHandlerMapping[373]: Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-10 13:25:43,738 INFO  o.h.h.i.QueryTranslatorFactoryInitiator[47]: HHH000397: Using ASTQueryTranslatorFactory
+2018-11-10 13:25:44,450 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter[574]: Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@15f2eda3: startup date [Sat Nov 10 13:25:28 CST 2018]; root of context hierarchy
+2018-11-10 13:25:44,563 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping[547]: Mapped "{[/api/article],methods=[GET]}" onto public org.springframework.data.domain.Page<cn.mariojd.fantasy.mp.model.response.ArticleResultVO> cn.mariojd.fantasy.mp.controller.ArticleController.findPage(cn.mariojd.fantasy.mp.model.request.ArticleSearchVO,org.springframework.data.domain.Pageable)
+2018-11-10 13:25:44,568 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping[547]: Mapped "{[/api/detail],methods=[GET]}" onto public cn.mariojd.fantasy.nearjob.model.response.JobDetailVO cn.mariojd.fantasy.nearjob.controller.DetailController.findDetail(java.lang.String,int)
+2018-11-10 13:25:44,570 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping[547]: Mapped "{[/api/index],methods=[GET]}" onto public org.springframework.data.domain.Page<cn.mariojd.fantasy.nearjob.model.response.IndexResultVO> cn.mariojd.fantasy.nearjob.controller.IndexController.findPage(cn.mariojd.fantasy.nearjob.model.request.SearchVO,org.springframework.data.domain.Pageable)
+2018-11-10 13:25:44,573 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping[547]: Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-11-10 13:25:44,574 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping[547]: Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-11-10 13:25:44,625 INFO  o.s.w.s.h.SimpleUrlHandlerMapping[373]: Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-10 13:25:44,625 INFO  o.s.w.s.h.SimpleUrlHandlerMapping[373]: Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-10 13:25:44,654 INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver[288]: Detected @ExceptionHandler methods in jobExceptionAdvice
+2018-11-10 13:25:45,312 INFO  o.s.j.e.a.AnnotationMBeanExporter[433]: Registering beans for JMX exposure on startup
+2018-11-10 13:25:45,314 INFO  o.s.j.e.a.AnnotationMBeanExporter[895]: Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-11-10 13:25:45,323 INFO  o.s.j.e.a.AnnotationMBeanExporter[668]: Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-11-10 13:25:45,345 INFO  io.undertow.servlet[360]: Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-11-10 13:25:45,345 INFO  o.s.w.s.DispatcherServlet[494]: FrameworkServlet 'dispatcherServlet': initialization started
+2018-11-10 13:25:45,368 INFO  o.s.w.s.DispatcherServlet[509]: FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2018-11-10 13:25:45,426 INFO  o.s.b.w.e.u.UndertowServletWebServer[148]: Undertow started on port(s) 10000 (http) with context path ''
+2018-11-10 13:25:45,432 INFO  c.m.fantasy.FantasyApplication[59]: Started FantasyApplication in 17.634 seconds (JVM running for 26.717)
+2018-11-10 13:25:45,571 INFO  io.lettuce.core.EpollProvider[104]: Starting without optional epoll library
+2018-11-10 13:25:45,574 INFO  io.lettuce.core.KqueueProvider[104]: Starting without optional kqueue library
+2018-11-10 13:28:20,224 INFO  c.m.fantasy.FantasyApplication[50]: Starting FantasyApplication on Jared with PID 22756 (started by jd in D:\IntelliJ IDEA\github\java-learning\fantasy)
+2018-11-10 13:28:20,232 INFO  c.m.fantasy.FantasyApplication[662]: No active profile set, falling back to default profiles: default
+2018-11-10 13:28:20,350 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext[590]: Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@77a2aa4a: startup date [Sat Nov 10 13:28:20 CST 2018]; root of context hierarchy
+2018-11-10 13:28:21,525 INFO  o.s.d.r.c.RepositoryConfigurationDelegate[163]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-10 13:28:21,618 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.AndroidDao.
+2018-11-10 13:28:21,624 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.CDao.
+2018-11-10 13:28:21,627 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.Cocos2dxDao.
+2018-11-10 13:28:21,630 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.CPlusPlusDao.
+2018-11-10 13:28:21,633 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.CSharpDao.
+2018-11-10 13:28:21,636 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.GoDao.
+2018-11-10 13:28:21,639 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.HadoopDao.
+2018-11-10 13:28:21,642 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.Html5Dao.
+2018-11-10 13:28:21,646 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.IosDao.
+2018-11-10 13:28:21,649 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.JavaDao.
+2018-11-10 13:28:21,653 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.NetDao.
+2018-11-10 13:28:21,660 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.NodeJSDao.
+2018-11-10 13:28:21,663 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.PhpDao.
+2018-11-10 13:28:21,666 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.PythonDao.
+2018-11-10 13:28:21,670 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.U3dDao.
+2018-11-10 13:28:21,673 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.WebDao.
+2018-11-10 13:28:21,772 INFO  o.s.d.r.c.RepositoryConfigurationDelegate[163]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-10 13:28:21,814 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data JPA - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.mp.repository.ArticleRepository.
+2018-11-10 13:28:21,841 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data JPA - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.repository.JobRepository.
+2018-11-10 13:28:21,913 INFO  o.s.d.r.c.RepositoryConfigurationDelegate[163]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-10 13:28:21,954 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.mp.repository.ArticleRepository.
+2018-11-10 13:28:21,954 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.AndroidDao.
+2018-11-10 13:28:21,955 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.CDao.
+2018-11-10 13:28:21,955 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.Cocos2dxDao.
+2018-11-10 13:28:21,955 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.CPlusPlusDao.
+2018-11-10 13:28:21,956 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.CSharpDao.
+2018-11-10 13:28:21,956 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.GoDao.
+2018-11-10 13:28:21,957 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.HadoopDao.
+2018-11-10 13:28:21,957 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.Html5Dao.
+2018-11-10 13:28:21,957 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.IosDao.
+2018-11-10 13:28:21,958 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.JavaDao.
+2018-11-10 13:28:21,958 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.NetDao.
+2018-11-10 13:28:21,959 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.NodeJSDao.
+2018-11-10 13:28:21,959 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.PhpDao.
+2018-11-10 13:28:21,959 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.PythonDao.
+2018-11-10 13:28:21,960 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.U3dDao.
+2018-11-10 13:28:21,961 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.WebDao.
+2018-11-10 13:28:21,961 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.repository.JobRepository.
+2018-11-10 13:28:22,812 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[326]: Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ad43cd37] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-10 13:28:23,339 INFO  org.xnio[104]: XNIO version 3.3.8.Final
+2018-11-10 13:28:23,364 INFO  org.xnio.nio[55]: XNIO NIO Implementation Version 3.3.8.Final
+2018-11-10 13:28:23,530 INFO  io.undertow.servlet[360]: Initializing Spring embedded WebApplicationContext
+2018-11-10 13:28:23,532 INFO  o.s.web.context.ContextLoader[285]: Root WebApplicationContext: initialization completed in 3182 ms
+2018-11-10 13:28:23,626 INFO  o.s.b.w.s.ServletRegistrationBean[187]: Servlet dispatcherServlet mapped to [/]
+2018-11-10 13:28:23,636 INFO  o.s.b.w.s.FilterRegistrationBean[245]: Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-10 13:28:23,638 INFO  o.s.b.w.s.FilterRegistrationBean[245]: Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-10 13:28:23,638 INFO  o.s.b.w.s.FilterRegistrationBean[245]: Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-11-10 13:28:23,638 INFO  o.s.b.w.s.FilterRegistrationBean[245]: Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-10 13:28:24,152 INFO  c.z.hikari.HikariDataSource[110]: HikariPool-1 - Starting...
+2018-11-10 13:28:24,310 INFO  c.z.hikari.HikariDataSource[123]: HikariPool-1 - Start completed.
+2018-11-10 13:28:24,471 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean[361]: Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-11-10 13:28:24,491 INFO  o.h.j.internal.util.LogHelper[31]: HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-11-10 13:28:24,661 INFO  org.hibernate.Version[45]: HHH000412: Hibernate Core {5.2.17.Final}
+2018-11-10 13:28:24,664 INFO  org.hibernate.cfg.Environment[213]: HHH000206: hibernate.properties not found
+2018-11-10 13:28:24,755 INFO  o.h.annotations.common.Version[66]: HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-11-10 13:28:25,040 INFO  org.hibernate.dialect.Dialect[157]: HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-11-10 13:28:27,735 INFO  o.h.e.j.e.i.LobCreatorBuilderImpl[85]: HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2018-11-10 13:28:27,739 INFO  o.h.type.BasicTypeRegistry[148]: HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@cfacf0
+2018-11-10 13:28:29,213 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean[415]: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-11-10 13:28:29,770 INFO  o.e.plugins.PluginsService[176]: no modules loaded
+2018-11-10 13:28:29,772 INFO  o.e.plugins.PluginsService[179]: loaded plugin [org.elasticsearch.index.reindex.ReindexPlugin]
+2018-11-10 13:28:29,773 INFO  o.e.plugins.PluginsService[179]: loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2018-11-10 13:28:29,773 INFO  o.e.plugins.PluginsService[179]: loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2018-11-10 13:28:29,774 INFO  o.e.plugins.PluginsService[179]: loaded plugin [org.elasticsearch.script.mustache.MustachePlugin]
+2018-11-10 13:28:29,774 INFO  o.e.plugins.PluginsService[179]: loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2018-11-10 13:28:31,444 INFO  o.s.d.e.c.TransportClientFactoryBean[106]: Adding transport node : 193.112.0.219:9300
+2018-11-10 13:28:33,231 INFO  o.s.w.s.h.SimpleUrlHandlerMapping[373]: Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-10 13:28:34,583 INFO  o.h.h.i.QueryTranslatorFactoryInitiator[47]: HHH000397: Using ASTQueryTranslatorFactory
+2018-11-10 13:28:35,335 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter[574]: Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@77a2aa4a: startup date [Sat Nov 10 13:28:20 CST 2018]; root of context hierarchy
+2018-11-10 13:28:35,446 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping[547]: Mapped "{[/api/article],methods=[GET]}" onto public org.springframework.data.domain.Page<cn.mariojd.fantasy.mp.model.response.ArticleResultVO> cn.mariojd.fantasy.mp.controller.ArticleController.findPage(cn.mariojd.fantasy.mp.model.request.ArticleSearchVO,org.springframework.data.domain.Pageable)
+2018-11-10 13:28:35,450 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping[547]: Mapped "{[/api/detail],methods=[GET]}" onto public cn.mariojd.fantasy.nearjob.model.response.JobDetailVO cn.mariojd.fantasy.nearjob.controller.DetailController.findDetail(java.lang.String,int)
+2018-11-10 13:28:35,452 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping[547]: Mapped "{[/api/index],methods=[GET]}" onto public org.springframework.data.domain.Page<cn.mariojd.fantasy.nearjob.model.response.IndexResultVO> cn.mariojd.fantasy.nearjob.controller.IndexController.findPage(cn.mariojd.fantasy.nearjob.model.request.SearchVO,org.springframework.data.domain.Pageable)
+2018-11-10 13:28:35,457 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping[547]: Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-11-10 13:28:35,458 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping[547]: Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-11-10 13:28:35,504 INFO  o.s.w.s.h.SimpleUrlHandlerMapping[373]: Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-10 13:28:35,504 INFO  o.s.w.s.h.SimpleUrlHandlerMapping[373]: Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-10 13:28:35,531 INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver[288]: Detected @ExceptionHandler methods in jobExceptionAdvice
+2018-11-10 13:28:36,281 INFO  o.s.j.e.a.AnnotationMBeanExporter[433]: Registering beans for JMX exposure on startup
+2018-11-10 13:28:36,284 INFO  o.s.j.e.a.AnnotationMBeanExporter[895]: Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-11-10 13:28:36,298 INFO  o.s.j.e.a.AnnotationMBeanExporter[668]: Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-11-10 13:28:36,327 INFO  io.undertow.servlet[360]: Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-11-10 13:28:36,328 INFO  o.s.w.s.DispatcherServlet[494]: FrameworkServlet 'dispatcherServlet': initialization started
+2018-11-10 13:28:36,353 INFO  o.s.w.s.DispatcherServlet[509]: FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2018-11-10 13:28:36,418 INFO  o.s.b.w.e.u.UndertowServletWebServer[148]: Undertow started on port(s) 10000 (http) with context path ''
+2018-11-10 13:28:36,423 INFO  c.m.fantasy.FantasyApplication[59]: Started FantasyApplication in 17.03 seconds (JVM running for 24.937)
+2018-11-10 13:28:36,666 INFO  io.lettuce.core.EpollProvider[104]: Starting without optional epoll library
+2018-11-10 13:28:36,668 INFO  io.lettuce.core.KqueueProvider[104]: Starting without optional kqueue library
+2018-11-10 13:32:49,544 INFO  o.s.w.s.h.SimpleUrlHandlerMapping[373]: Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-10 13:33:09,443 INFO  o.s.w.s.h.SimpleUrlHandlerMapping[373]: Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-10 13:36:26,570 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.mp.repository.ArticleRepository.
+2018-11-10 13:36:26,587 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data JPA - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.mp.repository.ArticleRepository.
+2018-11-10 13:36:26,846 INFO  o.s.w.s.h.SimpleUrlHandlerMapping[373]: Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-10 13:48:23,930 INFO  o.s.w.s.h.SimpleUrlHandlerMapping[373]: Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-10 13:49:26,649 INFO  o.s.w.s.h.SimpleUrlHandlerMapping[373]: Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-10 13:54:51,609 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper[308]: Neither @ContextConfiguration nor @ContextHierarchy found for test class [cn.mariojd.fantasy.FantasyApplicationTests], using SpringBootContextLoader
+2018-11-10 13:54:51,619 INFO  o.s.t.c.s.AbstractContextLoader[264]: Could not detect default resource locations for test class [cn.mariojd.fantasy.FantasyApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-11-10 13:54:51,621 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils[83]: Could not detect default configuration classes for test class [cn.mariojd.fantasy.FantasyApplicationTests]: FantasyApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-11-10 13:54:51,783 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper[247]: Found @SpringBootConfiguration cn.mariojd.fantasy.FantasyApplication for test class cn.mariojd.fantasy.FantasyApplicationTests
+2018-11-10 13:54:52,076 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper[248]: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-11-10 13:54:52,104 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper[177]: Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@183ec003, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7d9d0818, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@221a3fa4, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@451001e5, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2b40ff9c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3e08ff24, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4d1c005e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@8462f31, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@24569dba, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5ddeb7cb, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@70ed52de, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@496bc455]
+2018-11-10 13:54:52,769 INFO  c.m.f.FantasyApplicationTests[50]: Starting FantasyApplicationTests on Jared with PID 21596 (started by jd in D:\IntelliJ IDEA\github\java-learning\fantasy)
+2018-11-10 13:54:52,772 INFO  c.m.f.FantasyApplicationTests[662]: No active profile set, falling back to default profiles: default
+2018-11-10 13:54:52,950 INFO  o.s.w.c.s.GenericWebApplicationContext[590]: Refreshing org.springframework.web.context.support.GenericWebApplicationContext@141e5bef: startup date [Sat Nov 10 13:54:52 CST 2018]; root of context hierarchy
+2018-11-10 13:54:54,145 INFO  o.s.d.r.c.RepositoryConfigurationDelegate[163]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-10 13:54:54,206 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.AndroidDao.
+2018-11-10 13:54:54,210 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.CDao.
+2018-11-10 13:54:54,212 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.Cocos2dxDao.
+2018-11-10 13:54:54,214 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.CPlusPlusDao.
+2018-11-10 13:54:54,218 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.CSharpDao.
+2018-11-10 13:54:54,220 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.GoDao.
+2018-11-10 13:54:54,222 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.HadoopDao.
+2018-11-10 13:54:54,225 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.Html5Dao.
+2018-11-10 13:54:54,229 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.IosDao.
+2018-11-10 13:54:54,232 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.JavaDao.
+2018-11-10 13:54:54,234 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.NetDao.
+2018-11-10 13:54:54,236 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.NodeJSDao.
+2018-11-10 13:54:54,240 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.PhpDao.
+2018-11-10 13:54:54,243 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.PythonDao.
+2018-11-10 13:54:54,247 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.U3dDao.
+2018-11-10 13:54:54,249 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.WebDao.
+2018-11-10 13:54:54,309 INFO  o.s.d.r.c.RepositoryConfigurationDelegate[163]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-10 13:54:54,330 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data JPA - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.mp.repository.ArticleRepository.
+2018-11-10 13:54:54,352 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data JPA - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.repository.JobRepository.
+2018-11-10 13:54:54,442 INFO  o.s.d.r.c.RepositoryConfigurationDelegate[163]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-10 13:54:54,469 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.mp.repository.ArticleRepository.
+2018-11-10 13:54:54,471 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.AndroidDao.
+2018-11-10 13:54:54,472 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.CDao.
+2018-11-10 13:54:54,473 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.Cocos2dxDao.
+2018-11-10 13:54:54,474 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.CPlusPlusDao.
+2018-11-10 13:54:54,475 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.CSharpDao.
+2018-11-10 13:54:54,476 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.GoDao.
+2018-11-10 13:54:54,477 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.HadoopDao.
+2018-11-10 13:54:54,478 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.Html5Dao.
+2018-11-10 13:54:54,479 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.IosDao.
+2018-11-10 13:54:54,479 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.JavaDao.
+2018-11-10 13:54:54,482 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.NetDao.
+2018-11-10 13:54:54,483 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.NodeJSDao.
+2018-11-10 13:54:54,485 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.PhpDao.
+2018-11-10 13:54:54,487 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.PythonDao.
+2018-11-10 13:54:54,488 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.U3dDao.
+2018-11-10 13:54:54,489 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.dao.WebDao.
+2018-11-10 13:54:54,490 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport[297]: Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.mariojd.fantasy.nearjob.repository.JobRepository.
+2018-11-10 13:54:55,289 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[326]: Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f80741d9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-10 13:54:55,687 INFO  c.z.hikari.HikariDataSource[110]: HikariPool-1 - Starting...
+2018-11-10 13:54:57,878 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean[361]: Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-11-10 13:54:58,031 INFO  o.h.j.internal.util.LogHelper[31]: HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-11-10 13:54:58,286 INFO  org.hibernate.Version[45]: HHH000412: Hibernate Core {5.2.17.Final}
+2018-11-10 13:54:58,290 INFO  org.hibernate.cfg.Environment[213]: HHH000206: hibernate.properties not found
+2018-11-10 13:54:58,404 INFO  o.h.annotations.common.Version[66]: HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-11-10 13:54:58,649 INFO  c.z.hikari.HikariDataSource[110]: HikariPool-1 - Starting...
+2018-11-10 13:55:00,716 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener[101]: 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.

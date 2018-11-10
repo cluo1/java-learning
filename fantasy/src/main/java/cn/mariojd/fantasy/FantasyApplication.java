@@ -23,7 +23,7 @@ public class FantasyApplication {
 
         // 通过StringRedisTemplate获得hash key
         StringRedisTemplate redisTemplate = context.getBean("redisTemplate", StringRedisTemplate.class);
-        Map<Object, Object> entries = redisTemplate.opsForHash().entries("fantasy:jobs");
+        Map<Object, Object> entries = redisTemplate.opsForHash().entries("nearjob:jobs");
 
         // 通过hash value进行匹配装载对应匹配的Dao
         String[] beanNamesForType = context.getBeanNamesForType(BaseDao.class);
