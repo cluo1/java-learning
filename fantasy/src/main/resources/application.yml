@@ -38,7 +38,7 @@ spring:
       cluster-name: docker-cluster
     web:
       pageable:
-        max-page-size: 50
+        max-page-size: 40
         default-page-size: 15
   mvc:
     servlet:

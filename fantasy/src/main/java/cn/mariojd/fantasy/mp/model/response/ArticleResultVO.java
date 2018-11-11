@@ -12,6 +12,11 @@ import java.util.Date;
 public class ArticleResultVO {
 
     /**
+     * 主键Id
+     */
+    private Integer articleId;
+
+    /**
      * 标题
      */
     private String title;
@@ -22,12 +27,12 @@ public class ArticleResultVO {
     private String author;
 
     /**
-     * 封面图
+     * 封面图 or 图片消息
      */
     private String cover;
 
     /**
-     * 短语描述
+     * 短语描述  or 文字消息
      */
     private String digest;
 
@@ -40,5 +45,10 @@ public class ArticleResultVO {
      * 发布时间
      */
     private Date postTime;
+
+    /**
+     * 文章类型。1：文字；3：图片；49：图文
+     */
+    private Integer msgType;
 
 }

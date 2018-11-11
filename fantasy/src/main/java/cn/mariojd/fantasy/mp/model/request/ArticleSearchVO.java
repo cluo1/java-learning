@@ -31,4 +31,9 @@ public class ArticleSearchVO {
      */
     private Date endTime;
 
+    /**
+     * 文章类型。1：文字；3：图片；49：图文
+     */
+    private Integer msgType;
+
 }

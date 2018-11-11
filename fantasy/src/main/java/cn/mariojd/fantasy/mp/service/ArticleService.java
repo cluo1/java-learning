@@ -42,21 +42,20 @@ public class ArticleService {
         String word = searchVO.getKeyword();
         Date startTime = searchVO.getStartTime();
         Date endTime = searchVO.getEndTime();
+        Integer msgType = searchVO.getMsgType();
 
-        MatchQueryBuilder matchQueryBuilder = new MatchQueryBuilder("mpsId", mpsId);
         NativeSearchQueryBuilder builder = new NativeSearchQueryBuilder();
-        builder.withPageable(pageable).withFilter(matchQueryBuilder);
+        builder.withPageable(pageable).withFilter(new MatchQueryBuilder("mpsId", mpsId));
 
+        if (!Objects.isNull(msgType)) {
+            builder.withFilter(new MatchQueryBuilder("msgType", msgType));
+        }
         if (!Objects.isNull(startTime) && !Objects.isNull(endTime)) {
-            RangeQueryBuilder rangeQueryBuilder = new RangeQueryBuilder("postTime");
-            rangeQueryBuilder.gte(startTime).lte(endTime);
-            builder.withFilter(rangeQueryBuilder);
+            builder.withFilter(new RangeQueryBuilder("postTime").gte(startTime).lte(endTime));
         }
         if (!StringUtils.isEmpty(word)) {
-            MultiMatchQueryBuilder multiMatchQueryBuilder =
-                    new MultiMatchQueryBuilder(word, "title", "digest", "content", "author");
-            multiMatchQueryBuilder.field("content", 2.0f);
-            multiMatchQueryBuilder.field("title", 3.0f);
+            MultiMatchQueryBuilder multiMatchQueryBuilder = new MultiMatchQueryBuilder(word, "title", "digest", "content", "author")
+                    .field("content", 2.0f).field("title", 3.0f);
             builder.withQuery(multiMatchQueryBuilder);
         }
 

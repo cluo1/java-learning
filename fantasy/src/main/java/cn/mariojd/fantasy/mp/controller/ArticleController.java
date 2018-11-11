@@ -3,12 +3,11 @@ package cn.mariojd.fantasy.mp.controller;
 import cn.mariojd.fantasy.mp.model.request.ArticleSearchVO;
 import cn.mariojd.fantasy.mp.model.response.ArticleResultVO;
 import cn.mariojd.fantasy.mp.service.ArticleService;
-import cn.mariojd.fantasy.nearjob.model.request.SearchVO;
-import cn.mariojd.fantasy.nearjob.model.response.IndexResultVO;
-import cn.mariojd.fantasy.nearjob.service.IndexService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,7 +30,7 @@ public class ArticleController {
 
     @GetMapping
     public Page<ArticleResultVO> findPage(@ModelAttribute @Valid ArticleSearchVO searchVO,
-                                          Pageable pageable) {
+                                          @PageableDefault(size = 40, sort = "postTime", direction = Sort.Direction.DESC) Pageable pageable) {
         return articleService.findPage(searchVO, pageable);
     }
 

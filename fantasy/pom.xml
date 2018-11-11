@@ -5,7 +5,7 @@
 
     <groupId>cn.mariojd</groupId>
     <artifactId>fantasy</artifactId>
-    <version>0.0.5</version>
+    <version>0.0.6</version>
     <packaging>jar</packaging>
 
     <name>fantasy</name>
@@ -96,7 +96,7 @@
                         <imageTag>${project.version}</imageTag>
                         <imageTag>latest</imageTag>
                     </imageTags>
-                    <dockerHost>http://134.175.37.73:22375</dockerHost>
+                    <dockerHost>http://localhost:22375</dockerHost>
                     <dockerDirectory>src/main/docker</dockerDirectory>
                     <resources>
                         <resource>
