@@ -9,6 +9,7 @@ import org.elasticsearch.index.query.MatchQueryBuilder;
 import org.elasticsearch.index.query.MultiMatchQueryBuilder;
 import org.elasticsearch.index.query.RangeQueryBuilder;
 import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilder;
@@ -27,6 +28,9 @@ import java.util.Objects;
 @Service
 public class ArticleService {
 
+    @Value("${fantasy.mp-index}")
+    private String index;
+
     @Resource
     private ArticleRepository articleRepository;
 
@@ -43,6 +47,7 @@ public class ArticleService {
         Date startTime = searchVO.getStartTime();
         Date endTime = searchVO.getEndTime();
         Integer msgType = searchVO.getMsgType();
+        log.info("查询搜索mpsId:{} ;word:{} ;msgType:{} ;startTime:{} ;endTime:{}", mpsId, word, msgType, startTime, endTime);
 
         NativeSearchQueryBuilder builder = new NativeSearchQueryBuilder();
         builder.withPageable(pageable).withFilter(new MatchQueryBuilder("mpsId", mpsId));
@@ -81,7 +86,12 @@ public class ArticleService {
      * @return
      */
     public String getContentURL(int articleId) {
-        return "";
+        log.info("获取详情Article Detail:{}", articleId);
+        Article article = articleRepository.findByArticleId(articleId);
+        if (Objects.nonNull(article)) {
+            return article.getContentURL();
+        }
+        return index;
     }
 
 }

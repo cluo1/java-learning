@@ -1,10 +1,10 @@
-package cn.mariojd.fantasy.nearjob.enums;
+package cn.mariojd.fantasy.service.enums;
 
 /**
  * @author Jared
  * @date 2018/8/22 9:12
  */
-public enum JobEnum {
+public enum FantasyEnum {
 
     /**
      * 成功
@@ -26,7 +26,7 @@ public enum JobEnum {
      */
     private String msg;
 
-    JobEnum(Integer code, String msg) {
+    FantasyEnum(Integer code, String msg) {
         this.code = code;
         this.msg = msg;
     }

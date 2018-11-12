@@ -9,5 +9,8 @@ import org.springframework.data.elasticsearch.repository.ElasticsearchRepository
  */
 public interface ArticleRepository extends ElasticsearchRepository<Article, Integer> {
 
+    Article findByArticleId(int articleId);
+
 }
+
 

@@ -8,13 +8,12 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
+import java.io.IOException;
 
 /**
  * @author Jared
@@ -32,6 +31,16 @@ public class ArticleController {
     public Page<ArticleResultVO> findPage(@ModelAttribute @Valid ArticleSearchVO searchVO,
                                           @PageableDefault(size = 40, sort = "postTime", direction = Sort.Direction.DESC) Pageable pageable) {
         return articleService.findPage(searchVO, pageable);
+    }
+
+    @GetMapping("detail")
+    public void detail(@RequestParam int articleId, HttpServletResponse response) {
+        try {
+            String url = articleService.getContentURL(articleId);
+            response.sendRedirect(url);
+        } catch (IOException e) {
+            log.error(e.getMessage());
+        }
     }
 
 }

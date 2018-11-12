@@ -1,6 +1,6 @@
 package cn.mariojd.fantasy.nearjob.base;
 
-import cn.mariojd.fantasy.nearjob.enums.JobEnum;
+import cn.mariojd.fantasy.service.enums.FantasyEnum;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
@@ -22,16 +22,16 @@ public class BaseResponse<T> {
     private T data;
 
     @JsonIgnore
-    private JobEnum jobEnum;
+    private FantasyEnum fantasyEnum;
 
     public BaseResponse(Integer code, String msg) {
         this.code = code;
         this.msg = msg;
     }
 
-    public BaseResponse(JobEnum jobEnum) {
-        this.code = jobEnum.getCode();
-        this.msg = jobEnum.getMsg();
+    public BaseResponse(FantasyEnum fantasyEnum) {
+        this.code = fantasyEnum.getCode();
+        this.msg = fantasyEnum.getMsg();
     }
 
 }

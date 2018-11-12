@@ -1,4 +1,4 @@
-package cn.mariojd.fantasy.nearjob.exception;
+package cn.mariojd.fantasy.service.exception;
 
 import cn.mariojd.fantasy.nearjob.base.BaseResponse;
 import lombok.extern.slf4j.Slf4j;
@@ -16,13 +16,13 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
  */
 @Slf4j
 @RestControllerAdvice
-public class JobExceptionAdvice {
+public class FantasyExceptionAdvice {
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    @ExceptionHandler(JobException.class)
-    public BaseResponse jobException(JobException e) {
-        log.error("JobException: ", e);
-        return new BaseResponse(e.getJobEnum());
+    @ExceptionHandler(FantasyException.class)
+    public BaseResponse jobException(FantasyException e) {
+        log.error("FantasyException: {}", e);
+        return new BaseResponse(e.getFantasyEnum());
     }
 
 }

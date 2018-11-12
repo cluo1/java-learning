@@ -1,7 +1,8 @@
 # 服务host配置
 fantasy:
-  nearjob: nearjob
   host: localhost
+  nearjob: nearjob
+  mp-index: https://mp.mariojd.cn
 
 # 端口和日志配置
 server:
