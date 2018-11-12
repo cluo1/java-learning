@@ -5,15 +5,19 @@ import cn.mariojd.fantasy.mp.model.request.ArticleSearchVO;
 import cn.mariojd.fantasy.mp.model.response.ArticleResultVO;
 import cn.mariojd.fantasy.mp.repository.ArticleRepository;
 import lombok.extern.slf4j.Slf4j;
-import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.MatchQueryBuilder;
+import org.elasticsearch.index.query.MultiMatchQueryBuilder;
+import org.elasticsearch.index.query.RangeQueryBuilder;
 import org.springframework.beans.BeanUtils;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import javax.annotation.Resource;
+import java.util.Date;
+import java.util.Objects;
 
 /**
  * @author Jared
@@ -36,11 +40,26 @@ public class ArticleService {
     public Page<ArticleResultVO> findPage(ArticleSearchVO searchVO, Pageable pageable) {
         int mpsId = searchVO.getMpsId();
         String word = searchVO.getKeyword();
-        if (StringUtils.isEmpty(word)) {
-            return articleRepository.findByMpsId(mpsId, pageable).map(this::toArticleResultVO);
+        Date startTime = searchVO.getStartTime();
+        Date endTime = searchVO.getEndTime();
+        Integer msgType = searchVO.getMsgType();
+
+        NativeSearchQueryBuilder builder = new NativeSearchQueryBuilder();
+        builder.withPageable(pageable).withFilter(new MatchQueryBuilder("mpsId", mpsId));
+
+        if (!Objects.isNull(msgType)) {
+            builder.withFilter(new MatchQueryBuilder("msgType", msgType));
         }
-        return articleRepository.findByMpsIdOrTitleLikeOrAuthorLikeOrDigestLikeOrContentLike(
-                mpsId, word, word, word, word, pageable).map(this::toArticleResultVO);
+        if (!Objects.isNull(startTime) && !Objects.isNull(endTime)) {
+            builder.withFilter(new RangeQueryBuilder("postTime").gte(startTime).lte(endTime));
+        }
+        if (!StringUtils.isEmpty(word)) {
+            MultiMatchQueryBuilder multiMatchQueryBuilder = new MultiMatchQueryBuilder(word, "title", "digest", "content", "author")
+                    .field("content", 2.0f).field("title", 3.0f);
+            builder.withQuery(multiMatchQueryBuilder);
+        }
+
+        return articleRepository.search(builder.build()).map(this::toArticleResultVO);
     }
 
     /**

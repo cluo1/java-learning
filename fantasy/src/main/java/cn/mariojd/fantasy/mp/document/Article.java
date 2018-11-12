@@ -19,13 +19,13 @@ public class Article {
     /**
      * 自增主键
      */
-    @Field(type = FieldType.Integer)
+    @Id
     private Integer articleId;
 
     /**
-     * 消息id (唯一)
+     * 消息id
      */
-    @Id
+    @Field(type = FieldType.Integer)
     private Integer msgId;
 
     /**
@@ -33,6 +33,12 @@ public class Article {
      */
     @Field(type = FieldType.Integer)
     private Integer mpsId;
+
+    /**
+     * 文章类型。1：文字；3：图片；49：图文
+     */
+    @Field(type = FieldType.Integer)
+    private Integer msgType;
 
     /**
      * 标题
@@ -47,13 +53,13 @@ public class Article {
     private String author;
 
     /**
-     * 封面图
+     * 封面图 or 图片消息
      */
     @Field(type = FieldType.Keyword)
     private String cover;
 
     /**
-     * 短语描述
+     * 短语描述 or 文字消息
      */
     @Field(type = FieldType.Text, analyzer = "ik_max_word", searchAnalyzer = "ik_max_word")
     private String digest;
