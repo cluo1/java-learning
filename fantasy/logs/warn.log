@@ -1,2 +1,0 @@
-2018-11-11 09:03:15,174 WARN  io.undertow.websockets.jsr[67]: UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
-2018-11-11 09:03:15,200 WARN  io.undertow.websockets.jsr[76]: UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
