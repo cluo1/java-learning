@@ -55,4 +55,14 @@ public class ArticleService {
         return resultVO;
     }
 
+    /**
+     * 根据ArticleId获取contentURL
+     *
+     * @param articleId
+     * @return
+     */
+    public String getContentURL(int articleId) {
+        return "";
+    }
+
 }
