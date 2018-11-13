@@ -33,8 +33,8 @@ public class ArticleController {
         return articleService.findPage(searchVO, pageable);
     }
 
-    @GetMapping("detail")
-    public void detail(@RequestParam int articleId, HttpServletResponse response) {
+    @GetMapping("{articleId}")
+    public void detail(@PathVariable int articleId, HttpServletResponse response) {
         try {
             String url = articleService.getContentURL(articleId);
             response.sendRedirect(url);
