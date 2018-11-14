@@ -2,8 +2,6 @@ package cn.mariojd.fantasy.mp.model.request;
 
 import lombok.Data;
 
-import java.util.Date;
-
 /**
  * @author Jared
  * @date 2018/11/9 15:26
@@ -24,12 +22,12 @@ public class ArticleSearchVO {
     /**
      * 开始时间
      */
-    private Date startTime;
+    private Long startTime;
 
     /**
      * 结束时间
      */
-    private Date endTime;
+    private Long endTime;
 
     /**
      * 文章类型。1：文字；3：图片；49：图文

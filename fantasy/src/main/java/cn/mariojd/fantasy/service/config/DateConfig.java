@@ -1,5 +1,6 @@
 package cn.mariojd.fantasy.service.config;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.convert.converter.Converter;
@@ -11,6 +12,7 @@ import java.util.Date;
  * <p>
  * {@Link https://www.codetd.com/article/911931}
  */
+@Slf4j
 @Configuration
 public class DateConfig {
 
@@ -19,7 +21,19 @@ public class DateConfig {
         return new Converter<Long, Date>() {
             @Override
             public Date convert(Long source) {
+                log.info("Source Date {}", source);
                 return new Date(source);
+            }
+        };
+    }
+
+    @Bean
+    public Converter<String, Date> strTimestampToDate() {
+        return new Converter<String, Date>() {
+            @Override
+            public Date convert(String source) {
+                log.info("Source Date {}", source);
+                return new Date(Long.parseLong(source));
             }
         };
     }

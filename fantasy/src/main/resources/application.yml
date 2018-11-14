@@ -23,7 +23,7 @@ spring:
         # show_sql: true
         # format_sql: true
         # session_factory:
-          # interceptor: cn.mariojd.fantasy.nearjob.interceptor.TableInterceptor
+        # interceptor: cn.mariojd.fantasy.nearjob.interceptor.TableInterceptor
         jdbc:
           lob:
             # @See: https://github.com/pgjdbc/pgjdbc/issues/1102
@@ -49,3 +49,5 @@ spring:
     port: 12379
     database: 3
     password: redis6379
+  jackson:
+    date-format: yyyy-MM-dd HH:mm

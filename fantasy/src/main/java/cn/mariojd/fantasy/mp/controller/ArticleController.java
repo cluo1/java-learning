@@ -6,7 +6,6 @@ import cn.mariojd.fantasy.mp.service.ArticleService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
 
@@ -29,7 +28,7 @@ public class ArticleController {
 
     @GetMapping
     public Page<ArticleResultVO> findPage(@ModelAttribute @Valid ArticleSearchVO searchVO,
-                                          @PageableDefault(size = 40, sort = "postTime", direction = Sort.Direction.DESC) Pageable pageable) {
+                                          @PageableDefault(size = 40) Pageable pageable) {
         return articleService.findPage(searchVO, pageable);
     }
 

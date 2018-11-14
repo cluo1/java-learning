@@ -5,9 +5,12 @@ import cn.mariojd.fantasy.mp.model.request.ArticleSearchVO;
 import cn.mariojd.fantasy.mp.model.response.ArticleResultVO;
 import cn.mariojd.fantasy.mp.repository.ArticleRepository;
 import lombok.extern.slf4j.Slf4j;
-import org.elasticsearch.index.query.MatchQueryBuilder;
+import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.MultiMatchQueryBuilder;
-import org.elasticsearch.index.query.RangeQueryBuilder;
+import org.elasticsearch.index.query.QueryBuilders;
+import org.elasticsearch.search.sort.SortBuilder;
+import org.elasticsearch.search.sort.SortBuilders;
+import org.elasticsearch.search.sort.SortOrder;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
@@ -17,7 +20,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import javax.annotation.Resource;
-import java.util.Date;
 import java.util.Objects;
 
 /**
@@ -44,26 +46,34 @@ public class ArticleService {
     public Page<ArticleResultVO> findPage(ArticleSearchVO searchVO, Pageable pageable) {
         int mpsId = searchVO.getMpsId();
         String word = searchVO.getKeyword();
-        Date startTime = searchVO.getStartTime();
-        Date endTime = searchVO.getEndTime();
+        Long startTime = searchVO.getStartTime();
+        Long endTime = searchVO.getEndTime();
         Integer msgType = searchVO.getMsgType();
         log.info("查询搜索mpsId:{} ;word:{} ;msgType:{} ;startTime:{} ;endTime:{}", mpsId, word, msgType, startTime, endTime);
 
         NativeSearchQueryBuilder builder = new NativeSearchQueryBuilder();
-        builder.withPageable(pageable).withFilter(new MatchQueryBuilder("mpsId", mpsId));
+        BoolQueryBuilder boolQueryBuilder = QueryBuilders.boolQuery();
+        boolQueryBuilder.must(QueryBuilders.matchQuery("mpsId", mpsId));
 
-        if (!Objects.isNull(msgType)) {
-            builder.withFilter(new MatchQueryBuilder("msgType", msgType));
+        if (Objects.nonNull(msgType)) {
+            boolQueryBuilder.must(QueryBuilders.matchQuery("msgType", msgType));
         }
-        if (!Objects.isNull(startTime) && !Objects.isNull(endTime)) {
-            builder.withFilter(new RangeQueryBuilder("postTime").gte(startTime).lte(endTime));
+        if (Objects.nonNull(startTime) && Objects.nonNull(endTime)) {
+            String format = String.valueOf(startTime).length() == 10 ? "epoch_second" : "epoch_millis";
+            boolQueryBuilder.must(QueryBuilders.rangeQuery("postTime").format(format).gte(startTime).lte(endTime));
         }
+        SortBuilder sortBuilder;
         if (!StringUtils.isEmpty(word)) {
-            MultiMatchQueryBuilder multiMatchQueryBuilder = new MultiMatchQueryBuilder(word, "title", "digest", "content", "author")
-                    .field("content", 2.0f).field("title", 3.0f);
-            builder.withQuery(multiMatchQueryBuilder);
+            MultiMatchQueryBuilder multiMatchQueryBuilder = new MultiMatchQueryBuilder(word, "title", "content", "digest", "author")
+                    .field("title", 50).field("content", 20).field("digest", 15);
+            boolQueryBuilder.filter(multiMatchQueryBuilder);
+            sortBuilder = SortBuilders.scoreSort().order(SortOrder.DESC);
+        } else {
+            sortBuilder = SortBuilders.fieldSort("postTime").order(SortOrder.DESC);
         }
+        log.info(sortBuilder.toString().replaceAll("\n", ""));
 
+        builder.withQuery(boolQueryBuilder).withPageable(pageable).withSort(sortBuilder);
         return articleRepository.search(builder.build()).map(this::toArticleResultVO);
     }
 

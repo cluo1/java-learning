@@ -21,10 +21,10 @@ public class ArticleResultVO {
      */
     private String title;
 
-    /**
-     * 作者
-     */
-    private String author;
+//    /**
+//     * 作者
+//     */
+//     private String author;
 
     /**
      * 封面图 or 图片消息
@@ -36,10 +36,10 @@ public class ArticleResultVO {
      */
     private String digest;
 
-    /**
-     * 原文地址
-     */
-    private String contentURL;
+//    /**
+//     * 原文地址
+//     */
+//    private String contentURL;
 
     /**
      * 发布时间
