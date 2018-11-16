@@ -1,5 +1,6 @@
 # 服务host配置
 fantasy:
+  mp: wxmps
   host: localhost
   nearjob: nearjob
   mp-index: https://mp.mariojd.cn
@@ -16,6 +17,7 @@ server:
 # Jpa、Redis、Postgres和Elastic配置
 spring:
   jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
     properties:
@@ -30,9 +32,16 @@ spring:
             non_contextual_creation: true
     open-in-view: false
   datasource:
-    url: jdbc:postgresql://${fantasy.host}:12432/${fantasy.nearjob}
-    username: ${fantasy.nearjob}
-    password: ${fantasy.nearjob}
+    mp:
+      url: jdbc:postgresql://${fantasy.host}:12432/${fantasy.mp}
+      username: ${fantasy.mp}
+      password: ${fantasy.mp}
+      driver-class-name: org.postgresql.Driver
+    nearjob:
+      url: jdbc:postgresql://${fantasy.host}:12432/${fantasy.nearjob}
+      username: ${fantasy.nearjob}
+      password: ${fantasy.nearjob}
+      driver-class-name: org.postgresql.Driver
   data:
     elasticsearch:
       cluster-nodes: ${fantasy.host}:9300
