@@ -1,2 +1,19 @@
-{
-    }
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    database: default
+  datasource:
+    hikari:
+      mysql:
+        # Spring Boot 2.0+ 版本后，配置文件中使用spring.datasource.hikari.jdbc-url
+        # 而不是Spring Boot 1.0+ 版本中的spring.datasource.url
+        jdbc-url: jdbc:mysql://localhost:3306/test
+        password: root
+        username: root
+        driver-class-name: com.mysql.jdbc.Driver
+      postgres:
+        jdbc-url: jdbc:postgresql://postgres:5432/postgres
+        password: postgres
+        username: postgres
+        driver-class-name: org.postgresql.Driver

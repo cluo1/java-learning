@@ -24,6 +24,7 @@ import javax.sql.DataSource;
 @EnableTransactionManagement
 @EnableJpaRepositories(
         entityManagerFactoryRef = "mpEntityManagerFactory",
+        transactionManagerRef = "mpTransactionManager",
         basePackages = "cn.mariojd.fantasy.mp.dao")
 public class MpDataSourceConfig {
 
