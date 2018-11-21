@@ -20,13 +20,13 @@ public class DataSourceConfig {
 
     @Primary
     @Bean
-    @ConfigurationProperties("spring.jpa.datasource.hikari.mysql")
+    @ConfigurationProperties("spring.datasource.hikari.mysql")
     public DataSource mysqlDataSource() {
         return DataSourceBuilder.create().build();
     }
 
     @Bean
-    @ConfigurationProperties("spring.jpa.datasource.hikari.postgres")
+    @ConfigurationProperties("spring.datasource.hikari.postgres")
     public DataSource postgresDataSource() {
         return DataSourceBuilder.create().build();
     }

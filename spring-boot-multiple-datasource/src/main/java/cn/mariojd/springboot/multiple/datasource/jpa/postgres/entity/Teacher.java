@@ -1,11 +1,10 @@
 package cn.mariojd.springboot.multiple.datasource.jpa.postgres.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * @author Jared
@@ -14,6 +13,8 @@ import javax.persistence.Id;
  */
 @Data
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 public class Teacher {
 
     @Id
@@ -22,4 +23,7 @@ public class Teacher {
 
     private String name;
 
+    public Teacher(String name) {
+        this.name = name;
+    }
 }
