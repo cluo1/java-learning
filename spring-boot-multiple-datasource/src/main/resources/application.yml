@@ -1,19 +1,27 @@
 spring:
   jpa:
     hibernate:
+      # 多数据源下，该属性不生效，需要在配置中额外指定，这里仅表示普通定义
       ddl-auto: create-drop
-    database: default
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        jdbc:
+          lob:
+            non_contextual_creation: true
+    open-in-view: false
+  # 定义不同数据源的连接信息
   datasource:
     hikari:
       mysql:
-        # Spring Boot 2.0+ 版本后，配置文件中使用spring.datasource.hikari.jdbc-url
-        # 而不是Spring Boot 1.0+ 版本中的spring.datasource.url
-        jdbc-url: jdbc:mysql://localhost:3306/test
-        password: root
+        # Spring Boot 2.0+ 版本后，配置文件中使用spring.datasource.hikari.jdbc-url，而不是Spring Boot 1.0+ 版本中的spring.datasource.url
+        jdbc-url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8
         username: root
-        driver-class-name: com.mysql.jdbc.Driver
+        password: root
+        driver-class-name: com.mysql.cj.jdbc.Driver
       postgres:
-        jdbc-url: jdbc:postgresql://postgres:5432/postgres
-        password: postgres
+        jdbc-url: jdbc:postgresql://localhost:5432/postgres
         username: postgres
+        password: postgres
         driver-class-name: org.postgresql.Driver
