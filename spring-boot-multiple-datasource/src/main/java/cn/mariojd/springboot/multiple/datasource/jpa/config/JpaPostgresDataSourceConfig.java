@@ -5,6 +5,7 @@ import org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Profile;
 import org.springframework.core.env.Environment;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.JpaTransactionManager;
@@ -23,6 +24,7 @@ import java.util.Map;
  * @date 2018/11/21 19:53
  * @blog: https://blog.mariojd.cn/
  */
+@Profile("jpa")
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories(
@@ -30,7 +32,7 @@ import java.util.Map;
         transactionManagerRef = "postgresTransactionManager",
         // 数据层所在的包位置
         basePackages = "cn.mariojd.springboot.multiple.datasource.jpa.postgres.repository")
-public class PostgresDataSourceConfig {
+public class JpaPostgresDataSourceConfig {
 
     @Resource
     private Environment environment;
