@@ -43,8 +43,7 @@ public class PostgresDataSourceConfig {
     public LocalContainerEntityManagerFactoryBean postgresEntityManagerFactory(EntityManagerFactoryBuilder builder) {
         Map<String, Object> properties = new HashMap<>(4);
         properties.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
-        properties.put("hibernate.hbm2ddl.auto",
-                environment.getProperty("spring.jpa.hibernate.ddl-auto"));
+        properties.put("hibernate.hbm2ddl.auto", environment.getProperty("spring.jpa.hibernate.ddl-auto"));
         return builder.dataSource(dataSource)
                 // 实体所在的包位置
                 .properties(properties)

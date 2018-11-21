@@ -45,8 +45,7 @@ public class MysqlDataSourceConfig {
         Map<String, Object> properties = new HashMap<>(4);
         // Spring Boot2.0 ，指定MySQLDialect会默认使用MyISAM引擎，所以这里改成MySQL55Dialect
         properties.put("hibernate.dialect", "org.hibernate.dialect.MySQL55Dialect");
-        properties.put("hibernate.hbm2ddl.auto",
-                environment.getProperty("spring.jpa.hibernate.ddl-auto"));
+        properties.put("hibernate.hbm2ddl.auto", environment.getProperty("spring.jpa.hibernate.ddl-auto"));
         return builder.dataSource(dataSource)
                 .properties(properties)
                 // 实体所在的包位置

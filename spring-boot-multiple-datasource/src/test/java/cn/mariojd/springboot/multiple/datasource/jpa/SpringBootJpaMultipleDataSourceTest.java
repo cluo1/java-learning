@@ -11,13 +11,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
-import javax.validation.constraints.AssertTrue;
-
-import static org.junit.Assert.*;
 
 /**
+ * JPA多数据源测试
+ *
  * @author Jared
- * @date 2018/11/21 13:49
+ * @date 2018/11/21 23:49
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
