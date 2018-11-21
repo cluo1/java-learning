@@ -15,6 +15,8 @@ import javax.sql.DataSource;
  * @date 2018/11/21 19:41
  * @blog: https://blog.mariojd.cn/
  */
+// Spring Boot 1.0+ ，DataSourceBuilder所在包位置为：org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder
+// Spring Boot 2.0+ ，DataSourceBuilder所在包位置为：org.springframework.boot.jdbc.DataSourceBuilder
 @Configuration
 public class DataSourceConfig {
 

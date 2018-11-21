@@ -43,7 +43,8 @@ public class MysqlDataSourceConfig {
     @Primary
     public LocalContainerEntityManagerFactoryBean mysqlEntityManagerFactory(EntityManagerFactoryBuilder builder) {
         Map<String, Object> properties = new HashMap<>(4);
-        // Spring Boot2.0 ，指定MySQLDialect会默认使用MyISAM引擎，所以这里改成MySQL55Dialect
+        // Spring Boot 1.0+ ，使用MySQLDialect
+        // Spring Boot 2.0+ ，指定MySQLDialect会默认使用MyISAM引擎，改成MySQL55Dialect即可
         properties.put("hibernate.dialect", "org.hibernate.dialect.MySQL55Dialect");
         properties.put("hibernate.hbm2ddl.auto", environment.getProperty("spring.jpa.hibernate.ddl-auto"));
         return builder.dataSource(dataSource)
