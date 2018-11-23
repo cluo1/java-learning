@@ -8,7 +8,7 @@
     <version>1.0.1</version>
     <packaging>jar</packaging>
 
-    <name>happyJared - 洞见</name>
+    <name>happyJared</name>
     <description>『 吗哩噢 • 洞见 』 -> https://mp.mariojd.cn/</description>
 
     <parent>
