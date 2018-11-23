@@ -8,8 +8,8 @@
     <version>1.0.1</version>
     <packaging>jar</packaging>
 
-    <name>fantasy</name>
-    <description>Fantasy project for Spring Boot</description>
+    <name>happyJared - 洞见</name>
+    <description>『 吗哩噢 • 洞见 』 -> https://mp.mariojd.cn/</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
