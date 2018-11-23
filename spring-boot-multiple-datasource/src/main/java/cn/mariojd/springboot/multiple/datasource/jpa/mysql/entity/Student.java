@@ -3,6 +3,7 @@ package cn.mariojd.springboot.multiple.datasource.jpa.mysql.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.context.annotation.Profile;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,6 +15,7 @@ import javax.persistence.Id;
  * @date 2018/11/21 19:45
  * @blog: https://blog.mariojd.cn/
  */
+@Profile("jpa")
 @Data
 @Entity
 @NoArgsConstructor

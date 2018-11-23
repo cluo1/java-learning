@@ -3,6 +3,7 @@ package cn.mariojd.springboot.multiple.datasource.mybatis.mysql.mapper;
 import cn.mariojd.springboot.multiple.datasource.mybatis.mysql.entity.Boy;
 import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.type.JdbcType;
+import org.springframework.context.annotation.Profile;
 
 import java.util.List;
 
@@ -10,6 +11,7 @@ import java.util.List;
  * @author Jared
  * @date 2018/11/21 16:30
  */
+@Profile("mybatis")
 public interface BoyMapper {
 
     @Insert("CREATE TABLE `boy`(`id` int(11) NOT NULL,`name` varchar(255));")

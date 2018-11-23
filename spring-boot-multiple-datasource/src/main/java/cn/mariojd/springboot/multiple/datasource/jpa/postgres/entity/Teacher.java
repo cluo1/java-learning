@@ -3,6 +3,7 @@ package cn.mariojd.springboot.multiple.datasource.jpa.postgres.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.context.annotation.Profile;
 
 import javax.persistence.*;
 
@@ -11,6 +12,7 @@ import javax.persistence.*;
  * @date 2018/11/21 19:47
  * @blog: https://blog.mariojd.cn/
  */
+@Profile("jpa")
 @Data
 @Entity
 @NoArgsConstructor

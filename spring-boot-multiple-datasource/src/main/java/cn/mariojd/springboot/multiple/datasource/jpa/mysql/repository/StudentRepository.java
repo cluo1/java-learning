@@ -1,6 +1,7 @@
 package cn.mariojd.springboot.multiple.datasource.jpa.mysql.repository;
 
 import cn.mariojd.springboot.multiple.datasource.jpa.mysql.entity.Student;
+import org.springframework.context.annotation.Profile;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
@@ -8,5 +9,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @date 2018/11/21 19:46
  * @blog: https://blog.mariojd.cn/
  */
+@Profile("jpa")
 public interface StudentRepository extends JpaRepository<Student, Integer> {
 }
