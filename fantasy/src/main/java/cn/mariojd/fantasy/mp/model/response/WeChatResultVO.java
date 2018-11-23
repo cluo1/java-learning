@@ -10,6 +10,11 @@ import lombok.Data;
 public class WeChatResultVO {
 
     /**
+     * 主键id
+     */
+    private Integer id;
+
+    /**
      * 公众号名称
      */
     private String mpsName;
