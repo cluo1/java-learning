@@ -14,7 +14,7 @@ import javax.persistence.*;
  */
 @Data
 @Entity
-//@NoArgsConstructor
+@NoArgsConstructor
 @AllArgsConstructor
 public class Teacher {
 
