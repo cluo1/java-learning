@@ -12,7 +12,6 @@ import javax.persistence.*;
  * @date 2018/11/21 19:47
  * @blog: https://blog.mariojd.cn/
  */
-@Profile("jpa")
 @Data
 @Entity
 @NoArgsConstructor

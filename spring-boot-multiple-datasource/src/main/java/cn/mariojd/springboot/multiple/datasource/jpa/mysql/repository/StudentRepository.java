@@ -9,6 +9,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @date 2018/11/21 19:46
  * @blog: https://blog.mariojd.cn/
  */
-@Profile("jpa")
 public interface StudentRepository extends JpaRepository<Student, Integer> {
 }

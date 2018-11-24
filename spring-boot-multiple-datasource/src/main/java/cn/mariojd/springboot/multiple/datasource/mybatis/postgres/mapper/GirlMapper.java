@@ -3,7 +3,6 @@ package cn.mariojd.springboot.multiple.datasource.mybatis.postgres.mapper;
 import cn.mariojd.springboot.multiple.datasource.mybatis.postgres.entity.Girl;
 import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.type.JdbcType;
-import org.springframework.context.annotation.Profile;
 
 import java.util.List;
 
@@ -11,7 +10,6 @@ import java.util.List;
  * @author Jared
  * @date 2018/11/21 16:34
  */
-@Profile("mybatis")
 public interface GirlMapper {
 
     @Insert("CREATE TABLE \"girl\"(\"id\" int4 NOT NULL,\"name\" varchar(255));")

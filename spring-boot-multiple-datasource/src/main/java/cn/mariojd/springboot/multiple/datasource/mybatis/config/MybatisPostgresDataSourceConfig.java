@@ -18,7 +18,6 @@ import javax.sql.DataSource;
  * @author Jared
  * @date 2018/11/21 15:47
  */
-@Profile("mybatis")
 @Configuration
 @MapperScan(
         // 数据层所在包位置

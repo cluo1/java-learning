@@ -24,7 +24,6 @@ import java.util.Map;
  * @date 2018/11/21 19:53
  * @blog: https://blog.mariojd.cn/
  */
-@Profile("jpa")
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories(
