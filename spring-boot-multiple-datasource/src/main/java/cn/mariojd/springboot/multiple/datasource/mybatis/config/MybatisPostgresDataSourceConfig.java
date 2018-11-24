@@ -7,8 +7,6 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
-import org.springframework.context.annotation.Profile;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
 import javax.annotation.Resource;
@@ -30,7 +28,6 @@ public class MybatisPostgresDataSourceConfig {
     private DataSource dataSource;
 
     @Bean
-    @Primary
     public SqlSessionFactory mybatisPostgresSqlSessionFactory() throws Exception {
         SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
         factoryBean.setDataSource(dataSource);
@@ -40,13 +37,11 @@ public class MybatisPostgresDataSourceConfig {
     }
 
     @Bean
-    @Primary
     public DataSourceTransactionManager mybatisPostgresTransactionManager() {
         return new DataSourceTransactionManager(dataSource);
     }
 
     @Bean
-    @Primary
     public SqlSessionTemplate mybatisPostgresSqlSessionTemplate(@Qualifier("mybatisPostgresSqlSessionFactory") SqlSessionFactory sqlSessionFactory) {
         return new SqlSessionTemplate(sqlSessionFactory);
     }

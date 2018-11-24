@@ -1,9 +1,5 @@
 package cn.mariojd.springboot.multiple.datasource.mybatis;
 
-import cn.mariojd.springboot.multiple.datasource.jpa.mysql.entity.Student;
-import cn.mariojd.springboot.multiple.datasource.jpa.mysql.repository.StudentRepository;
-import cn.mariojd.springboot.multiple.datasource.jpa.postgres.entity.Teacher;
-import cn.mariojd.springboot.multiple.datasource.jpa.postgres.repository.TeacherRepository;
 import cn.mariojd.springboot.multiple.datasource.mybatis.mysql.entity.Boy;
 import cn.mariojd.springboot.multiple.datasource.mybatis.mysql.mapper.BoyMapper;
 import cn.mariojd.springboot.multiple.datasource.mybatis.postgres.entity.Girl;
@@ -13,11 +9,9 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
-import java.util.Random;
 
 /**
  * @author Jared
@@ -26,7 +20,6 @@ import java.util.Random;
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@ActiveProfiles("mybatis")
 public class SpringBootMybatisMultipleDataSourceTest {
 
     @Resource
