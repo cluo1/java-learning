@@ -11,7 +11,7 @@ import java.util.Date;
  * @date 2018/8/21 9:01
  */
 @Entity
-@Table(name = "tb_java")
+@Table(name = "tb_java",schema = "public")
 public class Java extends BaseEntity {
 
     public Java() {
