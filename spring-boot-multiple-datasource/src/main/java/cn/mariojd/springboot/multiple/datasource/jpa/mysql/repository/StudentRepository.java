@@ -1,7 +1,6 @@
 package cn.mariojd.springboot.multiple.datasource.jpa.mysql.repository;
 
 import cn.mariojd.springboot.multiple.datasource.jpa.mysql.entity.Student;
-import org.springframework.context.annotation.Profile;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
