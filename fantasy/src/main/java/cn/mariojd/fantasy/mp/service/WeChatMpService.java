@@ -5,6 +5,7 @@ import cn.mariojd.fantasy.mp.entity.WeChatMp;
 import cn.mariojd.fantasy.mp.model.response.WeChatResultVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -22,6 +23,8 @@ public class WeChatMpService {
     @Resource
     private WeChatMpDao weChatMpDao;
 
+    @Cacheable(cacheNames = "WeChatMpService-findPage",
+            key = "#pageable.pageNumber.concat(#pageable.pageSize)")
     public Page<WeChatResultVO> findPage(Pageable pageable) {
         log.info("获取WeChatMp ing...");
         return weChatMpDao.findByShowIsTrue(pageable).map(this::toWeChatResultVO);

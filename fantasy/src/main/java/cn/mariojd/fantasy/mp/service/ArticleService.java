@@ -13,6 +13,7 @@ import org.elasticsearch.search.sort.SortBuilders;
 import org.elasticsearch.search.sort.SortOrder;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilder;
@@ -95,6 +96,7 @@ public class ArticleService {
      * @param articleId
      * @return
      */
+    @Cacheable(cacheNames = "ArticleService-getContentURL")
     public String getContentURL(int articleId) {
         log.info("获取详情Article Detail:{}", articleId);
         Article article = articleRepository.findByArticleId(articleId);

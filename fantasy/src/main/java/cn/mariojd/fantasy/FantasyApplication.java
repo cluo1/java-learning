@@ -5,7 +5,11 @@ import cn.mariojd.fantasy.nearjob.base.BaseService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.cache.concurrent.ConcurrentMapCacheManager;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Primary;
 import org.springframework.data.redis.core.StringRedisTemplate;
 
 import java.util.Arrays;
@@ -13,6 +17,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Slf4j
+@EnableCaching
 @SpringBootApplication
 public class FantasyApplication {
 
@@ -36,6 +41,12 @@ public class FantasyApplication {
                     log.info("----->>>Load Bean: " + beanName);
                     BaseService.resources.put(Integer.parseInt(jobId), baseDao);
                 }));
+    }
+
+    @Bean
+    @Primary
+    public ConcurrentMapCacheManager concurrentMapCacheManager() {
+        return new ConcurrentMapCacheManager();
     }
 
 }
