@@ -14,8 +14,11 @@ server:
       enabled: true
       prefix: access.
 
-# Jpa、Redis、Postgres和Elastic配置
+# Jpa、Redis、PostgreSQL和Elasticsearch配置
 spring:
+  cache:
+    caffeine:
+      spec: expireAfterAccess=60s
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:

@@ -23,8 +23,7 @@ public class WeChatMpService {
     @Resource
     private WeChatMpDao weChatMpDao;
 
-    @Cacheable(cacheNames = "WeChatMpService-findPage",
-            key = "#pageable.pageNumber.concat(#pageable.pageSize)")
+    @Cacheable(cacheNames = "WeChatMpService-findPage", key = "#pageable.getPageNumber()")
     public Page<WeChatResultVO> findPage(Pageable pageable) {
         log.info("获取WeChatMp ing...");
         return weChatMpDao.findByShowIsTrue(pageable).map(this::toWeChatResultVO);
