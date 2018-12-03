@@ -1,5 +1,5 @@
 # 指定基础镜像(必需且为第一条指令,scratch是空白镜像)
-FROM openjdk:8-jre-alpine
+FROM openjdk:8
 
 # MAINTAINER已经过期，具体参考：https://docs.docker.com/engine/reference/builder/#label
 LABEL jared="dong1013@foxmail.com"
