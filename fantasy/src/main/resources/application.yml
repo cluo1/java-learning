@@ -16,9 +16,6 @@ server:
 
 # Jpa、Redis、PostgreSQL和Elasticsearch配置
 spring:
-  cache:
-    caffeine:
-      spec: expireAfterAccess=60s
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
