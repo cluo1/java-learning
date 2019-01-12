@@ -26,12 +26,6 @@
     </properties>
 
     <dependencies>
-        <!-- MongoDB -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-mongodb</artifactId>
-        </dependency>
-
         <!-- 持久化框架: JPA && Mybatis-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
