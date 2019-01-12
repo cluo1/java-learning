@@ -1,0 +1,13 @@
+spring:
+  data:
+    mongodb:
+      primary:
+        host: 193.112.0.219
+        port: 12017
+        database: test
+        username:
+        password:
+      secondary:
+        host: 193.112.0.219
+        port: 12017
+        database: test1
