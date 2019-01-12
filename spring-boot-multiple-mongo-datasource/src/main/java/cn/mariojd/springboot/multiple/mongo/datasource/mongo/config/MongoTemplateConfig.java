@@ -1,6 +1,6 @@
-package cn.mariojd.springboot.multiple.datasource.mongo.config;
+package cn.mariojd.springboot.multiple.mongo.datasource.mongo.config;
 
-import cn.mariojd.springboot.multiple.datasource.config.MongoPropertiesConfig;
+import cn.mariojd.springboot.multiple.mongo.datasource.config.MongoPropertiesConfig;
 import com.mongodb.MongoClient;
 import org.springframework.boot.autoconfigure.mongo.MongoProperties;
 import org.springframework.context.annotation.Bean;

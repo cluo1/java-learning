@@ -1,6 +1,6 @@
-package cn.mariojd.springboot.multiple.datasource.mongo.repository.secondary;
+package cn.mariojd.springboot.multiple.mongo.datasource.mongo.repository.secondary;
 
-import cn.mariojd.springboot.multiple.datasource.mongo.entity.Cartoon;
+import cn.mariojd.springboot.multiple.mongo.datasource.mongo.entity.Cartoon;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 /**

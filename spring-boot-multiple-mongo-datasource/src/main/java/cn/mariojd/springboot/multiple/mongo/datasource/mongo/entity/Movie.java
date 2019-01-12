@@ -1,4 +1,4 @@
-package cn.mariojd.springboot.multiple.datasource.mongo.entity;
+package cn.mariojd.springboot.multiple.mongo.datasource.mongo.entity;
 
 import lombok.Builder;
 import lombok.Data;

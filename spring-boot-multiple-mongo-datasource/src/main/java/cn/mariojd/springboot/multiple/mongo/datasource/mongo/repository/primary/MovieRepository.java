@@ -1,6 +1,6 @@
-package cn.mariojd.springboot.multiple.datasource.mongo.repository.primary;
+package cn.mariojd.springboot.multiple.mongo.datasource.mongo.repository.primary;
 
-import cn.mariojd.springboot.multiple.datasource.mongo.entity.Movie;
+import cn.mariojd.springboot.multiple.mongo.datasource.mongo.entity.Movie;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 /**

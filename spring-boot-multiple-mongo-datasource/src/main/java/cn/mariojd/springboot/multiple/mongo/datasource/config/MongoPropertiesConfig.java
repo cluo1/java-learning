@@ -1,4 +1,4 @@
-package cn.mariojd.springboot.multiple.datasource.config;
+package cn.mariojd.springboot.multiple.mongo.datasource.config;
 
 import lombok.Data;
 import org.springframework.boot.autoconfigure.mongo.MongoProperties;
