@@ -2,14 +2,14 @@ spring:
   data:
     mongodb:
       primary:
-        host: 193.112.0.219
-        port: 12017
+        host: localhost
+        port: 27017
         database: test
         username: root
-        password: +tm8nsSBcpz/ayq"GbFEhoe(Jg4Z^.dN
+        password: root
       secondary:
-        host: 193.112.0.219
-        port: 12017
+        host: localhost
+        port: 27017
         database: test
         username: root
-        password: +tm8nsSBcpz/ayq"GbFEhoe(Jg4Z^.dN
+        password: root

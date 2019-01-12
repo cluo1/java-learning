@@ -12,6 +12,6 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
         mongoTemplateRef = PrimaryMongoConfig.PRIMARY_MONGO_TEMPLATE)
 public class PrimaryMongoConfig {
 
-    static final String PRIMARY_MONGO_TEMPLATE = "primaryMongoTemplate";
+    public static final String PRIMARY_MONGO_TEMPLATE = "primaryMongoTemplate";
 
 }

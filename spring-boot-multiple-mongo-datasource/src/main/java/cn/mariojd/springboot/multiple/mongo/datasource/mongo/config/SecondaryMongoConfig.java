@@ -12,7 +12,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
         mongoTemplateRef = SecondaryMongoConfig.SECONDARY_MONGO_TEMPLATE)
 public class SecondaryMongoConfig {
 
-    static final String SECONDARY_MONGO_TEMPLATE = "secondaryMongoTemplate";
+    public static final String SECONDARY_MONGO_TEMPLATE = "secondaryMongoTemplate";
 
 }
 

@@ -1,5 +1,7 @@
 package cn.mariojd.springboot.multiple.mongo.datasource.mongo;
 
+import cn.mariojd.springboot.multiple.mongo.datasource.mongo.config.PrimaryMongoConfig;
+import cn.mariojd.springboot.multiple.mongo.datasource.mongo.config.SecondaryMongoConfig;
 import cn.mariojd.springboot.multiple.mongo.datasource.mongo.entity.Cartoon;
 import cn.mariojd.springboot.multiple.mongo.datasource.mongo.entity.Movie;
 import cn.mariojd.springboot.multiple.mongo.datasource.mongo.repository.primary.MovieRepository;
@@ -7,7 +9,9 @@ import cn.mariojd.springboot.multiple.mongo.datasource.mongo.repository.secondar
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -27,6 +31,14 @@ public class SpringBootMongoMultipleDataSourceTest {
 
     @Resource
     private CartoonRepository cartoonRepository;
+
+    @Resource
+    @Qualifier(value = PrimaryMongoConfig.PRIMARY_MONGO_TEMPLATE)
+    private MongoTemplate primaryMongoTemplate;
+
+    @Resource
+    @Qualifier(value = SecondaryMongoConfig.SECONDARY_MONGO_TEMPLATE)
+    private MongoTemplate secondaryMongoTemplate;
 
     @Test
     public void test() {
