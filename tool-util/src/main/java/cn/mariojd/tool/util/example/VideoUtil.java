@@ -1,12 +1,9 @@
 package cn.mariojd.tool.util.example;
 
-import com.sun.org.apache.bcel.internal.util.ClassPath;
 import org.bytedeco.javacv.FFmpegFrameGrabber;
 import org.bytedeco.javacv.Frame;
 import org.bytedeco.javacv.FrameGrabber;
 import org.bytedeco.javacv.Java2DFrameConverter;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.ResourceLoader;
 import org.springframework.util.ResourceUtils;
 
 import javax.imageio.ImageIO;
@@ -87,9 +84,14 @@ public class VideoUtil {
         return duration;
     }
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
         String videoPath = ResourceUtils.CLASSPATH_URL_PREFIX + "video.mp4";
-        File video = ResourceUtils.getFile(videoPath);
+        File video = null;
+        try {
+            video = ResourceUtils.getFile(videoPath);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
         String picPath = "video.jpg";
         getVideoPic(video, picPath);
 
