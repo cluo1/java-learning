@@ -9,6 +9,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
+
 /**
  * @author jdq
  * @date 2018/4/3 11:15
@@ -18,6 +23,10 @@ public class NettyChannelHandler extends SimpleChannelInboundHandler<Object> {
     private final Logger logger = LoggerFactory.getLogger(NettyChannelHandler.class);
 
     private WebSocketServerHandshaker handshake;
+
+    private List<Channel> channelList = new ArrayList<>();
+
+    private AtomicInteger integer = new AtomicInteger(0);
 
     /**
      * 连接创建的时候调用
@@ -41,7 +50,6 @@ public class NettyChannelHandler extends SimpleChannelInboundHandler<Object> {
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable e) throws Exception {
         ctx.close();
         e.printStackTrace();
-        logger.error("------ error is {}", e);
     }
 
     /**
@@ -95,9 +103,15 @@ public class NettyChannelHandler extends SimpleChannelInboundHandler<Object> {
 
         if (frame instanceof TextWebSocketFrame) {
             //文本消息
-            String message = ((TextWebSocketFrame) frame).text();
-            TextWebSocketFrame tws = new TextWebSocketFrame(message);
-            channel.writeAndFlush(tws);
+            channelList.forEach(channel1 -> {
+                int andIncrement = integer.getAndIncrement();
+                TextWebSocketFrame tws = new TextWebSocketFrame(String.valueOf(andIncrement));
+                channel.writeAndFlush(tws);
+            });
+            //System.out.println(channelList.size());
+//            String message = ((TextWebSocketFrame) frame).text() + "....";
+//            TextWebSocketFrame tws = new TextWebSocketFrame(message);
+//            channel.writeAndFlush(tws);
         } else if (frame instanceof CloseWebSocketFrame) {
             //关闭WebSocket消息
             handshake.close(channel, (CloseWebSocketFrame) frame.retain());
@@ -140,8 +154,8 @@ public class NettyChannelHandler extends SimpleChannelInboundHandler<Object> {
 
                 /*QueryStringDecoder queryStringDecoder = new QueryStringDecoder(req.uri());
                 Map<String, List<String>> parameters = queryStringDecoder.parameters();*/
-
-                TextWebSocketFrame tws = new TextWebSocketFrame("握手成功");
+                channelList.add(channel);
+                TextWebSocketFrame tws = new TextWebSocketFrame("shake success");
                 channel.writeAndFlush(tws);
             }
         }

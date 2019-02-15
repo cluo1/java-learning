@@ -9,6 +9,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Pattern;
 
+import static java.util.regex.Pattern.*;
+
 /**
  * Created by Mario
  */
@@ -19,7 +21,7 @@ public class ReadController extends BaseController {
     @ResponseBody
     public Map<String, Object> list(@PathVariable Integer currentPage) {
         PageResult page = new PageResult();
-        Pattern pattern = Pattern.compile("[0-9]{1,9}");
+        Pattern pattern = compile("[0-9]{1,9}");
         if (currentPage == null || !pattern.matcher(String.valueOf(currentPage)).matches()) {
             page.setCurrentPage(1);
         } else {
