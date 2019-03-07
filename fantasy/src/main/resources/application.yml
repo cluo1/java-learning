@@ -33,11 +33,11 @@ spring:
     open-in-view: false
   datasource:
     mp:
-      jdbc-url: jdbc:postgresql://${fantasy.host}:2432/${fantasy.mp}
+      jdbc-url: jdbc:postgresql://${fantasy.host}:12432/${fantasy.mp}
       username: ${fantasy.mp}
       password: ${fantasy.mp}
     nearjob:
-      jdbc-url: jdbc:postgresql://${fantasy.host}:2432/${fantasy.nearjob}
+      jdbc-url: jdbc:postgresql://${fantasy.host}:12432/${fantasy.nearjob}
       username: ${fantasy.nearjob}
       password: ${fantasy.nearjob}
   data:
