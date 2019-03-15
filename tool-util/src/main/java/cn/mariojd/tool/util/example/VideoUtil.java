@@ -106,7 +106,6 @@ public class VideoUtil {
                 recorder.setVideoCodec(avcodec.AV_CODEC_ID_H264);
                 recorder.setFrameRate(ff.getFrameRate());
                 recorder.setSampleRate(ff.getSampleRate());
-                recorder.setFrameRate(ff.getFrameRate());
                 recorder.start();
                 Frame capturedFrame;
 
