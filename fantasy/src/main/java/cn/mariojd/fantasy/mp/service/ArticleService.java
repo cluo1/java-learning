@@ -53,6 +53,7 @@ public class ArticleService {
         log.info("查询搜索mpsId:{} ;word:{} ;msgType:{} ;startTime:{} ;endTime:{}", mpsId, word, msgType, startTime, endTime);
 
         NativeSearchQueryBuilder builder = new NativeSearchQueryBuilder();
+
         BoolQueryBuilder boolQueryBuilder = QueryBuilders.boolQuery();
         boolQueryBuilder.must(QueryBuilders.matchQuery("mpsId", mpsId));
 
@@ -60,19 +61,21 @@ public class ArticleService {
             boolQueryBuilder.must(QueryBuilders.matchQuery("msgType", msgType));
         }
         if (Objects.nonNull(startTime) && Objects.nonNull(endTime)) {
-            String format = String.valueOf(startTime).length() == 10 ? "epoch_second" : "epoch_millis";
-            boolQueryBuilder.must(QueryBuilders.rangeQuery("postTime").format(format).gte(startTime).lte(endTime));
+            String epoch = String.valueOf(startTime).length() == 10 ? "epoch_second" : "epoch_millis";
+            boolQueryBuilder.must(QueryBuilders.rangeQuery("postTime").format(epoch).gte(startTime).lte(endTime));
         }
-        SortBuilder sortBuilder;
+        SortBuilder sortBuilder = SortBuilders.fieldSort("postTime").order(SortOrder.DESC);
         if (!StringUtils.isEmpty(word)) {
-            MultiMatchQueryBuilder multiMatchQueryBuilder = new MultiMatchQueryBuilder(word, "title", "content", "digest", "author")
-                    .field("title", 50).field("content", 20).field("digest", 15);
+            MultiMatchQueryBuilder multiMatchQueryBuilder =
+                    new MultiMatchQueryBuilder(word, "title", "content", "digest", "author")
+                            .field("title", 100).field("content", 50)
+                            .field("digest", 30);
+            // FunctionScoreQueryBuilder scoreQueryBuilder = QueryBuilders
+            //        .functionScoreQuery(QueryBuilders.multiMatchQuery(multiMatchQueryBuilder));
+            // builder.withQuery(scoreQueryBuilder);
             boolQueryBuilder.filter(multiMatchQueryBuilder);
             sortBuilder = SortBuilders.scoreSort().order(SortOrder.DESC);
-        } else {
-            sortBuilder = SortBuilders.fieldSort("postTime").order(SortOrder.DESC);
         }
-        log.info(sortBuilder.toString().replaceAll("\n", ""));
 
         builder.withQuery(boolQueryBuilder).withPageable(pageable).withSort(sortBuilder);
         return articleRepository.search(builder.build()).map(this::toArticleResultVO);
@@ -101,7 +104,10 @@ public class ArticleService {
         log.info("获取详情Article Detail:{}", articleId);
         Article article = articleRepository.findByArticleId(articleId);
         if (Objects.nonNull(article)) {
-            return article.getContentURL();
+            String contentURL = article.getContentURL();
+            if (!StringUtils.isEmpty(contentURL)) {
+                return contentURL;
+            }
         }
         return index;
     }
