@@ -104,9 +104,11 @@ public class VideoUtil {
                 recorder = new FFmpegFrameRecorder(mp4Path, ff.getImageWidth(), ff.getImageHeight(),
                         ff.getAudioChannels());
                 recorder.setVideoCodec(avcodec.AV_CODEC_ID_H264);
+                // 清晰度设置
+                recorder.setVideoBitrate(1920 * 1280);
                 recorder.setFrameRate(ff.getFrameRate());
                 recorder.setSampleRate(ff.getSampleRate());
-                recorder.start();
+                recorder.start(new AVFormatContext(99999));
                 Frame capturedFrame;
 
                 while (true) {
@@ -125,7 +127,7 @@ public class VideoUtil {
                 recorder.stop();
                 recorder.release();
                 ff.stop();
-            } catch (IOException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
