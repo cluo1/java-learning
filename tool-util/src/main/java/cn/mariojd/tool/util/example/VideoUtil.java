@@ -1,6 +1,7 @@
 package cn.mariojd.tool.util.example;
 
 import org.bytedeco.javacpp.avcodec;
+import org.bytedeco.javacpp.avformat;
 import org.bytedeco.javacv.*;
 import org.bytedeco.javacv.Frame;
 import org.springframework.util.ResourceUtils;
@@ -108,7 +109,7 @@ public class VideoUtil {
                 recorder.setVideoBitrate(1920 * 1280);
                 recorder.setFrameRate(ff.getFrameRate());
                 recorder.setSampleRate(ff.getSampleRate());
-                recorder.start(new AVFormatContext(99999));
+                recorder.start(new avformat.AVFormatContext(99999));
                 Frame capturedFrame;
 
                 while (true) {
