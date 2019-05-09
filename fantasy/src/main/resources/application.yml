@@ -16,6 +16,13 @@ server:
 
 # Jpa、Redis、PostgreSQL和Elasticsearch配置
 spring:
+  cache:
+    type: redis
+    redis:
+      cache-null-values: false
+      key-prefix: mp.mariojd.
+      # 缓存过期时间
+      time-to-live: 1800S
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:

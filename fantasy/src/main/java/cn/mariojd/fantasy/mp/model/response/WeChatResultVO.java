@@ -2,12 +2,14 @@ package cn.mariojd.fantasy.mp.model.response;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * @author Jared
  * @date 2018/11/23 9:53
  */
 @Data
-public class WeChatResultVO {
+public class WeChatResultVO implements Serializable {
 
     /**
      * 主键id

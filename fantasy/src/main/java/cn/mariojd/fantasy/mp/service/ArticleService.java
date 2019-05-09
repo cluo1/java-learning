@@ -13,6 +13,7 @@ import org.elasticsearch.search.sort.SortBuilders;
 import org.elasticsearch.search.sort.SortOrder;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -29,6 +30,7 @@ import java.util.Objects;
  */
 @Slf4j
 @Service
+@CacheConfig(cacheNames = "ArticleService")
 public class ArticleService {
 
     @Value("${fantasy.mp-index}")
@@ -39,10 +41,6 @@ public class ArticleService {
 
     /**
      * 根据查询条件搜索
-     *
-     * @param searchVO
-     * @param pageable
-     * @return
      */
     public Page<ArticleResultVO> findPage(ArticleSearchVO searchVO, Pageable pageable) {
         int mpsId = searchVO.getMpsId();
@@ -83,9 +81,6 @@ public class ArticleService {
 
     /**
      * Article -> ArticleResultVO
-     *
-     * @param article
-     * @return ArticleResultVO
      */
     private ArticleResultVO toArticleResultVO(Article article) {
         ArticleResultVO resultVO = new ArticleResultVO();
@@ -95,11 +90,8 @@ public class ArticleService {
 
     /**
      * 根据ArticleId获取contentURL
-     *
-     * @param articleId
-     * @return
      */
-    @Cacheable(cacheNames = "ArticleService-getContentURL")
+    @Cacheable(key = "#root.targetClass.simpleName+'.'+#root.methodName+'.'+#articleId")
     public String getContentURL(int articleId) {
         log.info("获取详情Article Detail:{}", articleId);
         Article article = articleRepository.findByArticleId(articleId);

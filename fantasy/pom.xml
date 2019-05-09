@@ -5,11 +5,11 @@
 
     <groupId>cn.mariojd</groupId>
     <artifactId>fantasy</artifactId>
-    <version>1.0.5</version>
+    <version>1.0.7</version>
     <packaging>jar</packaging>
 
     <name>happyJared</name>
-    <description>『 吗哩噢 • 洞见 』 -> https://mp.mariojd.cn/</description>
+    <description>『 happyJared • 洞见 』 -> https://mp.mariojd.cn/</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
